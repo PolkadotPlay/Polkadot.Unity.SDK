@@ -1,0 +1,78 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/DemoExplorer/UI/StyleDemoExplorer.uss?fileID=7433441132597879392&amp;guid=4882cd3f6f22bf547904d2bf4b8c1671&amp;type=3#StyleDemoExplorer" />
+    <ui:VisualElement name="VelMainView" style="flex-grow: 1; width: 100%; height: 100%; background-color: rgba(125, 75, 100, 0.39); align-items: center; justify-content: center;">
+        <ui:VisualElement name="VelAppView" style="flex-grow: 0; flex-shrink: 0; width: 500px; height: 500px; background-color: rgb(255, 255, 255); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 100%; height: 50%; flex-direction: row; -unity-background-image-tint-color: rgba(0, 0, 0, 0);">
+                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 50%; height: 100%; border-right-color: rgb(0, 0, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px;">
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 75%; width: 100%; align-items: center; justify-content: center;">
+                        <ui:VisualElement name="VelChainLogo" style="flex-grow: 0; flex-shrink: 0; width: 125px; height: 125px; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/polkadot_logo&apos;);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 25%; width: 100%; align-items: center; justify-content: center;">
+                        <ui:Label tabindex="-1" text="wss://1rpc.io/dot" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblNodeUrl" class="text_style" style="height: 50px; width: 200px; -unity-text-align: middle-center; white-space: normal;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 50%; height: 100%;">
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 25%; width: 100%; align-items: center; justify-content: center;">
+                        <ui:Label tabindex="-1" text="DEMO EXPLORER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblTitle" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font-style: bold; font-size: 22px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 50%; width: 100%; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 25px; width: 100%; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 50px; height: 100%; align-items: center; justify-content: center;">
+                                <ui:VisualElement name="VelSelPolkadotCheck" style="flex-grow: 0; background-image: resource(&apos;Images/check_yes&apos;); -unity-background-scale-mode: scale-to-fit; flex-shrink: 0; width: 100%; height: 100%; -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 0; justify-content: center; flex-shrink: 0; width: 125px;">
+                                <ui:Label tabindex="-1" text="Polkadot" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblSelectName" class="text_style" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 0; justify-content: center; flex-shrink: 0; align-items: flex-start;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 25px; width: 100%; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 50px; height: 100%; align-items: center; justify-content: center;">
+                                <ui:VisualElement name="VelSelKusamaCheck" style="flex-grow: 0; background-image: resource(&apos;Images/check_no&apos;); -unity-background-scale-mode: scale-to-fit; flex-shrink: 0; width: 100%; height: 100%; -unity-background-image-tint-color: rgb(51, 51, 51);" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 0; justify-content: center; flex-shrink: 0; width: 125px;">
+                                <ui:Label tabindex="-1" text="Kusama" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblSelectName" class="text_style" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 0; justify-content: center; flex-shrink: 0; align-items: flex-start;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 25px; width: 100%; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 50px; height: 100%; align-items: center; justify-content: center;">
+                                <ui:VisualElement name="VelSelLocalCheck" style="flex-grow: 0; background-image: resource(&apos;Images/check_no&apos;); -unity-background-scale-mode: scale-to-fit; flex-shrink: 0; width: 100%; height: 100%; -unity-background-image-tint-color: rgb(51, 51, 51);" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 0; justify-content: center; flex-shrink: 0; width: 125px;">
+                                <ui:Label tabindex="-1" text="Local" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblSelectName" class="text_style" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 0; justify-content: center; flex-shrink: 0; align-items: flex-start;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 25%; width: 100%; align-items: center; justify-content: center;">
+                        <ui:Button text="CONNECT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BtnConnection" class="button_style" style="border-left-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 50%; width: 100%; align-items: center; justify-content: flex-start; border-top-color: rgb(0, 0, 0); border-top-width: 5px;">
+                <ui:VisualElement style="flex-grow: 0; height: 10%; width: 95%; flex-shrink: 0; flex-direction: row;">
+                    <ui:VisualElement style="flex-grow: 0; width: 20%; height: 100%; flex-shrink: 0; justify-content: center; border-right-width: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 5px;">
+                        <ui:Label tabindex="-1" text="RUNTIME" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblCmdRuntime" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 12px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; width: 20%; height: 100%; flex-shrink: 0; justify-content: center; border-top-width: 0; border-right-width: 5px; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                        <ui:Label tabindex="-1" text="PROPERTIES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblCmdProperties" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 12px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; width: 20%; height: 100%; flex-shrink: 0; justify-content: center; border-right-width: 5px; border-right-color: rgb(0, 0, 0);">
+                        <ui:Label tabindex="-1" text="BLOCK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblCmdBlock" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 12px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; width: 20%; height: 100%; flex-shrink: 0; justify-content: center; border-right-width: 5px; border-right-color: rgb(0, 0, 0);">
+                        <ui:Label tabindex="-1" text="CUSTOM" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblCmdCustom" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 12px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; width: 20%; height: 100%; flex-shrink: 0; justify-content: center; border-right-width: 5px; border-right-color: rgb(0, 0, 0);">
+                        <ui:Label tabindex="-1" text="TRANSFER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblCmdTransfer" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 12px; -unity-font-style: bold; color: rgb(217, 9, 9);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 95%; height: 85%; background-color: rgb(0, 0, 0); padding-left: 5px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 23px; border-bottom-left-radius: 23px;">
+                    <ui:ScrollView mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="AlwaysVisible" style="flex-shrink: 0; width: 100%; height: 100%;">
+                        <ui:Label tabindex="-1" text="_" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblNodeInfo" class="text_style" style="width: 100%; height: 100%; white-space: normal; color: rgb(255, 255, 255); font-size: 14px; -unity-font-style: normal;" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
