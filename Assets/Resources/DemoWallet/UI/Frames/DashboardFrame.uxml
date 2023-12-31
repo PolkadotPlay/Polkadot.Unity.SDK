@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
+    <ui:VisualElement name="FramesBox" style="flex-grow: 0; width: 100%; height: 100%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-shrink: 0; align-items: center; font-size: 50px; justify-content: center;">
+        <ui:Label tabindex="-1" text="YOUR GAME HERE!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: upper-center; width: 100%; height: 100%;" />
+    </ui:VisualElement>
+</ui:UXML>

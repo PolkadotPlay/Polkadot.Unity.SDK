@@ -75,12 +75,12 @@ namespace Substrate
                 //Converters = { new BigIntegerConverter() }
             };
 
-            _polkadotLogo = Resources.Load<Texture2D>("Images/polkadot_logo");
-            _kusamaLogo = Resources.Load<Texture2D>("Images/kusama_logo");
-            _hostLogo = Resources.Load<Texture2D>("Images/host_logo");
+            _polkadotLogo = Resources.Load<Texture2D>("DemoExplorer/Icons/polkadot_logo");
+            _kusamaLogo = Resources.Load<Texture2D>("DemoExplorer/Icons/kusama_logo");
+            _hostLogo = Resources.Load<Texture2D>("DemoExplorer/Icons/host_logo");
 
-            _checkYes = Resources.Load<Texture2D>("Images/check_yes");
-            _checkNo = Resources.Load<Texture2D>("Images/check_no");
+            _checkYes = Resources.Load<Texture2D>("DemoExplorer/Icons/check_yes");
+            _checkNo = Resources.Load<Texture2D>("DemoExplorer/Icons/check_no");
         }
 
         /// <summary>
@@ -155,6 +155,7 @@ namespace Substrate
             if (_client != null && _client.IsConnected)
             {
                 await _client.CloseAsync();
+                _btnConnection.text = "CONNECT";
             }
 
             _lblCmdTransfer.SetEnabled(false);

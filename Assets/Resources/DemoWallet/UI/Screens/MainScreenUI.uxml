@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
+    <ui:VisualElement name="MainScreen" style="flex-grow: 1; height: 100%; width: 100%; flex-shrink: 1; min-width: auto; min-height: auto; flex-basis: auto; justify-content: flex-start; align-items: auto;">
+        <ui:VisualElement name="TopBound" class="layer-bg-dark" style="max-height: 325px; min-height: 250px; width: 100%;" />
+        <ui:VisualElement name="FloatBody" style="flex-grow: 1; height: auto; width: 100%; flex-shrink: 0; min-height: auto; min-width: auto; justify-content: flex-start;" />
+        <ui:VisualElement name="BottomBound" class="layer-bg-dark" style="flex-grow: 0; height: 200px; width: 100%; flex-shrink: 0; justify-content: flex-start;" />
+    </ui:VisualElement>
+</ui:UXML>

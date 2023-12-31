@@ -1,0 +1,59 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="HeaderBoxElement" src="project://database/Assets/Resources/UI/Elements/HeaderBoxElement.uxml?fileID=9197481963319205126&amp;guid=93636438f421bbb4698baadc6e80b366&amp;type=3#HeaderBoxElement" />
+    <ui:Template name="LogoElement" src="project://database/Assets/Resources/UI/Elements/LogoElement.uxml?fileID=9197481963319205126&amp;guid=1f50dc74725ab0d408fa25cf10b3d008&amp;type=3#LogoElement" />
+    <ui:Template name="OnBoardStartElement" src="project://database/Assets/Resources/UI/Elements/OnBoardStartElement.uxml?fileID=9197481963319205126&amp;guid=dd70a7752f6b64245a709e446432edbd&amp;type=3#OnBoardStartElement" />
+    <Style src="project://database/Assets/Resources/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
+    <ui:VisualElement name="OnboardingScreen" style="flex-grow: 1; height: 100%; width: 100%; flex-shrink: 1; min-width: auto; min-height: auto; flex-basis: auto; justify-content: flex-start; align-items: auto;">
+        <ui:VisualElement name="TopBound" style="flex-grow: 0; flex-shrink: 0; height: 350px; width: 100%; justify-content: center;">
+            <ui:Instance template="HeaderBoxElement" name="HeaderBoxElement" />
+        </ui:VisualElement>
+        <ui:VisualElement name="SubTopBound" style="flex-grow: 0; flex-shrink: 0; height: 320px; min-height: auto; min-width: auto; width: 100%;">
+            <ui:VisualElement name="OnboardStateBox" style="flex-grow: 1; width: 100%; height: 100%; padding-right: 65px; padding-bottom: 20px; padding-left: 65px; padding-top: 20px;">
+                <ui:VisualElement name="OnboardStateFrame" class="layer-bg-dark" style="flex-grow: 1; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
+                    <ui:VisualElement name="StateFieldElement" style="height: 25%; justify-content: center; flex-shrink: 0;">
+                        <ui:VisualElement name="OnboardStateField" style="flex-grow: 0; height: 100%; min-height: auto; width: 100%; flex-shrink: 0; flex-direction: row;">
+                            <ui:VisualElement name="OnBoardStateIconBox" style="flex-grow: 0; width: 100px; height: 100%; flex-shrink: 0; padding-top: 18px; padding-right: 0; padding-bottom: 18px; padding-left: 20px; align-self: auto;">
+                                <ui:VisualElement name="ImgCurrent1" style="flex-grow: 0; height: 80%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconArrowSelect.png?fileID=2800000&amp;guid=347a9a36cbfe189409c25fe9411024d6&amp;type=3#IconArrowSelect&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none; visibility: visible;" />
+                                <ui:VisualElement name="ImgMark1" style="flex-grow: 0; height: 100%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconCheckMark.png?fileID=2800000&amp;guid=75b6c85e64270a045867101732a09cf5&amp;type=3#IconCheckMark&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none; visibility: visible;" />
+                            </ui:VisualElement>
+                            <ui:Label tabindex="-1" text="ADD AN ACCOUNT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblOnBoardState1" class="font-aeonik font-light-color" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 100%; width: 500px; -unity-text-align: middle-left; font-size: 35px; -unity-font-style: normal;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StateFieldElement" style="height: 25%; width: 100%; flex-shrink: 0;">
+                        <ui:VisualElement name="OnboardStateField" style="flex-grow: 0; height: 100%; min-height: auto; width: 100%; flex-shrink: 0; flex-direction: row;">
+                            <ui:VisualElement name="OnBoardStateIconBox" style="flex-grow: 0; width: 100px; height: 100%; flex-shrink: 0; padding-top: 18px; padding-right: 0; padding-bottom: 18px; padding-left: 20px; align-self: auto;">
+                                <ui:VisualElement name="ImgCurrent2" style="flex-grow: 0; height: 80%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconArrowSelect.png?fileID=2800000&amp;guid=347a9a36cbfe189409c25fe9411024d6&amp;type=3#IconArrowSelect&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none;" />
+                                <ui:VisualElement name="ImgMark2" style="flex-grow: 0; height: 100%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconCheckMark.png?fileID=2800000&amp;guid=75b6c85e64270a045867101732a09cf5&amp;type=3#IconCheckMark&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none;" />
+                            </ui:VisualElement>
+                            <ui:Label tabindex="-1" text="NAME YOUR ACCOUNT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblOnBoardState2" class="font-aeonik font-light-color" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 100%; width: 500px; -unity-text-align: middle-left; font-size: 35px; -unity-font-style: normal;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StateFieldElement" style="height: 25%; width: 100%; flex-shrink: 0;">
+                        <ui:VisualElement name="OnboardStateField" style="flex-grow: 0; height: 100%; min-height: auto; width: 100%; flex-shrink: 0; flex-direction: row;">
+                            <ui:VisualElement name="OnBoardStateIconBox" style="flex-grow: 0; width: 100px; height: 100%; flex-shrink: 0; padding-top: 18px; padding-right: 0; padding-bottom: 18px; padding-left: 20px; align-self: auto;">
+                                <ui:VisualElement name="ImgCurrent3" style="flex-grow: 0; height: 80%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconArrowSelect.png?fileID=2800000&amp;guid=347a9a36cbfe189409c25fe9411024d6&amp;type=3#IconArrowSelect&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none;" />
+                                <ui:VisualElement name="ImgMark3" style="flex-grow: 0; height: 100%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconCheckMark.png?fileID=2800000&amp;guid=75b6c85e64270a045867101732a09cf5&amp;type=3#IconCheckMark&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none;" />
+                            </ui:VisualElement>
+                            <ui:Label tabindex="-1" text="SET A PASSWORD" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblOnBoardState3" class="font-aeonik font-light-color" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 100%; width: 500px; -unity-text-align: middle-left; font-size: 35px; -unity-font-style: normal;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StateFieldElement" style="height: 25%; width: 100%; flex-shrink: 0;">
+                        <ui:VisualElement name="OnboardStateField" style="flex-grow: 0; height: 100%; min-height: auto; width: 100%; flex-shrink: 0; flex-direction: row;">
+                            <ui:VisualElement name="OnBoardStateIconBox" style="flex-grow: 0; width: 100px; height: 100%; flex-shrink: 0; padding-top: 18px; padding-right: 0; padding-bottom: 18px; padding-left: 20px; align-self: auto;">
+                                <ui:VisualElement name="ImgCurrent4" style="flex-grow: 0; height: 80%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconArrowSelect.png?fileID=2800000&amp;guid=347a9a36cbfe189409c25fe9411024d6&amp;type=3#IconArrowSelect&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none;" />
+                                <ui:VisualElement name="ImgMark4" style="flex-grow: 0; height: 100%; width: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/Images/IconCheckMark.png?fileID=2800000&amp;guid=75b6c85e64270a045867101732a09cf5&amp;type=3#IconCheckMark&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; display: none;" />
+                            </ui:VisualElement>
+                            <ui:Label tabindex="-1" text="START PLAYING" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblOnBoardState4" class="font-aeonik font-light-color" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 100%; width: 500px; -unity-text-align: middle-left; font-size: 35px; -unity-font-style: normal;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="FloatBody" style="flex-grow: 1; height: auto; width: 100%; flex-shrink: 0; min-height: auto; min-width: auto; justify-content: flex-start;">
+            <ui:Instance template="LogoElement" name="LogoElement" style="height: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="BottomBound" style="flex-grow: 0; height: 850px; width: 100%; flex-shrink: 0; justify-content: flex-start;">
+            <ui:Instance template="OnBoardStartElement" name="OnBoardStartElement" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
