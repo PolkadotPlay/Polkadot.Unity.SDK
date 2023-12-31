@@ -17,7 +17,7 @@ namespace Assets.Scripts.ScreenStates
             var instance = visualTreeAsset.Instantiate();
             instance.style.width = new Length(100, LengthUnit.Percent);
             instance.style.height = new Length(98, LengthUnit.Percent);
-            
+
             var velReturnBox = instance.Q<VisualElement>("VelReturnBox");
             velReturnBox.style.visibility = Visibility.Visible;
             velReturnBox.RegisterCallback<ClickEvent>(OnClickReturn);

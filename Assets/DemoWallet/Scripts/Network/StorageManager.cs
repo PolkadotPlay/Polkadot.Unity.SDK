@@ -67,11 +67,10 @@ public class StorageManager : Singleton<StorageManager>
         var block = await Network.Client.Chain.GetBlockAsync(CancellationToken.None);
         if (block == null)
         {
-              return;
+            return;
         }
 
         ulong? blockNumber = block.Block?.Header?.Number?.Value;
-
 
         if (blockNumber == null || BlockNumber >= blockNumber)
         {

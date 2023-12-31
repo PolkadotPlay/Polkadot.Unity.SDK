@@ -31,6 +31,5 @@ namespace Assets.Scripts
             "dreaming of marshmallow skies",
             "giggling with goofy gremlins"
         };
-
     }
 }

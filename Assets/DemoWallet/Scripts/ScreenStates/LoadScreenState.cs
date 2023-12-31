@@ -32,12 +32,13 @@ namespace Assets.Scripts.ScreenStates
             var lbProgressInfo = instance.Q<Label>("LblProgressInfo");
             lbProgressInfo.text = $"...tick tack tick...";
 
-             _velAnimSpinner = instance.Q<VisualElement>("VelAnimSpinner");
+            _velAnimSpinner = instance.Q<VisualElement>("VelAnimSpinner");
             _velAnimSpinner.style.transitionProperty = new List<StylePropertyName>() { "rotate" };
             _velAnimSpinner.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Linear };
             _velAnimSpinner.style.transitionDuration = new List<TimeValue> { new(1, TimeUnit.Second) };
             _velAnimSpinner.style.transitionDelay = new List<TimeValue> { 0f };
-            _velAnimSpinner.RegisterCallback<TransitionEndEvent>((evt) => {
+            _velAnimSpinner.RegisterCallback<TransitionEndEvent>((evt) =>
+            {
                 _velAnimSpinner.style.transitionDuration = new List<TimeValue> { new(0, TimeUnit.Second) };
                 _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(Angle.Turns(0)));
                 _velAnimSpinner.style.transitionDuration = new List<TimeValue> { new(1, TimeUnit.Second) };
@@ -58,7 +59,8 @@ namespace Assets.Scripts.ScreenStates
             // add container
             FlowController.VelContainer.Add(instance);
 
-            _velAnimSpinner.schedule.Execute(() => {
+            _velAnimSpinner.schedule.Execute(() =>
+            {
                 _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(Angle.Turns(1)));
             }).StartingIn(100); // Delay in milliseconds
 
@@ -84,15 +86,16 @@ namespace Assets.Scripts.ScreenStates
             if (IsConnected)
             {
                 _velOverlay.style.display = DisplayStyle.Flex;
-                _velBackDrop.RegisterCallback<TransitionEndEvent>((evt) => {
+                _velBackDrop.RegisterCallback<TransitionEndEvent>((evt) =>
+                {
                     FlowController.ChangeScreenState(ScreenState.MainScreen);
                 });
 
-                _velBackDrop.schedule.Execute(() => {
+                _velBackDrop.schedule.Execute(() =>
+                {
                     _velBackDrop.style.backgroundColor = new StyleColor(new Color32(255, 255, 255, 255));
                 }).StartingIn(100); // Delay in milliseconds
             }
         }
-
     }
 }

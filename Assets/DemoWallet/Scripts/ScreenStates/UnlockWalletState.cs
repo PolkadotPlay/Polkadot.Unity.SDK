@@ -43,7 +43,7 @@ namespace Assets.Scripts.ScreenStates
             {
                 lblAccountName.text = FlowController.Network.Wallet.FileName;
                 lblAccountAddress.text = FlowController.Network.Wallet.Account.Value;
-            } 
+            }
             else
             {
                 txfPasswordInput.SetEnabled(false);

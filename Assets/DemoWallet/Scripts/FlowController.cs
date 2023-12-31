@@ -3,7 +3,6 @@ using Substrate.NET.Wallet;
 using Substrate.NetApi.Model.Types;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using System.Security.Principal;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -131,7 +130,6 @@ namespace Assets.Scripts
 
             // enter current state
             _currentState.EnterState();
-
         }
 
         /// <summary>
