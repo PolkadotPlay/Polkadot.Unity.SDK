@@ -1,0 +1,74 @@
+
+Introduction
+This document serves as a comprehensive guide to the Official Polkadot SDK for Unity. It provides game and app developers with all the tools required to integrate Polkadot's blockchain functionalities into Unity projects with ease.
+
+Table of Contents
+
+1. Introduction
+2. Getting Started
+3. Feature Overview
+4. Script Reference
+5. Demo Projects
+6. Troubleshooting
+7. Support and Contact
+
+Getting Started
+Begin by setting up the SDK within your Unity environment. Follow the initial setup instructions to integrate the SDK components and prepare your project for blockchain functionality.
+
+Feature Overview
+Explore the diverse features of the SDK, including comprehensive blockchain access, independent onboarding processes, and support for .NET profiles. Understand how to customize these features to suit your project's needs.
+
+Script Reference
+Find detailed documentation of all scripts, functions, and parameters included in the SDK. This reference section will assist you in implementing and modifying the SDK's capabilities within your Unity project.
+
+Demo Projects
+Utilize our demo projects to gain practical insights:
+
+* The Demo Explorer showcases how to access on-chain data.
+* The Demo Wallet demonstrates a user-friendly onboarding process.
+* The Demo Game presents Hexalem, an on-chain multiplayer game ready for extension.
+
+Troubleshooting
+Address common issues and solutions to streamline your development process.
+
+Support and Contact
+For further assistance and information on how to contribute to the SDK, consult the support section.
+
+
+
+
+# Manually Setting up the C# Dependencies for Substrate .NET API
+
+1. Getting DLL from NuGet
+- https://www.nuget.org/packages/Substrate.NET.API
+  - Download substrate.net.api.x.y.z.nupkg latest version (ex. substrate.net.api.0.9.14.nupkg)
+  - Open lib/netstandard2.0 or lib/netstandard2.1
+  - Copy Substrate.NetApi.dll into your Plugins Folder
+2. Download all DLL from NuGet, following the Dependecies of .NETStandard 2.0 or 2.1
+
+## Extending Demo Explorer with a new Chain
+
+Example Polkadot.
+
+### PreBuild Binaries
+
+https://github.com/SubstrateGaming/Substrate.Chains.NET/
+
+1. Getting DLL from NuGet
+- https://www.nuget.org/packages/Substrate.Polkadot.NET.Extension
+  - Download substrate.polkadot.net.extension.x.y.z.nupkg latest version (ex. substrate.polkadot.net.extension.1.10001.0.nupkg)
+  - Open lib/netstandard2.0 or lib/netstandard2.1
+  - Copy Substrate.Polkadot.NET.NetApiExt.dll into your Plugins Folder
+
+
+### Build Binaries
+
+
+
+
+- Setting up C# Dependencies.
+
+
+
+
+Make sure that Internet Access is set to Required
