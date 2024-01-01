@@ -2,7 +2,6 @@ using Schnorrkel.Keys;
 using Substrate.NET.Wallet;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
-using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
 using System.Collections.Generic;
 using System.Data;

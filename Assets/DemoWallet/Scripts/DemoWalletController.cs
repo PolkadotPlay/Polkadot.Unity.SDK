@@ -43,11 +43,10 @@ namespace Assets.Scripts
         internal string TempAccountPassword { get; set; } // TODO: remove this ....
         internal string TempMnemonic { get; set; }  // TODO: remove this ....
 
-        void Awake()
+        private void Awake()
         {
             base.Awake();
             //Your code goes here
-
         }
 
         protected override void InitializeStates()
@@ -74,10 +73,10 @@ namespace Assets.Scripts
             _subStateDictionary.Add(DemoWalletScreen.MainScreen, mainScreenSubStates);
         }
 
-            /// <summary>
-            /// Start is called before the first frame update
-            /// </summary>
-            private void Start()
+        /// <summary>
+        /// Start is called before the first frame update
+        /// </summary>
+        private void Start()
         {
             var root = GetComponent<UIDocument>().rootVisualElement;
             VelContainer = root.Q<VisualElement>("VelContainer");
