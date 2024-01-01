@@ -5,12 +5,12 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class UnlockWalletState : ScreenBaseState
+    public class UnlockWalletState : WalletBaseScreen
     {
         private Button _btnUnlockWallet;
         private VisualElement _velLogo;
 
-        public UnlockWalletState(FlowController _flowController)
+        public UnlockWalletState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -101,22 +101,22 @@ namespace Assets.Scripts.ScreenStates
             // make sure that the client account is also unlocked, not needed anymore we use only the wallet account
             //Network.Client.Account = Network.Wallet.Account;
 
-            FlowController.ChangeScreenState(ScreenState.LoadScreen);
+            FlowController.ChangeScreenState(DemoWalletScreen.LoadScreen);
         }
 
         private void OnLostPasswordClicked(ClickEvent evt)
         {
-            FlowController.ChangeScreenState(ScreenState.ResetWallet);
+            FlowController.ChangeScreenState(DemoWalletScreen.ResetWallet);
         }
 
         private void OnAccountSelectorClicked(ClickEvent evt)
         {
-            FlowController.ChangeScreenState(ScreenState.AccountSelection);
+            FlowController.ChangeScreenState(DemoWalletScreen.AccountSelection);
         }
 
         private void OnAccountClicked(ClickEvent evt)
         {
-            FlowController.ChangeScreenState(ScreenState.OnBoarding);
+            FlowController.ChangeScreenState(DemoWalletScreen.OnBoarding);
         }
     }
 }

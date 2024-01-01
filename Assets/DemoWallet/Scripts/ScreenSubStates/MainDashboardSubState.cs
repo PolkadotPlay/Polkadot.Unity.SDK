@@ -3,13 +3,13 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    internal class MainDashboardSubState : ScreenBaseState
+    internal class MainDashboardSubState : WalletBaseScreen
     {
         public VisualElement _velAvatarSmallElement;
 
-        public MainScreenState MainScreenState => ParentState as MainScreenState;
+        public WalletScreenState MainScreenState => ParentState as WalletScreenState;
 
-        public MainDashboardSubState(FlowController flowController, ScreenBaseState parent)
+        public MainDashboardSubState(DemoWalletController flowController, WalletBaseScreen parent)
             : base(flowController, parent) { }
 
         public override void EnterState()
@@ -17,7 +17,7 @@ namespace Assets.Scripts.ScreenStates
             Debug.Log($"[{this.GetType().Name}][SUB] EnterState");
 
             var floatBody = FlowController.VelContainer.Q<VisualElement>("FloatBody");
-            floatBody.style.backgroundColor = GameConstant.ColorLightGrey;
+            floatBody.style.backgroundColor = DemoWalletConstants.ColorLightGrey;
             floatBody.Clear();
 
             TemplateContainer elementInstance = ElementInstance("DemoWallet/UI/Frames/DashboardFrame");

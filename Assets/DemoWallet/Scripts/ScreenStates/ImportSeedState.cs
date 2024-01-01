@@ -9,13 +9,13 @@ using static Substrate.NetApi.Mnemonic;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class ImportSeedState : ScreenBaseState
+    public class ImportSeedState : WalletBaseScreen
     {
         private Button _btnCreateWalletSeed;
 
         private CustomTextField _txfSeedPhrase;
 
-        public ImportSeedState(FlowController _flowController)
+        public ImportSeedState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -54,7 +54,7 @@ namespace Assets.Scripts.ScreenStates
         {
             Debug.Log($"[{this.GetType().Name}] ExitState [currentState={FlowController.CurrentState}]");
 
-            if (FlowController.CurrentState == ScreenState.UnlockWallet)
+            if (FlowController.CurrentState == DemoWalletScreen.UnlockWallet)
             {
                 FlowController.VelContainer.RemoveAt(1);
             }
@@ -64,7 +64,7 @@ namespace Assets.Scripts.ScreenStates
         {
             FlowController.TempAccount = Mnemonic.GetAccountFromMnemonic(FlowController.TempMnemonic, "", KeyType.Sr25519);
             Debug.Log($"Temporary account stored with keytype {FlowController.TempAccount.KeyType}");
-            FlowController.ChangeScreenState(ScreenState.CreateWallet);
+            FlowController.ChangeScreenState(DemoWalletScreen.CreateWallet);
         }
 
         private void OnClickLblFillRandom(ClickEvent evt)

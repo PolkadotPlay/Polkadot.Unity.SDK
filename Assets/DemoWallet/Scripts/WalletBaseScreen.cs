@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts
 {
-    public abstract class ScreenBaseState
+    public abstract class WalletBaseScreen : IScreenState
     {
         public enum StepState
         {
@@ -12,15 +12,13 @@ namespace Assets.Scripts
             Done
         }
 
-        protected FlowController FlowController { get; private set; }
+        protected DemoWalletController FlowController { get; private set; }
 
-        protected ScreenBaseState ParentState { get; private set; }
+        protected WalletBaseScreen ParentState { get; private set; }
 
-        protected NetworkManager Network => NetworkManager.GetInstance();
+        protected NetworkWalletManager Network => NetworkWalletManager.GetInstance();
 
-        protected StorageManager Storage => StorageManager.GetInstance();
-
-        protected ScreenBaseState(FlowController flowController, ScreenBaseState parentState = null)
+        protected WalletBaseScreen(DemoWalletController flowController, WalletBaseScreen parentState = null)
         {
             FlowController = flowController;
             ParentState = parentState;
@@ -29,6 +27,11 @@ namespace Assets.Scripts
         public abstract void EnterState();
 
         public abstract void ExitState();
+
+        public virtual void UpdateState()
+        {
+            Debug.Log("Not implemented updated!");
+        }
 
         internal TemplateContainer ElementInstance(string elementPath, int widthPerc = 100, int heightPerc = 100)
         {

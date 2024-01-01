@@ -6,11 +6,11 @@ using static Substrate.NetApi.Mnemonic;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class VerifyPasswordState : ScreenBaseState
+    public class VerifyPasswordState : WalletBaseScreen
     {
         private Button _btnCreateWallet;
 
-        public VerifyPasswordState(FlowController _flowController)
+        public VerifyPasswordState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -58,14 +58,14 @@ namespace Assets.Scripts.ScreenStates
                 Debug.Log($"Failed to create {FlowController.TempAccountName} wallet!");
                 return;
             }
-            else if (!NetworkManager.GetInstance().ChangeWallet(wallet))
+            else if (!NetworkWalletManager.GetInstance().ChangeWallet(wallet))
             {
                 Debug.Log($"Couldn't change to {FlowController.TempAccountName} wallet!");
                 return;
             }
 
             Debug.Log($"Create {FlowController.TempAccountName} wallet successful!");
-            FlowController.ChangeScreenState(ScreenState.LoadScreen);
+            FlowController.ChangeScreenState(DemoWalletScreen.LoadScreen);
         }
 
         private void OnChangeEventVerifyPassword(ChangeEvent<string> evt)

@@ -4,9 +4,9 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class AccountSelectionState : ScreenBaseState
+    public class AccountSelectionState : WalletBaseScreen
     {
-        public AccountSelectionState(FlowController _flowController)
+        public AccountSelectionState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -58,12 +58,12 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWallet(ClickEvent evt)
         {
-            FlowController.ChangeScreenState(ScreenState.OnBoarding);
+            FlowController.ChangeScreenState(DemoWalletScreen.OnBoarding);
         }
 
         private void OnClickReturn(EventBase evt)
         {
-            FlowController.ChangeScreenState(ScreenState.UnlockWallet);
+            FlowController.ChangeScreenState(DemoWalletScreen.UnlockWallet);
         }
 
         private void OnClickVelSelectAccount(ClickEvent evt, Wallet wallet)
@@ -71,7 +71,7 @@ namespace Assets.Scripts.ScreenStates
             Debug.Log($"Loading the following {wallet.FileName} wallet");
             Network.ChangeWallet(wallet);
 
-            FlowController.ChangeScreenState(ScreenState.UnlockWallet);
+            FlowController.ChangeScreenState(DemoWalletScreen.UnlockWallet);
         }
     }
 }

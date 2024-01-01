@@ -12,9 +12,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public delegate void ExtrinsicStateUpdate(string subscriptionId, ExtrinsicStatus extrinsicUpdate);
-
-    public class NetworkManager : Singleton<NetworkManager>
+    public class NetworkWalletManager : Singleton<NetworkWalletManager>
     {
         public delegate void ConnectionStateChangedHandler(bool IsConnected);
 

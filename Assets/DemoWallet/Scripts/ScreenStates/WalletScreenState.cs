@@ -3,9 +3,9 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class MainScreenState : ScreenBaseState
+    public class WalletScreenState : WalletBaseScreen
     {
-        public MainScreenState(FlowController _flowController)
+        public WalletScreenState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -14,7 +14,7 @@ namespace Assets.Scripts.ScreenStates
 
             // filler is to avoid camera in the ui
             var topFiller = FlowController.VelContainer.Q<VisualElement>("VelTopFiller");
-            topFiller.style.backgroundColor = GameConstant.ColorDark;
+            topFiller.style.backgroundColor = DemoWalletConstants.ColorDark;
 
             var visualTreeAsset = Resources.Load<VisualTreeAsset>($"DemoWallet/UI/Screens/MainScreenUI");
             var instance = visualTreeAsset.Instantiate();
@@ -24,7 +24,7 @@ namespace Assets.Scripts.ScreenStates
             // add container
             FlowController.VelContainer.Add(instance);
 
-            FlowController.ChangeScreenSubState(ScreenState.MainScreen, ScreenSubState.Dashboard);
+            FlowController.ChangeScreenSubState(DemoWalletScreen.MainScreen, DemoWalletSubScreen.Dashboard);
         }
 
         public override void ExitState()

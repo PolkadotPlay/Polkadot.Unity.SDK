@@ -5,13 +5,13 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class ImportJsonState : ScreenBaseState
+    public class ImportJsonState : WalletBaseScreen
     {
         private Button _btnCreateWalletJson;
 
         private CustomTextField _txfJsonContent;
 
-        public ImportJsonState(FlowController _flowController)
+        public ImportJsonState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -48,7 +48,7 @@ namespace Assets.Scripts.ScreenStates
         {
             Debug.Log($"[{this.GetType().Name}] ExitState [currentState={FlowController.CurrentState}]");
 
-            if (FlowController.CurrentState == ScreenState.UnlockWallet)
+            if (FlowController.CurrentState == DemoWalletScreen.UnlockWallet)
             {
                 FlowController.VelContainer.RemoveAt(1);
             }
@@ -63,7 +63,7 @@ namespace Assets.Scripts.ScreenStates
 
             Network.ChangeWallet(wallet);
             Debug.Log($"Changing to json wallet {FlowController.TempAccountName}");
-            FlowController.ChangeScreenState(ScreenState.UnlockWallet);
+            FlowController.ChangeScreenState(DemoWalletScreen.UnlockWallet);
         }
 
         private void OnChangeEventJsonContent(ChangeEvent<string> evt)

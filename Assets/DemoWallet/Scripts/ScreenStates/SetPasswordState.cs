@@ -4,11 +4,11 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class SetPasswordState : ScreenBaseState
+    public class SetPasswordState : WalletBaseScreen
     {
         private Button _btnCreateWallet;
 
-        public SetPasswordState(FlowController _flowController)
+        public SetPasswordState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -46,7 +46,7 @@ namespace Assets.Scripts.ScreenStates
         {
             Debug.Log($"[{this.GetType().Name}] ExitState [currentState={FlowController.CurrentState}]");
 
-            if (FlowController.CurrentState == ScreenState.UnlockWallet)
+            if (FlowController.CurrentState == DemoWalletScreen.UnlockWallet)
             {
                 FlowController.VelContainer.RemoveAt(1);
             }
@@ -54,7 +54,7 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWallet(ClickEvent evt)
         {
-            FlowController.ChangeScreenState(ScreenState.VerifyPassword);
+            FlowController.ChangeScreenState(DemoWalletScreen.VerifyPassword);
         }
 
         private void OnChangeEventAccountPassword(ChangeEvent<string> evt)

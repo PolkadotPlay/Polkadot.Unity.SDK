@@ -3,11 +3,11 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class ResetWalletState : ScreenBaseState
+    public class ResetWalletState : WalletBaseScreen
     {
         private Button _btnDeleteWallet;
 
-        public ResetWalletState(FlowController _flowController)
+        public ResetWalletState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -49,7 +49,7 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickReturn(ClickEvent evt)
         {
-            FlowController.ChangeScreenState(ScreenState.UnlockWallet);
+            FlowController.ChangeScreenState(DemoWalletScreen.UnlockWallet);
         }
 
         private void OnClickBtnDeleteWallet(ClickEvent evt)

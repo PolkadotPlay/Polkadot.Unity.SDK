@@ -5,13 +5,13 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts.ScreenStates
 {
-    public class LoadScreenState : ScreenBaseState
+    public class LoadScreenState : WalletBaseScreen
     {
         private VisualElement _velAnimSpinner;
         private VisualElement _velBackDrop;
         private VisualElement _velOverlay;
 
-        public LoadScreenState(FlowController _flowController)
+        public LoadScreenState(DemoWalletController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()
@@ -44,8 +44,8 @@ namespace Assets.Scripts.ScreenStates
                 _velAnimSpinner.style.transitionDuration = new List<TimeValue> { new(1, TimeUnit.Second) };
                 _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(Angle.Turns(1)));
 
-                var qu = Random.Range(0, GameConstant.GameQuotes.Length);
-                lbProgressInfo.text = $"...{GameConstant.GameQuotes[qu]}...";
+                var qu = Random.Range(0, DemoWalletConstants.GameQuotes.Length);
+                lbProgressInfo.text = $"...{DemoWalletConstants.GameQuotes[qu]}...";
             });
 
             _velOverlay = instance.Q<VisualElement>("Overlay");
@@ -88,7 +88,7 @@ namespace Assets.Scripts.ScreenStates
                 _velOverlay.style.display = DisplayStyle.Flex;
                 _velBackDrop.RegisterCallback<TransitionEndEvent>((evt) =>
                 {
-                    FlowController.ChangeScreenState(ScreenState.MainScreen);
+                    FlowController.ChangeScreenState(DemoWalletScreen.MainScreen);
                 });
 
                 _velBackDrop.schedule.Execute(() =>

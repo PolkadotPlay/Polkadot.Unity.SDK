@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 namespace Assets.Scripts
 {
-    public static class GameConstant
+    public static class DemoWalletConstants
     {
         public static StyleColor ColorLightGrey => new StyleColor(new Color32(236, 235, 233, 255));
 
