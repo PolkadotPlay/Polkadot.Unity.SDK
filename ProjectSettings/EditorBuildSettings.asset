@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Polkadot Unity SDK/DemoExplorer/DemoExplorer.unity
-    guid: 30a4cc4db1e8eb145827249558cb6cff
+    path: Assets/Polkadot Unity SDK/DemoGame/DemoGame.unity
+    guid: 36d4c9189f4df1144a15df543d0e6086
   m_configObjects: {}
