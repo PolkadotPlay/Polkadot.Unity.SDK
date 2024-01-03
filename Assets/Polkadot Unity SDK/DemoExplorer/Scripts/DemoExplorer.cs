@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using Schnorrkel.Keys;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
