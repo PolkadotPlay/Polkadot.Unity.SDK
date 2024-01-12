@@ -43,7 +43,7 @@ namespace Assets.Scripts
         internal string TempAccountPassword { get; set; } // TODO: remove this ....
         internal string TempMnemonic { get; set; }  // TODO: remove this ....
 
-        private void Awake()
+        private new void Awake()
         {
             base.Awake();
             //Your code goes here

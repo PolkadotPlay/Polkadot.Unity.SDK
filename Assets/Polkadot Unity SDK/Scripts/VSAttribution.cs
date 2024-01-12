@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using UnityEngine.Analytics;
 
 namespace UnityEditor.VSAttribution.SubstrateGaming
@@ -66,3 +67,4 @@ namespace UnityEditor.VSAttribution.SubstrateGaming
 		}
 	}
 }
+#endif

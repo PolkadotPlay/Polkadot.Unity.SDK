@@ -7,14 +7,12 @@
 
 .font-comic {
     -unity-font-definition: resource('DemoGame/Fonts & Materials/Hey Comic SDF');
-    flex-shrink: 0;
-    -unity-font: url('project://database/Assets/DemoGame/Fonts/Hey%20Comic.ttf?fileID=12800000&guid=76b251ed5027e7347b294a930d467c67&type=3#Hey Comic');
+    -unity-font: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoGame/Fonts/Hey%20Comic.ttf?fileID=12800000&guid=4174102ac3175b3418182b34e4242389&type=3#Hey Comic');
 }
 
 .font-chicken {
     -unity-font-definition: resource('DemoGame/Fonts & Materials/Happy Chicken SDF');
-    flex-shrink: 0;
-    -unity-font: url('project://database/Assets/DemoGame/Fonts/Happy%20Chicken.ttf?fileID=12800000&guid=22f474d54f5886446be641bb7450ba36&type=3#Happy Chicken');
+    -unity-font: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoGame/Fonts/Happy%20Chicken.ttf?fileID=12800000&guid=d55a5b45c9c15354aa6a64dfc20eeb53&type=3#Happy Chicken');
 }
 
 .font-color {

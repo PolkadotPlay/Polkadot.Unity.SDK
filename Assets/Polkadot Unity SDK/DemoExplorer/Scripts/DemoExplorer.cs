@@ -40,6 +40,12 @@ namespace Substrate
         public static MiniSecret MiniSecretAlice => new MiniSecret(Utils.HexToByteArray("0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a"), ExpandMode.Ed25519);
         public static Account Alice => Account.Build(KeyType.Sr25519, MiniSecretAlice.ExpandToSecret().ToBytes(), MiniSecretAlice.GetPair().Public.Key);
 
+        [SerializeField]
+        private string _polkadotNode = "wss://polkadot.public.curie.radiumblock.co/ws";
+
+        [SerializeField]
+        private string _kusamaNode = "wss://kusama-rpc.dwellir.com";
+
         private Label _lblNodeUrl;
         private Label _lblNodeInfo;
 
@@ -117,16 +123,16 @@ namespace Substrate
             _lblCommandArray = new List<Label>();
 
             var lblCmdRuntime = velMainView.Q<Label>("LblCmdRuntime");
-            lblCmdRuntime.RegisterCallback<ClickEvent>(ev => OnCommandClicked(SubstrateCmds.Runtime));
+            lblCmdRuntime.RegisterCallback<ClickEvent>(async ev => await OnCommandClicked(SubstrateCmds.Runtime));
             _lblCommandArray.Add(lblCmdRuntime);
             var lblCmdProperties = velMainView.Q<Label>("LblCmdProperties");
-            lblCmdProperties.RegisterCallback<ClickEvent>(ev => OnCommandClicked(SubstrateCmds.Properties));
+            lblCmdProperties.RegisterCallback<ClickEvent>(async ev => await OnCommandClicked(SubstrateCmds.Properties));
             _lblCommandArray.Add(lblCmdProperties);
             var lblCmdBlock = velMainView.Q<Label>("LblCmdBlock");
-            lblCmdBlock.RegisterCallback<ClickEvent>(ev => OnCommandClicked(SubstrateCmds.Block));
+            lblCmdBlock.RegisterCallback<ClickEvent>(async ev => await OnCommandClicked(SubstrateCmds.Block));
             _lblCommandArray.Add(lblCmdBlock);
             var lblCmdCustom = velMainView.Q<Label>("LblCmdCustom");
-            lblCmdCustom.RegisterCallback<ClickEvent>(ev => OnCommandClicked(SubstrateCmds.Custom));
+            lblCmdCustom.RegisterCallback<ClickEvent>(async ev => await OnCommandClicked(SubstrateCmds.Custom));
             _lblCommandArray.Add(lblCmdCustom);
 
             _lblCmdTransfer = velMainView.Q<Label>("LblCmdTransfer");
@@ -174,7 +180,7 @@ namespace Substrate
             {
                 case SubstrateChains.Polkadot:
                     {
-                        url = "wss://1rpc.io/dot";
+                        url = _polkadotNode;
                         _lblNodeUrl.text = url;
                         _velChainLogo.style.backgroundImage = _polkadotLogo;
                         _client = new PolkadotExt.SubstrateClientExt(new Uri(url), ChargeTransactionPayment.Default());
@@ -189,7 +195,7 @@ namespace Substrate
 
                 case SubstrateChains.Kusama:
                     {
-                        url = "wss://1rpc.io/ksm";
+                        url = _kusamaNode;
                         _lblNodeUrl.text = url;
                         _velChainLogo.style.backgroundImage = _kusamaLogo;
                         _client = new KusamaExt.SubstrateClientExt(new Uri(url), ChargeTransactionPayment.Default());

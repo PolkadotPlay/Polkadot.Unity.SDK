@@ -1,6 +1,5 @@
 ﻿using Substrate.Hexalem.Engine;
 using Substrate.Integration.Client;
-using Substrate.NetApi.Model.Types;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -16,7 +15,7 @@ namespace Assets.Scripts.ScreenStates
         private readonly System.Random _random = new System.Random();
 
         private Button _btnPlay;
-        private Button _btnTrain;
+
         private Button _btnReset;
 
         private Label _lblExtriniscUpdate;
@@ -40,8 +39,8 @@ namespace Assets.Scripts.ScreenStates
 
             TemplateContainer elementInstance = ElementInstance("DemoGame/UI/Frames/ChooseFrame");
 
-            _btnTrain = elementInstance.Q<Button>("BtnTrain");
-            _btnTrain.RegisterCallback<ClickEvent>(OnBtnTrainClicked);
+            var btnTrain = elementInstance.Q<Button>("BtnTrain");
+            btnTrain.RegisterCallback<ClickEvent>(OnBtnTrainClicked);
 
             _btnPlay = elementInstance.Q<Button>("BtnPlay");
             _btnPlay.SetEnabled(false);
@@ -63,7 +62,6 @@ namespace Assets.Scripts.ScreenStates
             Network.ConnectionStateChanged += OnConnectionStateChanged;
             Storage.OnStorageUpdated += OnStorageUpdated;
             Network.Client.ExtrinsicManager.ExtrinsicUpdated += OnExtrinsicUpdated;
-            Network.ExtrinsicCheck += OnExtrinsicCheck;
 
             OnConnectionStateChanged(Network.Client.IsConnected);
         }
@@ -76,7 +74,6 @@ namespace Assets.Scripts.ScreenStates
             Network.ConnectionStateChanged -= OnConnectionStateChanged;
             Storage.OnStorageUpdated -= OnStorageUpdated;
             Network.Client.ExtrinsicManager.ExtrinsicUpdated -= OnExtrinsicUpdated;
-            Network.ExtrinsicCheck -= OnExtrinsicCheck;
         }
 
         private void OnConnectionStateChanged(bool IsConnected)
@@ -109,10 +106,6 @@ namespace Assets.Scripts.ScreenStates
             }
 
             _btnPlay.SetEnabled(true);
-        }
-
-        private void OnExtrinsicCheck()
-        {
         }
 
         private void OnExtrinsicUpdated(string subscriptionId, ExtrinsicInfo extrinsicInfo)
@@ -179,7 +172,7 @@ namespace Assets.Scripts.ScreenStates
             FlowController.ChangeScreenState(DemoGameScreen.PlayScreen);
         }
 
-        private async void OnBtnPlayClicked(ClickEvent evt)
+        private void OnBtnPlayClicked(ClickEvent evt)
         {
             if (Storage.HexaGame != null)
             {
@@ -199,7 +192,8 @@ namespace Assets.Scripts.ScreenStates
                 _btnPlay.text = "WAIT";
                 _btnReset.SetEnabled(false);
                 var call = Substrate.Integration.Call.PalletHexalem.HexalemRootDeleteGame(Storage.HexaGame.Id);
-                // TODO: make sure we use SUDO for this call
+                
+                // We use SUDO for this call
                 var subscriptionId = await Network.Client.SudoAsync(Network.Sudo, call, 1, CancellationToken.None);
                 if (subscriptionId == null)
                 {

@@ -3,6 +3,6 @@
     <Style src="project://database/Assets/Polkadot%20Unity%20SDK/DemoGame/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=7b9a8bdc89bd4444c8329e09faba0d7c&amp;type=3#UIStylesheet" />
     <ui:VisualElement name="VelContainer" class="main-bg" style="width: 100%; height: 100%;">
         <ui:VisualElement name="VelTopFiller" style="flex-grow: 0; width: 100%; height: 2%; flex-shrink: 0; background-color: rgb(255, 255, 255);" />
-        <ui:Instance template="StartScreenUI" name="StartScreenUI" style="width: 100%; height: 98%;" />
+        <ui:Instance template="StartScreenUI" name="StartScreenUI" />
     </ui:VisualElement>
 </ui:UXML>

@@ -18,7 +18,6 @@ namespace Assets.Scripts.ScreenStates
         private Button _btnFaucet;
 
         private Label _lblNodeVersion;
-        private Label _lblNodeUrl;
         private Label _lblConnection;
         private Label _lblBlockNumber;
 
@@ -53,19 +52,19 @@ namespace Assets.Scripts.ScreenStates
 
             var topBound = instance.Q<VisualElement>("TopBound");
 
-            _lblAccount = topBound.Query<Label>("LblAccount");
-            _lblAddress = topBound.Query<Label>("LblAddress");
-            _lblToken = topBound.Query<Label>("LblToken");
+            _lblAccount = topBound.Q<Label>("LblAccount");
+            _lblAddress = topBound.Q<Label>("LblAddress");
+            _lblToken = topBound.Q<Label>("LblToken");
 
             _btnFaucet = topBound.Query<Button>("BtnFaucet");
             _btnFaucet.RegisterCallback<ClickEvent>(OnFaucetClicked);
             _btnFaucet.SetEnabled(false);
 
-            _lblNodeUrl = topBound.Query<Label>("LblNodeUrl");
-            _lblNodeUrl.text = Network.CurrentNodeType.ToString();
-            _lblNodeVersion = topBound.Query<Label>("LblNodeVersion");
-            _lblConnection = topBound.Query<Label>("LblConnection");
-            _lblBlockNumber = topBound.Query<Label>("LblBlockNumber");
+            var lblNodeUrl = topBound.Q<Label>("LblNodeUrl");
+            lblNodeUrl.text = Network.CurrentNodeType.ToString();
+            _lblNodeVersion = topBound.Q<Label>("LblNodeVersion");
+            _lblConnection = topBound.Q<Label>("LblConnection");
+            _lblBlockNumber = topBound.Q<Label>("LblBlockNumber");
 
             // add container
             FlowController.VelContainer.Add(instance);
@@ -98,12 +97,10 @@ namespace Assets.Scripts.ScreenStates
             if (IsConnected)
             {
                 _lblConnection.text = "Online";
-                //_lblConnection.style.unityTextOutlineColor = GameConstant.PastelGreen;
             }
             else
             {
                 _lblConnection.text = "Offline";
-                //_lblConnection.style.unityTextOutlineColor = GameConstant.PastelRed;
             }
         }
 
@@ -111,7 +108,7 @@ namespace Assets.Scripts.ScreenStates
         {
             _lblBlockNumber.text = blocknumber.ToString();
 
-            if (Network.Client.Account == null)
+            if (Network.Client?.Account == null)
             {
                 return;
             }
@@ -119,9 +116,7 @@ namespace Assets.Scripts.ScreenStates
             _btnFaucet.SetEnabled(false);
 
             _lblAccount.text = Network.CurrentAccountName;
-            
-            //Debug.Log(Network.Client.Account.Value);
-            
+                       
             var address = Network.Client.Account.Value;
             _lblAddress.text = address.Substring(0, 6) + " ... " + address.Substring(20, 6);
 

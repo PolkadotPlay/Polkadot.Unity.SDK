@@ -19,8 +19,6 @@ namespace Assets.Scripts.ScreenStates
     {
         public MainScreenState PlayScreenState => ParentState as MainScreenState;
 
-        private readonly System.Random _random = new System.Random();
-
         private Button _btnCreate;
         private Button _btnInvite;
 
@@ -61,10 +59,10 @@ namespace Assets.Scripts.ScreenStates
             _btnCreate.RegisterCallback<ClickEvent>(OnBtnCreateClicked);
 
             var btnLeft = elementInstance.Q<Button>("BtnLeft");
-            btnLeft.RegisterCallback<ClickEvent>((evt) => OnBtnChangeClicked(evt, -1));
+            btnLeft.RegisterCallback<ClickEvent>(e => OnBtnChangeClicked(-1));
 
             var btnRight = elementInstance.Q<Button>("BtnRight");
-            btnRight.RegisterCallback<ClickEvent>((evt) => OnBtnChangeClicked(evt, +1));
+            btnRight.RegisterCallback<ClickEvent>(e => OnBtnChangeClicked(+1));
 
             var velPlayerBox = elementInstance.Q<VisualElement>("VelPlayerBox");
             _velPlayers = velPlayerBox.Children().ToList();
@@ -91,7 +89,6 @@ namespace Assets.Scripts.ScreenStates
             // subscribe to connection changes
             Storage.OnStorageUpdated += OnStorageUpdated;
             Network.Client.ExtrinsicManager.ExtrinsicUpdated += OnExtrinsicUpdated;
-            Network.ExtrinsicCheck += OnExtrinsicCheck;
         }
 
         public override void ExitState()
@@ -101,7 +98,6 @@ namespace Assets.Scripts.ScreenStates
             // unsubscribe from event
             Storage.OnStorageUpdated -= OnStorageUpdated;
             Network.Client.ExtrinsicManager.ExtrinsicUpdated -= OnExtrinsicUpdated;
-            Network.ExtrinsicCheck -= OnExtrinsicCheck;
         }
 
         private void PlayerParty(PartyAction partyAction, string currentAccountName)
@@ -249,10 +245,6 @@ namespace Assets.Scripts.ScreenStates
             PlayerSetInvite(_invitePlayer);
         }
 
-        private void OnExtrinsicCheck()
-        {
-        }
-
         private void OnExtrinsicUpdated(string subscriptionId, ExtrinsicInfo extrinsicInfo)
         {
             if (_subscriptionId == null || _subscriptionId != subscriptionId)
@@ -298,7 +290,7 @@ namespace Assets.Scripts.ScreenStates
             });
         }
 
-        private void OnBtnChangeClicked(ClickEvent evt, int value)
+        private void OnBtnChangeClicked(int value)
         {
             var values = Enum.GetValues(typeof(AccountType)).Length;
             _invitePlayer = (AccountType)((((int)_invitePlayer) + values + value) % values);
@@ -344,7 +336,7 @@ namespace Assets.Scripts.ScreenStates
             }
         }
 
-        private async void OnBtnTogglePlayerClicked(ClickEvent evt)
+        private void OnBtnTogglePlayerClicked(ClickEvent evt)
         {
             if (_inviteAction == PartyAction.Non)
             {

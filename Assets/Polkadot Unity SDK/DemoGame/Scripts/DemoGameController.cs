@@ -41,7 +41,7 @@ namespace Assets.Scripts
 
         public VisualElement VelContainer { get; private set; }
 
-        private void Awake()
+        private new void Awake()
         {
             base.Awake();
             //Your code goes here

@@ -4,7 +4,7 @@
 
 .custom-text-field {
     flex-direction: column;
-    -unity-font-definition: url('project://database/Assets/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
 }
 
 .custom-text-field-label {
@@ -12,7 +12,7 @@
     color: rgb(144, 143, 141);
     padding-left: 20px;
     -unity-font-style: normal;
-    -unity-font-definition: url('project://database/Assets/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
 }
 
 .custom-text-field-element {
@@ -25,7 +25,7 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     font-size: 35px;
-    -unity-font-definition: url('project://database/Assets/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
     color: rgb(36, 38, 40);
 }
 
@@ -51,14 +51,13 @@
 }
 
 .font-nexa {
-    -unity-font: initial;
-    -unity-font-definition: url('project://database/Assets/Fonts/NexaBlack%20SDF.asset?fileID=11400000&guid=1ae826cfdcc741e469920de6462fd6f7&type=2#NexaBlack SDF');
-    -unity-text-align: middle-left;
+    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/NexaBlack%20SDF.asset?fileID=11400000&guid=1ae826cfdcc741e469920de6462fd6f7&type=2#NexaBlack SDF');
+    -unity-font: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/NexaBlack.otf?fileID=12800000&guid=c744a8ec7dbddc94ebfc7946e3404ab0&type=3#NexaBlack');
 }
 
 .font-aeonik {
-    -unity-font-definition: url('project://database/Assets/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
-    flex-shrink: 0;
+    -unity-font: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular.otf?fileID=12800000&guid=4c9f79490ec460e4a97b2cbba27450f7&type=3#Aeonik-Regular');
+    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
 }
 
 .font-dark-color {

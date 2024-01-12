@@ -46,8 +46,6 @@ namespace Assets.Scripts.ScreenStates
 
         private Label _lblRoundValue;
 
-        private VisualElement _velRankingBox;
-        private VisualElement _velTargetBox;
         private VisualElement _velEndTurnBox;
         private VisualElement _velExtrinsicFrame;
 
@@ -138,11 +136,11 @@ namespace Assets.Scripts.ScreenStates
 
             _lblRoundValue = topBound.Q<Label>("LblRoundValue");
 
-            _velRankingBox = topBound.Q<VisualElement>("VelRankingBox");
-            _velRankingBox.RegisterCallback<ClickEvent>(OnRankingClicked);
+            var velRankingBox = topBound.Q<VisualElement>("VelRankingBox");
+            velRankingBox.RegisterCallback<ClickEvent>(OnRankingClicked);
 
-            _velTargetBox = topBound.Q<VisualElement>("VelTargetBox");
-            _velTargetBox.RegisterCallback<ClickEvent>(OnTargetClicked);
+            var velTargetBox = topBound.Q<VisualElement>("VelTargetBox");
+            velTargetBox.RegisterCallback<ClickEvent>(OnTargetClicked);
 
             _velEndTurnBox = topBound.Q<VisualElement>("VelEndTurnBox");
             _velEndTurnBox.SetEnabled(false);
@@ -168,7 +166,6 @@ namespace Assets.Scripts.ScreenStates
 
             Storage.OnChangedHexaBoard += OnChangedHexaBoard;
             Storage.OnChangedHexaPlayer += OnChangedHexaPlayer;
-            Storage.OnNextPlayerTurn += OnNextPlayerTurn;
             Storage.OnBoardStateChanged += OnBoardStateChanged;
             Storage.OnStorageUpdated += OnStorageUpdated;
             Storage.OnNextBlocknumber += OnNextBlockNumber;
@@ -188,7 +185,6 @@ namespace Assets.Scripts.ScreenStates
 
             Storage.OnChangedHexaBoard -= OnChangedHexaBoard;
             Storage.OnChangedHexaPlayer -= OnChangedHexaPlayer;
-            Storage.OnNextPlayerTurn -= OnNextPlayerTurn;
             Storage.OnBoardStateChanged -= OnBoardStateChanged;
 
             Network.Client.ExtrinsicManager.ExtrinsicUpdated -= OnExtrinsicUpdated;
@@ -251,8 +247,6 @@ namespace Assets.Scripts.ScreenStates
         {
             if (!Network.Client.IsConnected)
             {
-                //_lblExtriniscInfo.text = "Not connected";
-                //_velExtrinsicFrame.style.backgroundColor = GameConstant.PastelRed;
                 _subscriptionOrder.Clear();
                 _subscriptionDict.Clear();
             }
@@ -271,6 +265,8 @@ namespace Assets.Scripts.ScreenStates
             {
                 _subscriptionOrder.Add(subscriptionId);
                 _subscriptionDict.Add(subscriptionId, extrinsicInfo);
+                // set the index on the newest subscription
+                _subscriptionIndex = _subscriptionOrder.Count - 1;
             }
             else
             {
@@ -318,8 +314,13 @@ namespace Assets.Scripts.ScreenStates
 
             if (extrinsicInfo.IsCompleted)
             {
+                var holdSubscriptionId = _subscriptionOrder[_subscriptionIndex];
                 _subscriptionOrder.Remove(subscriptionId);
                 _subscriptionDict.Remove(subscriptionId);
+                // set the index to correctly after removing an element
+                _subscriptionIndex = _subscriptionOrder.IndexOf(holdSubscriptionId);
+                _subscriptionIndex = _subscriptionIndex == -1 ? 0 : _subscriptionIndex;
+
             }
         }
 
@@ -384,22 +385,6 @@ namespace Assets.Scripts.ScreenStates
             _lblStoneValue.text = hexaPlayer[RessourceType.Stone].ToString();
             _lblGoldValue.text = hexaPlayer[RessourceType.Gold].ToString();
         }
-
-        private void OnNextPlayerTurn(byte playerTurn)
-        {
-            //FlowController.ChangeScreenSubState(ScreenState.PlayScreen, ScreenSubState.PlayNextTurn);
-        }
-
-        //private void UpdateTimerProgress(object source, ElapsedEventArgs e)
-        //{
-        //    // ChangeEvent height
-        //    var currentHeight = _velTimerProgress.style.height.value;
-        //    var nextHeight = currentHeight.value + Length.Percent(10).value;
-        //    if (nextHeight >= 100) nextHeight = 100;
-
-        //    Debug.Log($"Timer progress, height = {currentHeight}");
-        //    _velTimerProgress.style.height = Length.Percent(40);
-        //}
 
         private void OnBoardStateChanged(HexBoardState boardState)
         {
