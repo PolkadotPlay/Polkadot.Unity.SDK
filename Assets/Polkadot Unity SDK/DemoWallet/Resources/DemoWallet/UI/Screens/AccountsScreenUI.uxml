@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:Template name="HeaderBoxElement" src="project://database/Assets/Resources/UI/Boxes/HeaderBoxElement.uxml?fileID=9197481963319205126&amp;guid=93636438f421bbb4698baadc6e80b366&amp;type=3#HeaderBoxElement" />
+    <ui:Template name="HeaderBoxElement" src="project://database/Assets/Polkadot Unity SDK/DemoWallet/Resources/DemoWallet/UI/Boxes/HeaderBoxElement.uxml?fileID=9197481963319205126&amp;guid=93636438f421bbb4698baadc6e80b366&amp;type=3#HeaderBoxElement" />
     <Style src="project://database/Assets/Resources/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
     <ui:VisualElement name="AccountsScreen" style="flex-grow: 0; height: 1000px; width: 100%; flex-shrink: 1; min-width: auto; min-height: auto; flex-basis: auto; justify-content: flex-start; align-items: auto;">
         <ui:VisualElement name="TopBound" style="flex-grow: 0; flex-shrink: 0; height: 350px; width: 100%; justify-content: flex-start; align-items: auto;">

@@ -87,7 +87,7 @@ namespace Assets.Scripts.ScreenStates
             FlowController.TempAccountPassword = accountPassword;
             _btnUnlockWallet.SetEnabled(true);
 
-            _velLogo.style.rotate = new StyleRotate(new Rotate(Angle.Turns(0.5f)));
+            _velLogo.style.rotate = new StyleRotate(new Rotate(180)); // Angle.Turns(0.5f)
         }
 
         private void OnClickBtnUnlockWallet(ClickEvent evt)

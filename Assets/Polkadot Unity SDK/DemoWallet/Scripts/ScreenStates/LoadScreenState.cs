@@ -40,9 +40,9 @@ namespace Assets.Scripts.ScreenStates
             _velAnimSpinner.RegisterCallback<TransitionEndEvent>((evt) =>
             {
                 _velAnimSpinner.style.transitionDuration = new List<TimeValue> { new(0, TimeUnit.Second) };
-                _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(Angle.Turns(0)));
+                _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(0)); // Angle.Turns(0)
                 _velAnimSpinner.style.transitionDuration = new List<TimeValue> { new(1, TimeUnit.Second) };
-                _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(Angle.Turns(1)));
+                _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(360)); // Angle.Turns(1)
 
                 var qu = Random.Range(0, DemoWalletConstants.GameQuotes.Length);
                 lbProgressInfo.text = $"...{DemoWalletConstants.GameQuotes[qu]}...";
@@ -61,7 +61,7 @@ namespace Assets.Scripts.ScreenStates
 
             _velAnimSpinner.schedule.Execute(() =>
             {
-                _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(Angle.Turns(1)));
+                _velAnimSpinner.style.rotate = new StyleRotate(new Rotate(360)); // Angle.Turns(1)
             }).StartingIn(100); // Delay in milliseconds
 
             // subscribe to connection changes
