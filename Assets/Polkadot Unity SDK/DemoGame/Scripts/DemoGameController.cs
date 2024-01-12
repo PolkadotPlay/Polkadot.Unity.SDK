@@ -16,6 +16,7 @@ namespace Assets.Scripts
     public enum DemoGameSubScreen
     {
         MainChoose,
+        MainInvite,
         Play,
         PlaySelect,
         PlayTileSelect,
@@ -24,7 +25,7 @@ namespace Assets.Scripts
         PlayFinish,
         PlayWaiting,
         PlayRanking,
-        PlayTarget
+        PlayTarget,
     }
 
     public class DemoGameController : ScreenStateMachine<DemoGameScreen, DemoGameSubScreen>
@@ -78,6 +79,7 @@ namespace Assets.Scripts
             var mainScreenSubStates = new Dictionary<DemoGameSubScreen, IScreenState>
             {
                 { DemoGameSubScreen.MainChoose, new MainChooseSubState(this, mainScreen) },
+                { DemoGameSubScreen.MainInvite, new MainInviteSubState(this, mainScreen) },
                 { DemoGameSubScreen.Play, new MainPlaySubState(this, mainScreen) },
             };
             _subStateDictionary.Add(DemoGameScreen.MainScreen, mainScreenSubStates);

@@ -1,5 +1,6 @@
 using Schnorrkel.Keys;
 using Substrate.Integration;
+using Substrate.Integration.Client;
 using Substrate.Integration.Helper;
 using Substrate.NET.Wallet;
 using Substrate.NetApi;
@@ -18,12 +19,14 @@ namespace Assets.Scripts
         Alice,
         Bob,
         Charlie,
-        Dave
+        Dave,
+        Custom
     }
 
     public enum NodeType
     {
         Local,
+        Solo,
         Tanssi
     }
 
@@ -40,16 +43,7 @@ namespace Assets.Scripts
         public event ExtrinsicCheckHandler ExtrinsicCheck;
 
         public MiniSecret MiniSecretAlice => new MiniSecret(Utils.HexToByteArray("0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a"), ExpandMode.Ed25519);
-        public Account Alice => Account.Build(KeyType.Sr25519, MiniSecretAlice.ExpandToSecret().ToBytes(), MiniSecretAlice.GetPair().Public.Key);
-
-        public MiniSecret MiniSecretBob => new MiniSecret(Utils.HexToByteArray("0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89"), ExpandMode.Ed25519);
-        public Account Bob => Account.Build(KeyType.Sr25519, MiniSecretBob.ExpandToSecret().ToBytes(), MiniSecretBob.GetPair().Public.Key);
-
-        public MiniSecret MiniSecretCharlie => new MiniSecret(Utils.HexToByteArray("0xbc1ede780f784bb6991a585e4f6e61522c14e1cae6ad0895fb57b9a205a8f938"), ExpandMode.Ed25519);
-        public Account Charlie => Account.Build(KeyType.Sr25519, MiniSecretCharlie.ExpandToSecret().ToBytes(), MiniSecretCharlie.GetPair().Public.Key);
-
-        public MiniSecret MiniSecretDave => new MiniSecret(Utils.HexToByteArray("0x868020ae0687dda7d57565093a69090211449845a7e11453612800b663307246"), ExpandMode.Ed25519);
-        public Account Dave => Account.Build(KeyType.Sr25519, MiniSecretDave.ExpandToSecret().ToBytes(), MiniSecretDave.GetPair().Public.Key);
+        public Account SudoAlice => Account.Build(KeyType.Sr25519, MiniSecretAlice.ExpandToSecret().ToBytes(), MiniSecretAlice.GetPair().Public.Key);
 
         public MiniSecret MiniSecretSudo => new MiniSecret(Utils.HexToByteArray(""), ExpandMode.Ed25519);
         public Account SudoHexalem => Account.Build(KeyType.Sr25519, MiniSecretSudo.ExpandToSecret().ToBytes(), MiniSecretSudo.GetPair().Public.Key);
@@ -63,6 +57,7 @@ namespace Assets.Scripts
         private readonly NetworkType _networkType = NetworkType.Live;
 
         public AccountType CurrentAccountType { get; private set; }
+        public string CurrentAccountName { get; private set; }
 
         public NodeType CurrentNodeType { get; private set; }
 
@@ -77,7 +72,7 @@ namespace Assets.Scripts
             //Your code goes here
             CurrentAccountType = AccountType.Alice;
             CurrentNodeType = NodeType.Local;
-            Sudo = Alice;
+            Sudo = SudoAlice;
             _nodeUrl = "ws://127.0.0.1:9944";
             InitializeClient();
         }
@@ -114,32 +109,47 @@ namespace Assets.Scripts
             ExtrinsicCheck?.Invoke();
         }
 
-        public bool SetAccount(AccountType accountType)
+        public (Account, string) GetAccount(AccountType accountType, string custom = null)
         {
-            CurrentAccountType = accountType;
-
+            Account result;
+            string name;
             switch (accountType)
             {
                 case AccountType.Alice:
-                    Client.Account = Alice;
-                    break;
-
                 case AccountType.Bob:
-                    Client.Account = Bob;
-                    break;
-
                 case AccountType.Charlie:
-                    Client.Account = Charlie;
+                case AccountType.Dave:
+                    name = accountType.ToString();
+                    result = BaseClient.RandomAccount(GameConstant.AccountSeed, accountType.ToString(), KeyType.Sr25519);
                     break;
 
-                case AccountType.Dave:
-                    Client.Account = Dave;
+                case AccountType.Custom:
+                    name = custom.ToUpper();
+                    result = BaseClient.RandomAccount(GameConstant.AccountSeed, custom, KeyType.Sr25519);
                     break;
 
                 default:
-                    Client.Account = Alice;
+                    name = AccountType.Alice.ToString();
+                    result = BaseClient.RandomAccount(GameConstant.AccountSeed, AccountType.Alice.ToString(), KeyType.Sr25519); 
                     break;
             }
+
+            return (result, name);
+        }
+
+        public bool SetAccount(AccountType accountType, string custom = null)
+        {
+            if (accountType == AccountType.Custom && (string.IsNullOrEmpty(custom) || custom.Length < 3))
+            {
+                return false;
+            }
+
+            CurrentAccountType = accountType;
+
+            var tuple = GetAccount(accountType, custom);
+
+            Client.Account = tuple.Item1;
+            CurrentAccountName = tuple.Item2;
 
             return true;
         }
@@ -148,16 +158,22 @@ namespace Assets.Scripts
         {
             switch (CurrentNodeType)
             {
-                case NodeType.Tanssi:
-                    CurrentNodeType = NodeType.Local;
-                    _nodeUrl = "ws://127.0.0.1:9944";
-                    Sudo = Alice;
+                case NodeType.Local:
+                    CurrentNodeType = NodeType.Solo;
+                    _nodeUrl = "wss://hexalem-rpc.substrategaming.org";
+                    Sudo = SudoAlice;
                     break;
 
-                default:
+                case NodeType.Solo:
                     CurrentNodeType = NodeType.Tanssi;
                     _nodeUrl = "wss://fraa-dancebox-3023-rpc.a.dancebox.tanssi.network";
                     Sudo = SudoHexalem;
+                    break;
+
+                case NodeType.Tanssi:
+                    CurrentNodeType = NodeType.Local;
+                    _nodeUrl = "ws://127.0.0.1:9944";
+                    Sudo = SudoAlice;
                     break;
             }
 
@@ -190,7 +206,7 @@ namespace Assets.Scripts
         public void InitializeClient()
         {
             _client = new SubstrateNetwork(null, _networkType, _nodeUrl);
-            SetAccount(CurrentAccountType);
+            SetAccount(CurrentAccountType, CurrentAccountName);
         }
     }
 }

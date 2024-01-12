@@ -32,6 +32,7 @@ namespace Assets.Scripts.ScreenStates
         public Texture2D PortraitBob { get; }
         public Texture2D PortraitCharlie { get; }
         public Texture2D PortraitDave { get; }
+        public Texture2D PortraitCustom { get; }
 
         public int PlayerIndex { get; private set; }
 
@@ -76,6 +77,7 @@ namespace Assets.Scripts.ScreenStates
             PortraitBob = Resources.Load<Texture2D>($"DemoGame/Images/bob_portrait");
             PortraitCharlie = Resources.Load<Texture2D>($"DemoGame/Images/charlie_portrait");
             PortraitDave = Resources.Load<Texture2D>($"DemoGame/Images/dave_portrait");
+            PortraitCustom = Resources.Load<Texture2D>($"DemoGame/Images/custom_portrait");
         }
 
         public override void EnterState()
@@ -116,6 +118,10 @@ namespace Assets.Scripts.ScreenStates
 
                 case AccountType.Dave:
                     velPortrait.style.backgroundImage = new StyleBackground(PortraitDave);
+                    break;
+
+                case AccountType.Custom:
+                    velPortrait.style.backgroundImage = new StyleBackground(PortraitCustom);
                     break;
             }
 

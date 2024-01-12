@@ -3,6 +3,7 @@ using Substrate.Hexalem.Integration.Model;
 using Substrate.Integration.Helper;
 using Substrate.Integration.Model;
 using Substrate.NetApi.Model.Types;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -52,7 +53,9 @@ namespace Assets.Scripts
 
         public uint MockBlockNumber { get; internal set; }
 
-        //public int PlayerIndex { get; private set; }
+        public bool[] HasAccountBoard { get; internal set; }
+
+        private bool _isPolling;
 
         /// <summary>
         /// Awake is called when the script instance is being loaded
@@ -64,6 +67,10 @@ namespace Assets.Scripts
 
             UpdateHexalem = true;
             MockBlockNumber = 1;
+
+            HasAccountBoard = new bool[Enum.GetValues(typeof(AccountType)).Length];
+
+            _isPolling = false;
         }
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace Assets.Scripts
         private void Start()
         {
             InvokeRepeating(nameof(UpdatedBaseData), 1.0f, 2.0f);
+            //InvokeRepeating(nameof(UpdateHasPlayerBoards), 10.0f, 20.0f);
         }
 
         /// <summary>
@@ -99,8 +107,29 @@ namespace Assets.Scripts
             return true;
         }
 
+        private async void UpdateHasPlayerBoards()
+        {
+            if (!CanPollStorage())
+            {
+                return;
+            }
+
+            // todo replace by scraping all boards once in a while
+            foreach (AccountType player in Enum.GetValues(typeof(AccountType)))
+            {
+                var accountTuple = Network.GetAccount(player, "");
+                var accountBoard = await Network.Client.GetBoardAsync(accountTuple.Item1.Value, CancellationToken.None);
+                HasAccountBoard[(int)player] = accountBoard != null;
+            }
+        }
+
         private async void UpdatedBaseData()
         {
+            if (_isPolling)
+            {
+                return;
+            }
+
             // don't update hexalem on chain informations ...
             if (!UpdateHexalem)
             {
@@ -133,6 +162,12 @@ namespace Assets.Scripts
                 return;
             }
 
+            // make sure to not poll storage twice
+            _isPolling = true;
+
+            var stopwatch = new System.Diagnostics.Stopwatch(); // Create a Stopwatch instance
+            stopwatch.Start(); // Start timing
+
             AccountInfo = await Network.Client.GetAccountAsync(CancellationToken.None);
 
             var myBoard = await Network.Client.GetBoardAsync(Network.Client.Account.Value, CancellationToken.None);
@@ -161,9 +196,14 @@ namespace Assets.Scripts
                 HexaGame = HexalemWrapper.GetHexaGame(playerGame, playerBoards.ToArray());
                 // check for the event
                 HexaGameDiff(oldGame, HexaGame, PlayerIndex(Network.Client.Account).Value);
-            }
+            }     
 
             OnStorageUpdated?.Invoke(blockNumber.Value);
+
+            stopwatch.Stop(); // Stop timing
+            Debug.Log($"Poll Storage: {stopwatch.ElapsedMilliseconds} ms");
+
+            _isPolling = false;
         }
 
         public void HexaGameDiff(HexaGame oldGame, HexaGame newGame, int playerIndex)

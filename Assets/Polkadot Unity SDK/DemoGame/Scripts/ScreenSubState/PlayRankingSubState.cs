@@ -96,25 +96,26 @@ namespace Assets.Scripts
                 playerScoreInstance.Q<Label>("LblPlayerIndex").text = (i + 1).ToString();
                 playerScoreInstance.Q<Label>("LblTurn").text = i == Storage.HexaGame.PlayerTurn ? "TURN" : "";
                 var velPortrait = playerScoreInstance.Q<VisualElement>("VelPlayerPort");
-                if (player.Id.SequenceEqual(Network.Alice.Bytes))
+
+                if (player.Id.SequenceEqual(Network.GetAccount(AccountType.Alice).Item1.Bytes))
                 {
                     velPortrait.style.backgroundImage = new StyleBackground(PlayScreenState.PortraitAlice);
                 }
-                else if (player.Id.SequenceEqual(Network.Bob.Bytes))
+                else if (player.Id.SequenceEqual(Network.GetAccount(AccountType.Bob).Item1.Bytes))
                 {
                     velPortrait.style.backgroundImage = new StyleBackground(PlayScreenState.PortraitBob);
                 }
-                else if (player.Id.SequenceEqual(Network.Charlie.Bytes))
+                else if (player.Id.SequenceEqual(Network.GetAccount(AccountType.Charlie).Item1.Bytes))
                 {
                     velPortrait.style.backgroundImage = new StyleBackground(PlayScreenState.PortraitCharlie);
                 }
-                else if (player.Id.SequenceEqual(Network.Dave.Bytes))
+                else if (player.Id.SequenceEqual(Network.GetAccount(AccountType.Dave).Item1.Bytes))
                 {
                     velPortrait.style.backgroundImage = new StyleBackground(PlayScreenState.PortraitDave);
                 }
                 else
                 {
-                    velPortrait.style.backgroundImage = new StyleBackground(PlayScreenState.PortraitAlice);
+                    velPortrait.style.backgroundImage = new StyleBackground(PlayScreenState.PortraitCustom);
                 }
 
                 playerScoreInstance.Q<Label>("LblManaValue").text = player[RessourceType.Mana].ToString(); ;

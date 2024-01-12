@@ -7,6 +7,10 @@ namespace Assets.Scripts
 {
     public static class GameConstant
     {
+        public const int AccountSeed = 123456789;
+
+        public const int FaucetThreshold = 100;
+
         public static StyleColor ColorMythical => new StyleColor(new Color32(211, 194, 42, 255));
         public static StyleColor ColorLegendary => new StyleColor(new Color32(211, 116, 42, 255));
         public static StyleColor ColorEpic => new StyleColor(new Color32(165, 95, 255, 255));
@@ -23,8 +27,10 @@ namespace Assets.Scripts
         public static StyleColor PastelPink => new StyleColor(new Color32(192, 148, 204, 255));
         public static StyleColor PastelRed => new StyleColor(new Color32(195, 120, 146, 255));
         public static StyleColor PastelGreen => new StyleColor(new Color32(162, 208, 192, 255));
+        public static StyleColor PastelGray => new StyleColor(new Color32(61, 219, 207, 255));
 
-        public static StyleColor PastelGray => new StyleColor(new Color32(207, 207, 207, 255));
+        public static StyleColor AddPlayer => new StyleColor(new Color32(61, 219, 142, 255));
+        public static StyleColor RemPlayer => new StyleColor(new Color32(219, 61, 61, 255));
 
         public static StyleColor ColorUnselected => new StyleColor(new Color32(200, 175, 150, 255));
         public static StyleColor ColorSelected => new StyleColor(new Color32(150, 200, 150, 255));

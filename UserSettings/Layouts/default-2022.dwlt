@@ -8,20 +8,20 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 75
-    y: 51
-    width: 2193
-    height: 1333
+    x: 222
+    y: 93
+    width: 2012
+    height: 1244
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Game
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 321}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2193
-    height: 1333
+    width: 2012
+    height: 1244
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2193
+    width: 2012
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1313
-    width: 2193
+    y: 1224
+    width: 2012
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2193
-    height: 1283
+    width: 2012
+    height: 1194
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 344
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1736
-    height: 1283
+    width: 1589
+    height: 1194
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 261
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1736
-    height: 951
+    width: 1589
+    height: 817
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 262
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 261
-    height: 951
+    width: 343
+    height: 817
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -206,16 +206,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SimulatorWindow
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 261
+    x: 343
     y: 0
-    width: 1475
-    height: 951
-  m_MinSize: {x: 202, y: 221}
+    width: 1246
+    height: 817
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
@@ -224,7 +224,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 21}
   m_Selected: 3
-  m_LastSelected: 3
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 951
-    width: 1736
-    height: 332
+    y: 817
+    width: 1589
+    height: 377
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 18}
@@ -267,12 +267,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1736
+    x: 1589
     y: 0
-    width: 457
-    height: 1283
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 423
+    height: 1194
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -300,9 +300,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2012
+    x: 1811
     y: 81
-    width: 479
+    width: 456
     height: 1262
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -334,9 +334,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2012
+    x: 1811
     y: 81
-    width: 479
+    width: 456
     height: 1262
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -368,10 +368,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 340
+    x: 336
     y: 81
-    width: 1110
-    height: 909
+    width: 1473
+    height: 930
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -402,10 +402,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 75
-    y: 81
-    width: 260
-    height: 930
+    x: 222
+    y: 123
+    width: 342
+    height: 796
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -419,23 +419,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ac4b0000
+      m_SelectedIDs: 7e750000
       m_LastClickedID: 0
-      m_ExpandedIDs: 72dcffff14dfffff6ae1ffff18f7ffffc2f8ffff2cfbffff
+      m_ExpandedIDs: a274fffff074ffff3475ffffe679ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: UIDocument
-        m_OriginalName: UIDocument
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24082
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -887,10 +887,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 340
+    x: 194
     y: 81
-    width: 1110
-    height: 909
+    width: 1095
+    height: 864
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -921,10 +921,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 75
-    y: 1032
-    width: 1735
-    height: 311
+    x: 222
+    y: 940
+    width: 1588
+    height: 356
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -946,7 +946,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Polkadot Unity SDK/DemoExplorer/Scripts
+    - Assets/Polkadot Unity SDK/DemoExplorer
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -954,16 +954,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Polkadot Unity SDK/DemoExplorer/Scripts
+  - Assets/Polkadot Unity SDK/DemoExplorer
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\repos\API AND SDK\Polkadot.Unity.SDK
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 81}
-    m_SelectedIDs: 8c5d0000
-    m_LastClickedID: 23948
-    m_ExpandedIDs: 00000000525d0000545d0000565d0000585d00005c5d0000625d0000645d0000685d00006a5d00008a5d0000045e0000b864000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c8700000
+    m_LastClickedID: 28872
+    m_ExpandedIDs: 000000009070000096700000da70000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -991,7 +991,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000525d0000545d0000565d0000585d00005a5d00005c5d0000
+    m_ExpandedIDs: 000000009070000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1022,18 +1022,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000f65f0000505a000036640000805a00009e590000c8590000cc590000ec6e0000a05a0000f2590000305c00001066000028980000827a0300125a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scripts
-      m_OriginalName: Scripts
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23948
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -1067,10 +1067,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 41
-    y: 1040
-    width: 1970
-    height: 303
+    x: 1
+    y: 966
+    width: 1011
+    height: 384
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1102,9 +1102,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1811
-    y: 81
-    width: 456
-    height: 1262
+    y: 123
+    width: 422
+    height: 1173
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1137,21 +1137,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 13974, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Simulator
-    m_Image: {fileID: 8720083202187608617, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 336
-    y: 81
-    width: 1473
-    height: 930
+    x: 565
+    y: 123
+    width: 1244
+    height: 796
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1163,34 +1163,68 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SerializedViewNames:
-  - UnityEditor.GameView
+  - UnityEditor.DeviceSimulation.SimulatorWindow
   m_SerializedViewValues:
-  - D:\repos\API AND SDK\Polkadot.Unity.SDK\Library\PlayModeViewStates\8836c360343ffba4faf28d72f5772f79
-  m_PlayModeViewName: Device Simulator
+  - D:\repos\API AND SDK\Polkadot.Unity.SDK\Library\PlayModeViewStates\f4417d329eb5dec4a9816236df693903
+  m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1170, y: 2532}
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1080, y: 2340}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 2
+  m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
-  m_SimulatorState:
-    controlPanelVisible: 0
-    controlPanelWidth: 0
-    controlPanelFoldoutKeys:
-    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
-    controlPanelFoldoutValues: 00
-    pluginNames:
-    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
-    pluginStates:
-    - '{}'
-    scale: 34
-    fitToScreenEnabled: 1
-    rotationDegree: 0
-    highlightSafeAreaEnabled: 0
-    friendlyName: Apple iPhone 12
-    screenIndex: 0
-    networkReachability: 1
-    systemLanguage: 10
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -540
+    m_HBaseRangeMax: 540
+    m_VBaseRangeMin: -1170
+    m_VBaseRangeMax: 1170
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1244
+      height: 775
+    m_Scale: {x: 0.33119658, y: 0.33119658}
+    m_Translation: {x: 622, y: 387.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -1878.0387
+      y: -1170
+      width: 3756.0774
+      height: 2340
+    m_MinimalGUI: 1
+  m_defaultScale: 0.33119658
+  m_LastWindowPixelSize: {x: 1244, y: 796}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}

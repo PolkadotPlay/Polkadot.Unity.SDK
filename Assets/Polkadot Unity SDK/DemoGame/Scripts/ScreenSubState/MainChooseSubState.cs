@@ -181,28 +181,13 @@ namespace Assets.Scripts.ScreenStates
 
         private async void OnBtnPlayClicked(ClickEvent evt)
         {
-            Storage.UpdateHexalem = true;
-
             if (Storage.HexaGame != null)
             {
                 FlowController.ChangeScreenState(DemoGameScreen.PlayScreen);
             }
-            else if (!Network.Client.ExtrinsicManager.Running.Any())
+            else
             {
-                _btnTrain.SetEnabled(false);
-                _btnPlay.SetEnabled(false);
-                _btnPlay.text = "WAIT";
-                var subscriptionId = await Network.Client.CreateGameAsync(Network.Client.Account, new List<Account>() { Network.Client.Account }, 25, 1, CancellationToken.None);
-                if (subscriptionId == null)
-                {
-                    _btnTrain.SetEnabled(true);
-                    _btnPlay.SetEnabled(true);
-                    return;
-                }
-
-                Debug.Log($"Extrinsic[CreateGameAsync] submited: {subscriptionId}");
-
-                _subscriptionId = subscriptionId;
+                FlowController.ChangeScreenSubState(DemoGameScreen.MainScreen, DemoGameSubScreen.MainInvite);
             }
         }
 

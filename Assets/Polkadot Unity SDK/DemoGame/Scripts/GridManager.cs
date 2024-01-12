@@ -87,33 +87,46 @@ namespace Assets.Scripts
 
         private void Update()
         {
+            // Check for touch input
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);
+                HandleInput(touch.phase, touch.position);
+            }
+            // Check for mouse input
+            else if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0) || Input.GetMouseButtonUp(0))
+            {
+                TouchPhase phase = Input.GetMouseButtonDown(0) ? TouchPhase.Began :
+                                  (Input.GetMouseButtonUp(0) ? TouchPhase.Ended : TouchPhase.Moved);
+                Vector2 position = Input.mousePosition;
+                HandleInput(phase, position);
+            }
+        }
 
-                switch (touch.phase)
-                {
-                    case TouchPhase.Began:
-                        touchStart = touch.position;
-                        isSwiping = false;
-                        break;
+        private void HandleInput(TouchPhase phase, Vector2 position)
+        {
+            switch (phase)
+            {
+                case TouchPhase.Began:
+                    touchStart = position;
+                    isSwiping = false;
+                    break;
 
-                    case TouchPhase.Moved:
-                        touchEnd = touch.position;
-                        if (!isSwiping && !isPointerOverUI && Vector2.Distance(touchStart, touchEnd) >= swipeThreshold)
-                        {
-                            ProcessSwipe(touchEnd.x - touchStart.x, touchEnd.y - touchStart.y);
-                            isSwiping = true;
-                        }
-                        break;
+                case TouchPhase.Moved:
+                    touchEnd = position;
+                    if (!isSwiping && !isPointerOverUI && Vector2.Distance(touchStart, touchEnd) >= swipeThreshold)
+                    {
+                        ProcessSwipe(touchEnd.x - touchStart.x, touchEnd.y - touchStart.y);
+                        isSwiping = true;
+                    }
+                    break;
 
-                    case TouchPhase.Ended:
-                        if (!isSwiping)
-                        {
-                            ProcessTap(touch.position);
-                        }
-                        break;
-                }
+                case TouchPhase.Ended:
+                    if (!isSwiping)
+                    {
+                        ProcessTap(position);
+                    }
+                    break;
             }
         }
 

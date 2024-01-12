@@ -1,4 +1,7 @@
 ﻿using Substrate.Integration;
+using Substrate.Integration.Helper;
+using System;
+using System.Linq;
 using System.Numerics;
 using System.Threading;
 using UnityEngine;
@@ -12,13 +15,28 @@ namespace Assets.Scripts.ScreenStates
         private Label _lblAddress;
         private Label _lblToken;
 
+        private Button _btnFaucet;
+
         private Label _lblNodeVersion;
         private Label _lblNodeUrl;
         private Label _lblConnection;
         private Label _lblBlockNumber;
 
+        public Texture2D PortraitAlice { get; }
+        public Texture2D PortraitBob { get; }
+        public Texture2D PortraitCharlie { get; }
+        public Texture2D PortraitDave { get; }
+        public Texture2D PortraitCustom { get; }
+
         public MainScreenState(DemoGameController _flowController)
-            : base(_flowController) { }
+            : base(_flowController) {
+
+            PortraitAlice = Resources.Load<Texture2D>($"DemoGame/Images/alice_portrait");
+            PortraitBob = Resources.Load<Texture2D>($"DemoGame/Images/bob_portrait");
+            PortraitCharlie = Resources.Load<Texture2D>($"DemoGame/Images/charlie_portrait");
+            PortraitDave = Resources.Load<Texture2D>($"DemoGame/Images/dave_portrait");
+            PortraitCustom = Resources.Load<Texture2D>($"DemoGame/Images/custom_portrait");
+        }
 
         public override void EnterState()
         {
@@ -38,6 +56,10 @@ namespace Assets.Scripts.ScreenStates
             _lblAccount = topBound.Query<Label>("LblAccount");
             _lblAddress = topBound.Query<Label>("LblAddress");
             _lblToken = topBound.Query<Label>("LblToken");
+
+            _btnFaucet = topBound.Query<Button>("BtnFaucet");
+            _btnFaucet.RegisterCallback<ClickEvent>(OnFaucetClicked);
+            _btnFaucet.SetEnabled(false);
 
             _lblNodeUrl = topBound.Query<Label>("LblNodeUrl");
             _lblNodeUrl.text = Network.CurrentNodeType.ToString();
@@ -89,28 +111,57 @@ namespace Assets.Scripts.ScreenStates
         {
             _lblBlockNumber.text = blocknumber.ToString();
 
-            if (Network.Client.Account != null)
+            if (Network.Client.Account == null)
             {
-                _lblAccount.text = Network.CurrentAccountType.ToString();
-                Debug.Log(Network.Client.Account.Value);
-                var address = Network.Client.Account.Value;
-                _lblAddress.text = address.Substring(0, 6) + " ... " + address.Substring(20, 6);
+                return;
             }
-            else
-            {
-                //_lblAccount.text = "...";
-            }
+
+            _btnFaucet.SetEnabled(false);
+
+            _lblAccount.text = Network.CurrentAccountName;
+            
+            //Debug.Log(Network.Client.Account.Value);
+            
+            var address = Network.Client.Account.Value;
+            _lblAddress.text = address.Substring(0, 6) + " ... " + address.Substring(20, 6);
 
             if (Storage.AccountInfo != null && Storage.AccountInfo.Data != null)
             {
-                _lblToken.text = GameConstant.BalanceFormatter(BigInteger.Divide(Storage.AccountInfo.Data.Free, new BigInteger(SubstrateNetwork.DECIMALS))) + " HEXA";
+                var amount = BigInteger.Divide(Storage.AccountInfo.Data.Free, new BigInteger(SubstrateNetwork.DECIMALS));
+
+                _lblToken.text = GameConstant.BalanceFormatter(amount) + " HEXA";
                 var specName = Network.Client.SubstrateClient.RuntimeVersion.SpecName;
                 _lblNodeVersion.text = specName.Length > 20 ? $"{specName[..17]}..." : specName;
+
+                // only enable if
+                _btnFaucet.SetEnabled(!Network.Client.ExtrinsicManager.Running.Any() && GameConstant.FaucetThreshold < 100);
             }
             else
             {
-                //_lblToken.text = ".";
+                _btnFaucet.SetEnabled(!Network.Client.ExtrinsicManager.Running.Any());
             }
+        }
+
+        private async void OnFaucetClicked(ClickEvent evt)
+        {
+            _btnFaucet.SetEnabled(false);
+
+            var sender = Network.Sudo;
+            var target = Network.Client.Account;
+
+            var amountToTransfer = new BigInteger(1000 * SubstrateNetwork.DECIMALS);
+
+            Debug.Log($"[{nameof(NetworkManager)})] Send {amountToTransfer} from {sender.ToAccountId32().ToAddress()} to {target.ToAccountId32().ToAddress()}");
+            
+            var subscriptionId = await Network.Client.TransferKeepAliveAsync(sender, target.ToAccountId32(), amountToTransfer, 1, CancellationToken.None);
+            if (subscriptionId == null)
+            {
+                Debug.LogError($"[{nameof(NetworkManager)}] Transfer failed");
+                _btnFaucet.SetEnabled(true);
+                return;
+            }
+
+            Debug.Log($"[{nameof(NetworkManager)}] Transfer executed!");
         }
     }
 }
