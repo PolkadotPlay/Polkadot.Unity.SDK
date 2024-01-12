@@ -23,7 +23,7 @@ namespace Assets.Scripts
         private Button _btnActionTitle;
         private Button _btnActionCancel;
 
-        public PlayTileSelectSubState(FlowController flowController, GameBaseState parent)
+        public PlayTileSelectSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent)
         {
             _emptyMat = Resources.Load<Material>("DemoGame/Materials/empty");

@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
     public abstract class GameBaseState : IScreenState
     {
-        protected FlowController FlowController { get; private set; }
+        protected DemoGameController FlowController { get; private set; }
 
         protected GameBaseState ParentState { get; private set; }
 
@@ -15,7 +15,7 @@ namespace Assets.Scripts
 
         protected GridManager Grid => GridManager.GetInstance();
 
-        protected GameBaseState(FlowController flowController, GameBaseState parentState = null)
+        protected GameBaseState(DemoGameController flowController, GameBaseState parentState = null)
         {
             FlowController = flowController;
             ParentState = parentState;

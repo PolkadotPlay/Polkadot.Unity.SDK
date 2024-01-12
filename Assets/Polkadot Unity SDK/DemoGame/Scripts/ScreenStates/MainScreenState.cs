@@ -17,7 +17,7 @@ namespace Assets.Scripts.ScreenStates
         private Label _lblConnection;
         private Label _lblBlockNumber;
 
-        public MainScreenState(FlowController _flowController)
+        public MainScreenState(DemoGameController _flowController)
             : base(_flowController) { }
 
         public override void EnterState()

@@ -27,7 +27,7 @@ namespace Assets.Scripts
         PlayTarget
     }
 
-    public class FlowController : ScreenStateMachine<DemoGameScreen, DemoGameSubScreen>
+    public class DemoGameController : ScreenStateMachine<DemoGameScreen, DemoGameSubScreen>
     {
         internal NetworkManager Network => NetworkManager.GetInstance();
         internal StorageManager Storage => StorageManager.GetInstance();
@@ -55,6 +55,8 @@ namespace Assets.Scripts
         {
             var root = GetComponent<UIDocument>().rootVisualElement;
             VelContainer = root.Q<VisualElement>("VelContainer");
+
+            VelContainer.RemoveAt(1);
 
             if (VelContainer.childCount > 1)
             {

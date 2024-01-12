@@ -58,7 +58,7 @@ namespace Assets.Scripts.ScreenStates
         private List<string> _subscriptionOrder;
         private Dictionary<string, ExtrinsicInfo> _subscriptionDict;
 
-        public PlayScreenState(FlowController _flowController)
+        public PlayScreenState(DemoGameController _flowController)
             : base(_flowController)
         {
             // load assets here

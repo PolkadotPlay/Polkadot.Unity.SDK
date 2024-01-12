@@ -15,7 +15,7 @@ namespace Assets.Scripts.ScreenStates
         private Label _lblPlayerName;
         private Label _lblNodeType;
 
-        public StartScreen(FlowController _flowController)
+        public StartScreen(DemoGameController _flowController)
             : base(_flowController)
         {
             _portraitAlice = Resources.Load<Texture2D>($"DemoGame/Images/alice_portrait");

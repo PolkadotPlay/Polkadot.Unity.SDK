@@ -1,6 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Resources/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
+    <ui:Template name="LoginScreenUI" src="project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Resources/DemoWallet/UI/Screens/LoginScreenUI.uxml?fileID=9197481963319205126&amp;guid=c798c25cafe3a2643bf4129aa39f3af7&amp;type=3#LoginScreenUI" />
+    <Style src="project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Resources/DemoWallet/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
     <ui:VisualElement name="VelContainer" class="main-bg-light">
         <ui:VisualElement name="VelTopFiller" style="flex-grow: 0; width: 100%; height: 2%; flex-shrink: 0;" />
+        <ui:Instance template="LoginScreenUI" name="LoginScreenUI" style="width: 100%; height: 98%;" />
     </ui:VisualElement>
 </ui:UXML>

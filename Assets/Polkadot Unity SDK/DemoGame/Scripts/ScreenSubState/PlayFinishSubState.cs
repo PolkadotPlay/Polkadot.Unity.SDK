@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private Label _lblActionInfo;
         private Label _lblActionTitle;
 
-        public PlayFinishSubState(FlowController flowController, GameBaseState parent)
+        public PlayFinishSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent) { }
 
         public override void EnterState()

@@ -18,7 +18,7 @@ namespace Assets.Scripts
 
         private Label _lblTileDescription;
 
-        public PlayTileUpgradeSubState(FlowController flowController, GameBaseState parent)
+        public PlayTileUpgradeSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent) { }
 
         public override void EnterState()

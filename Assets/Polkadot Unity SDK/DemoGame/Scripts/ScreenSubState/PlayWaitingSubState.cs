@@ -14,7 +14,7 @@ namespace Assets.Scripts
 
         private Label _lblActionInfo;
 
-        public PlayWaitingSubState(FlowController flowController, GameBaseState parent)
+        public PlayWaitingSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent) { }
 
         public override void EnterState()

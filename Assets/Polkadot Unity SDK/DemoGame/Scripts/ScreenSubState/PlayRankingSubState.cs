@@ -21,7 +21,7 @@ namespace Assets.Scripts
 
         private Label _lblActionInfo;
 
-        public PlayRankingSubState(FlowController flowController, GameBaseState parent)
+        public PlayRankingSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent)
         {
             _playerScoreElement = Resources.Load<VisualTreeAsset>($"DemoGame/UI/Elements/PlayerScoreElement");

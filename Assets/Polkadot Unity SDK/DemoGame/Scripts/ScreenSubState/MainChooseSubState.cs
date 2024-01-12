@@ -23,7 +23,7 @@ namespace Assets.Scripts.ScreenStates
 
         private string _subscriptionId;
 
-        public MainChooseSubState(FlowController flowController, GameBaseState parent)
+        public MainChooseSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent) { }
 
         public override void EnterState()

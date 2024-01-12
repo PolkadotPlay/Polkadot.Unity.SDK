@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private ScrollView _scvSelection;
         private Label _lblActionInfo;
 
-        public PlaySelectSubState(FlowController flowController, GameBaseState parent)
+        public PlaySelectSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent) { }
 
         public override void EnterState()

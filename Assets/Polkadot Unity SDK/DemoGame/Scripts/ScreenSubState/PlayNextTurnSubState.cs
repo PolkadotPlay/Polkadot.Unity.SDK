@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private Label _lblActionInfo;
         private Label _lblActionTitle;
 
-        public PlayNextTurnSubState(FlowController flowController, GameBaseState parent)
+        public PlayNextTurnSubState(DemoGameController flowController, GameBaseState parent)
             : base(flowController, parent) { }
 
         public override void EnterState()
