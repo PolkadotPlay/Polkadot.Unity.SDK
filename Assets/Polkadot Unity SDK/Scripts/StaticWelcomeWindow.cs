@@ -1,14 +1,14 @@
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using UnityEditor.VSAttribution.SubstrateGaming;
+//using UnityEditor.VSAttribution.SubstrateGaming;
 using UnityEditor.SceneManagement;
 
 namespace Assets.Scripts
 {
     public class StaticWelcomeWindow : EditorWindow
     {
-        static readonly Vector2 s_WindowSize = new Vector2(450, 800);
+        static readonly Vector2 s_WindowSize = new Vector2(450, 710);
 
         private Texture2D bannerTexture; // Texture for the banner
 
@@ -96,8 +96,6 @@ namespace Assets.Scripts
 
             DrawLine(Color.gray);
 
-            GUILayout.Space(10);
-
             // Documentation and Support Section
             GUILayout.Label("Documentation and Support", EditorStyles.boldLabel);
 
@@ -124,13 +122,13 @@ namespace Assets.Scripts
             partnerName = ""; // VS Partner Name
             customerUid = ""; // VS Customer UID
 
-            GUILayout.Space(20f);
+            //GUILayout.Space(20f);
 
-            if (GUILayout.Button("Send Attribution", GUILayout.Width(buttonWidth), GUILayout.Height(buttonHeight)))
-            {
-                var result = VSAttribution.SendAttributionEvent(actionName, partnerName, customerUid);
-                Debug.Log($"[VS Attribution] Attribution Event returned status: {result}!");
-            }
+            //if (GUILayout.Button("Send Attribution", GUILayout.Width(buttonWidth), GUILayout.Height(buttonHeight)))
+            //{
+            //    var result = VSAttribution.SendAttributionEvent(actionName, partnerName, customerUid);
+            //    Debug.Log($"[VS Attribution] Attribution Event returned status: {result}!");
+            //}
 
         }
 

@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Substrate.Hexalem.Engine</name>
+    </assembly>
+    <members>
+        <member name="F:Substrate.Hexalem.Engine.GridSize.Small">
+            <summary>
+            3x3 tiles
+            </summary>
+        </member>
+        <member name="F:Substrate.Hexalem.Engine.GridSize.Medium">
+            <summary>
+            5x5 tiles
+            </summary>
+        </member>
+        <member name="F:Substrate.Hexalem.Engine.GridSize.Large">
+            <summary>
+            7x7 tiles
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.CreateGame(System.UInt32,System.Collections.Generic.List{Substrate.Hexalem.Engine.HexaPlayer},Substrate.Hexalem.Engine.GridSize)">
+            <summary>
+            Create a new game
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="players"></param>
+            <param name="gridSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.ChooseAndPlace(System.UInt32,Substrate.Hexalem.Engine.HexaGame,System.Byte,System.Int32,System.Int32)">
+            <summary>
+            Player chose a tile and play it
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <param name="playerIndex"></param>
+            <param name="selectionIndex"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.ChooseAndPlace(System.UInt32,Substrate.Hexalem.Engine.HexaGame,System.Byte,System.Int32,System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Player chose a tile and play it
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <param name="playerIndex"></param>
+            <param name="selectionIndex"></param>
+            <param name="coords"></param>
+            <param name="logger"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.Upgrade(System.UInt32,Substrate.Hexalem.Engine.HexaGame,System.Byte,System.Int32)">
+            <summary>
+            Player upgrade a tile
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <param name="playerIndex"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.Upgrade(System.UInt32,Substrate.Hexalem.Engine.HexaGame,System.Byte,System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Player upgrade a tile
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <param name="playerIndex"></param>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.FinishTurn(System.UInt32,Substrate.Hexalem.Engine.HexaGame,System.Byte)">
+            <summary>
+            Player finish his turn or win the game by call a late opponent
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <param name="playerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.ForceFinishTurn(System.UInt32,Substrate.Hexalem.Engine.HexaGame,System.Byte)">
+            <summary>
+            Force an opponents turn to finish
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <param name="playerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.Game.ReceiveRewards(System.UInt32,Substrate.Hexalem.Engine.HexaGame)">
+            <summary>
+            Receive rewards from the game
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="hexaGame"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Substrate.Hexalem.Engine.GameConfig.TILE_COSTS">
+            <summary>
+            Tile offer
+            </summary>
+        </member>
+        <member name="F:Substrate.Hexalem.Engine.GameEnd.PlayerWin">
+            <summary>
+            Player win by reaching his WinCondition
+            </summary>
+        </member>
+        <member name="F:Substrate.Hexalem.Engine.GameEnd.Tie">
+            <summary>
+            Every player has his board full
+            </summary>
+        </member>
+        <member name="F:Substrate.Hexalem.Engine.GameEnd.RageQuit">
+            <summary>
+            A player play too slowly or ragequit
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.IHexaBase.Init(System.UInt32)">
+            <summary>
+            Init an hexa item
+            </summary>
+            <param name="blockNumber"></param>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.IHexaBase.NextRound(System.UInt32)">
+            <summary>
+            Action to perform on next round
+            </summary>
+            <param name="blockNumber"></param>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.IHexaBase.PostMove(System.UInt32)">
+            <summary>
+            Trigger after a player move
+            </summary>
+            <param name="blockNumber"></param>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.#ctor(System.Byte[])">
+            <summary>
+            HexGrid constructor, bytes need to be of size 9, 25 or 49
+            An odd number power two, to have a middle tile
+            </summary>
+            <param name="bytes"></param>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaBoard.Item(System.Int32)">
+            <summary>
+            Indexer to access the internal array
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.ToIndex(System.Nullable{System.ValueTuple{System.Int32,System.Int32}})">
+            <summary>
+            Get the side length of the grid
+            </summary>
+            <param name="q"></param>
+            <param name="r"></param>
+            <returns></returns>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.ToCoords(System.Int32)">
+            <summary>
+            Convert a 1D array index back to hexagonal grid coordinates (q, r)
+            </summary>
+            <param name="index">The index in the 1D array.</param>
+            <returns>A tuple (q, r) representing hexagonal coordinates.</returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.GetNeighbors(System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Get the neighbors of a hex tile in the grid
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.SetPatterns(System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Set patterns only around a tile and it's impacting neighbours
+            </summary>
+            <param name="tileCoords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.SetPatterns">
+            <summary>
+            Set patterns on the whole grid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.SetPatternAroundTile(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="tileIndex"></param>
+             <returns></returns>
+             <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.GetPattern(System.Collections.Generic.List{System.Nullable{System.ValueTuple{System.Int32,Substrate.Hexalem.Engine.HexaTile}}})">
+            <summary>
+            Get the pattern of a hex tile in the grid
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.IsValidHex(System.Int32,System.Int32)">
+            <summary>
+            Check if the hexagon at (q, r) is within the valid bounds of the grid
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.CanPlace(System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Check if a tile can be placed on the board
+            </summary>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.CanPlace(System.Nullable{System.Int32})">
+            <summary>
+            Check if a tile can be placed on the board
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.Place(System.ValueTuple{System.Int32,System.Int32},Substrate.Hexalem.Engine.HexaTile)">
+            <summary>
+            Place a tile on the board
+            </summary>
+            <param name="coords"></param>
+            <param name="tile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.Place(System.Nullable{System.Int32},Substrate.Hexalem.Engine.HexaTile)">
+            <summary>
+            Place a tile on the board
+            </summary>
+            <param name="index"></param>
+            <param name="tile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.Stats">
+            <summary>
+            Get the stats of the board
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaBoard.IsSame(Substrate.Hexalem.Engine.HexaBoard)">
+            <summary>
+            Check if two boards are the same
+            </summary>
+            <param name="compare"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Hexalem.Engine.HexaGame">
+            <summary>
+            HexaGame storage class
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.HexaTuples">
+            <summary>
+            Associate a player and his board
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.UnboundTileOffers">
+            <summary>
+            Tiles that can be bought by players
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.CurrentPlayerBoard">
+            <summary>
+            Shortcut to current player board instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.CurrentPlayer">
+            <summary>
+            Shortcut to current player instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.RefillSelection(System.UInt32,System.Int32)">
+            <summary>
+            Refill selection
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="selectBase">selection size</param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CanChooseAndPlace(System.Byte,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="playerIndex"></param>
+             <param name="selectionIndex"></param>
+             <param name="gridIndex"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CanChooseAndPlace(System.Byte,System.Int32,System.ValueTuple{System.Int32,System.Int32})">
+            <param name="playerIndex"></param>
+            <param name="selectionIndex"></param>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.ChooseAndPlace(System.Byte,System.Int32,System.Int32)">
+            <summary>
+            Choose and place a tile on the board
+            </summary>
+            <param name="playerIndex"></param>
+            <param name="selectionIndex"></param>
+            <param name="gridIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.ChooseAndPlace(System.Byte,System.Int32,System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Choose and place a tile on the board
+            </summary>
+            <param name="playerIndex"></param>
+            <param name="selectionIndex"></param>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CanUpgrade(System.Byte,System.Int32)">
+            <summary>
+            Can upgrade a tile
+            </summary>
+            <param name="playerIndex"></param>
+            <param name="gridIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CanUpgrade(System.Byte,System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Can upgrade a tile
+            </summary>
+            <param name="playerIndex"></param>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.Upgrade(System.Byte,System.Int32)">
+            <summary>
+            Upgrade a tile
+            </summary>
+            <param name="playerIndex"></param>
+            <param name="gridIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.Upgrade(System.Byte,System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Upgrade a tile
+            </summary>
+            <param name="playerIndex"></param>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CanFinishTurn(System.UInt32,System.Byte)">
+            <summary>
+            Can finish turn
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="playerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.FinsihTurn(System.UInt32,System.Byte)">
+            <summary>
+            Finish turn
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="playerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CanForceFinishTurn(System.UInt32,System.Byte)">
+            <summary>
+            Can force finish turn
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="playerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.ForceFinsihTurn(System.UInt32,System.Byte)">
+            <summary>
+            Force finish turn
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="playerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.IsFinished">
+            <summary>
+            Check if a player has won the game
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.RenewSelection(System.UInt32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="blockNumber"></param>
+             <param name="selectBase"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.CalcRewards(System.UInt32,System.Byte)">
+            <summary>
+            Calculate rewards for a player
+            </summary>
+            <param name="blockNumber"></param>
+            <param name="playerIndex"></param>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.EnsureCurrentPlayer(System.Byte)">
+            <summary>
+            Check if playerIndex is the right <see cref="P:Substrate.Hexalem.Engine.HexaGame.PlayerTurn"/>
+            </summary>
+            <param name="playerIndex"></param>
+            <returns>True if it is a valid playerIndex</returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.EnsureRessourcesToUpgrade(Substrate.Hexalem.Engine.HexaPlayer,Substrate.Hexalem.Engine.HexaTile)">
+            <summary>
+            Ensure that the player has enough ressources to upgrade the tile
+            </summary>
+            <param name="player"></param>
+            <param name="tile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.EnsureTimePassed(System.UInt32)">
+            <summary>
+            Ensure that the allowed time to play passed
+            </summary>
+            <param name="blockNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.EnsureRessourcesToPlay(Substrate.Hexalem.Engine.HexaPlayer,Substrate.Hexalem.Engine.TileOffer)">
+            <summary>
+            Ensure that the player has enough ressources to play the tile
+            </summary>
+            <param name="player"></param>
+            <param name="tile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.EnsureValidSelection(System.Int32)">
+            <summary>
+            Ensure that the selection index is valid
+            </summary>
+            <param name="selectionIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.EnsureValidCoords(Substrate.Hexalem.Engine.HexaBoard,System.ValueTuple{System.Int32,System.Int32})">
+            <summary>
+            Ensure that the coords are valid
+            </summary>
+            <param name="board"></param>
+            <param name="coords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaGame.Evaluate(Substrate.Hexalem.Engine.RessourceType,Substrate.Hexalem.Engine.HexaPlayer,Substrate.Hexalem.Engine.HexaBoardStats)">
+            <summary>
+            Evaluate a ressource type for a player
+            </summary>
+            <param name="resourceType"></param>
+            <param name="player"></param>
+            <param name="boardStats"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.HexBoardRound">
+            <summary>
+            Holding the current round number
+            There is a maximum of 64 rounds per game
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.PlayersCount">
+            <summary>
+            Number of players in the game
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.PlayerTurn">
+            <summary>
+            Player index which is currently play
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.SelectBase">
+            <summary>
+            Nb tiles a player can buy during his turn
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaGame.LastMove">
+            <summary>
+            Last block number when a player made a move
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaPlayer.HasReachedTargetGoal">
+            <summary>
+            Ha
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaTile.IsEmpty">
+            <summary>
+            Is an empty tile
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaTile.Same(Substrate.Hexalem.Engine.HexaTile)">
+            <summary>
+            Same tile type
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Hexalem.Engine.HexaTile.Upgrade">
+            <summary>
+            Upgrade a tile
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaTile.TileLevel">
+            <summary>
+            2 bits
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaTile.TileType">
+            <summary>
+            3 bits
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Engine.HexaTile.TilePattern">
+            <summary>
+            3 bits
+            </summary>
+        </member>
+    </members>
+</doc>

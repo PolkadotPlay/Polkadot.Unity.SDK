@@ -1,0 +1,1116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Substrate.Hexalem.Integration</name>
+    </assembly>
+    <members>
+        <member name="T:Substrate.Integration.Call.ICall">
+            <summary>
+            Call interface to be implemented by all calls
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Call.ICall.ToCall">
+            <summary>
+            Convert the call to a runtime call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Call.PalletBalances">
+            <summary>
+            Pallet Balances
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Call.PalletBalances.BalancesTransferKeepAlive(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Numerics.BigInteger)">
+            <summary>
+            Balances transfer keep alive call
+            </summary>
+            <param name="target"></param>
+            <param name="amount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Call.PalletBalances.BalancesTransfer(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Numerics.BigInteger)">
+            <summary>
+            Balances transfer call
+            </summary>
+            <param name="target"></param>
+            <param name="amount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Call.PalletHexalem">
+            <summary>
+            Pallet Hexalem
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Call.PalletHexalem.HexalemCreateGame(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[],System.Byte)">
+            <summary>
+            Create game
+            </summary>
+            <param name="players"></param>
+            <param name="gridSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Call.PalletHexalem.HexalemPlay(System.Byte,System.Byte,System.Numerics.BigInteger)">
+            <summary>
+            Play
+            </summary>
+            <param name="placeIndex"></param>
+            <param name="buyIndex"></param>
+            <param name="payType"></param>
+            <param name="amount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Call.PalletHexalem.HexalemFinishTurn">
+            <summary>
+            Finish turn
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Call.PalletHexalem.HexalemRootDeleteGame(System.Byte[])">
+            <summary>
+            Root delete game
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Client.BaseClient">
+            <summary>
+            Base client
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.BaseClient.Alice">
+            <summary>
+            Alice account
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.BaseClient.ExtrinsicManager">
+            <summary>
+            Extrinsic manager, used to manage extrinsic subscriptions and the corresponding states.
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.BaseClient.SubscriptionManager">
+            <summary>
+            Subscription manager, used to manage subscriptions of storage elements.
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.BaseClient.SubstrateClient">
+            <summary>
+            Substrate Extension Client
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.BaseClient.IsConnected">
+            <summary>
+            Is connected to the network
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.BaseClient.NetworkType">
+            <summary>
+            Network type
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.#ctor(System.String,Substrate.Integration.Helper.NetworkType,System.Int32)">
+            <summary>
+            Base Client Constructor
+            </summary>
+            <param name="url"></param>
+            <param name="networkType"></param>
+            <param name="maxConcurrentCalls"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.ConnectAsync(System.Boolean,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Connect to the network
+            </summary>
+            <param name="useMetadata"></param>
+            <param name="standardSubstrate"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.DisconnectAsync">
+            <summary>
+            Disconnect from the network
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.CanExtrinsic(System.String,System.Int32)">
+            <summary>
+            Check if extrinsic can be sent
+            </summary>
+            <param name="extrinsicType"></param>
+            <param name="concurrentTasks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.HasMaxConcurentTaskRunning">
+            <summary>
+            Check if we have maximum of concurrent tasks running reached
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.HasToManyConcurentTaskRunning(System.String,System.Int32)">
+            <summary>
+            Check if we have maximum of concurrent tasks running reached
+            </summary>
+            <param name="extrinsicType"></param>
+            <param name="concurrentTasks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.GenericExtrinsicAsync(Substrate.NetApi.Model.Types.Account,System.String,Substrate.NetApi.Model.Extrinsics.Method,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Generic extrinsic sender
+            </summary>
+            <param name="extrinsicType"></param>
+            <param name="extrinsicMethod"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.ActionExtrinsicUpdate(System.String,Substrate.NetApi.Model.Rpc.TransactionEventInfo)">
+            <summary>
+            Callback for extrinsic update
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="extrinsicUpdate"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.SubscribeEventsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Subscribe to event storage
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.BaseClient.RandomAccount(System.Int32,System.String,Substrate.NetApi.Model.Types.KeyType)">
+            <summary>
+            Generate a random account
+            </summary>
+            <param name="seed"></param>
+            <param name="derivationPsw"></param>
+            <param name="keyType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Client.ExtrinsicInfo">
+            <summary>
+            Extrinsic Info, class that holds all information about an extrinsic
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.TransactionEvent">
+            <summary>
+            Current blockchain transaction event information
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.ExtrinsicType">
+            <summary>
+            Extrinsic type
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.Created">
+            <summary>
+             Timestamp when the extrinsic was created
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.LastUpdated">
+            <summary>
+            Timestamp when the extrinsic was last updated
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.Hash">
+            <summary>
+            Transaction hash
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.Index">
+            <summary>
+            Transaction index
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.IsReady">
+            <summary>
+            Is the extrinsic ready to be broadcasted
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.IsInBlock">
+            <summary>
+            Is the extrinsic in a block
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.IsSuccess">
+            <summary>
+            Is the extrinsic successfull
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.IsCompleted">
+            <summary>
+            Is the extrinsic completed
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.HasEvents">
+            <summary>
+            Does the extrinsic have events
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.Error">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.EventRecords">
+            <summary>
+            All event records
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicInfo.TimeElapsed">
+            <summary>
+            Time elapsed since the extrinsic was created
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicInfo.#ctor(System.String)">
+            <summary>
+            Extrinsic info constructor
+            </summary>
+            <param name="extrinsicType"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicInfo.AllEvents``1(Substrate.Hexalem.NET.NetApiExt.Generated.Model.hexalem_runtime.RuntimeEvent,System.Collections.Generic.IEnumerable{``0}@)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="runtimeEvent"></param>
+             <param name="allEnumEvents"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Client.ExtrinsicUpdateEvent">
+            <summary>
+            Extrinsic Update Event
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="queueInfo"></param>
+        </member>
+        <member name="T:Substrate.Integration.Client.ExtrinsicManager">
+            <summary>
+            Extrinsic Manager
+            </summary>
+        </member>
+        <member name="F:Substrate.Integration.Client.ExtrinsicManager.RetentationTimeSec">
+            <summary>
+            Reteintation time in seconds
+            </summary>
+        </member>
+        <member name="E:Substrate.Integration.Client.ExtrinsicManager.ExtrinsicUpdated">
+            <summary>
+            Extrinsic Update Event
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicManager.Running">
+            <summary>
+            Running extrinsics
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.ExtrinsicManager.PreInblock">
+            <summary>
+            Pre in block extrinsics
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.#ctor(Substrate.Hexalem.NET.NetApiExt.Generated.SubstrateClientExt)">
+            <summary>
+            Extrinisic Manager
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.Add(System.String,System.String)">
+            <summary>
+            Add a subscription of a certain extrinsic type
+            </summary>
+            <param name="subscription"></param>
+            <param name="extrinsicType"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.Get(System.String)">
+            <summary>
+            Get extrinsic info
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.UpdateExtrinsicInfo(System.String,Substrate.NetApi.Model.Rpc.TransactionEventInfo)">
+            <summary>
+            Update extrinsic info
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="extrinsicUpdate"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.UpdateExtrinsicEvents(System.String,System.Collections.Generic.IEnumerable{Substrate.Hexalem.NET.NetApiExt.Generated.Model.frame_system.EventRecord})">
+            <summary>
+            Update extrinsic events
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="allExtrinsicEvents"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.UpdateExtrinsicError(System.String,System.String)">
+            <summary>
+            Update extrinsic error
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="errorMsg"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.ExtrinsicManager.OnExtrinsicUpdated(System.String,Substrate.Integration.Client.ExtrinsicInfo)">
+            <summary>
+            Simple extrinsic tester
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="queueInfo"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Substrate.Integration.Client.SubscriptionOnEvent">
+            <summary>
+            Delegate for subscription updated event
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="storageChangeSet"></param>
+        </member>
+        <member name="T:Substrate.Integration.Client.SubscriptionManager">
+            <summary>
+            Subscription Manager
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Client.SubscriptionManager.IsSubscribed">
+            <summary>
+            Is the subscription active
+            </summary>
+        </member>
+        <member name="E:Substrate.Integration.Client.SubscriptionManager.SubscrptionEvent">
+            <summary>
+            Subscription updated event
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Client.SubscriptionManager.#ctor">
+            <summary>
+            Subscription Manager constructor
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Client.SubscriptionManager.ActionSubscrptionEvent(System.String,Substrate.NetApi.Model.Rpc.StorageChangeSet)">
+            <summary>
+            Simple extrinsic tester
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="storageChangeSet"></param>
+        </member>
+        <member name="M:Substrate.Integration.Client.SubscriptionManager.OnSystemEvents(System.String,Substrate.NetApi.Model.Rpc.StorageChangeSet)">
+            <summary>
+            On extrinsic updated
+            </summary>
+            <param name="subscriptionId"></param>
+            <param name="storageChangeSet"></param>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.UnitToDecimals(System.Double,System.Int32)">
+            <summary>
+            Unit to decimals
+            </summary>
+            <param name="amount"></param>
+            <param name="decimals"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToHexString(Substrate.Hexalem.NET.NetApiExt.Generated.Model.primitive_types.H256)">
+            <summary>
+            Convert H256 to hex string
+            </summary>
+            <param name="h256"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToPublicKey(System.String)">
+            <summary>
+            Convert address string to public key
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToAddress(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Int16)">
+            <summary>
+            Convert AccountId32 to address string
+            </summary>
+            <param name="account32"></param>
+            <param name="ss58"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToAddress(System.Byte[],System.Int16)">
+            <summary>
+            Convert public key to address string
+            </summary>
+            <param name="publicKey"></param>
+            <param name="ss58"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToAccountId32(System.Byte[])">
+            <summary>
+            Convert public key to AccountId32
+            </summary>
+            <param name="publicKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToAccountId32(Substrate.NetApi.Model.Types.Account)">
+            <summary>
+            Convert Account to AccountId32
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToAccountId32(System.String)">
+            <summary>
+            Convert address string to AccountId32
+            </summary>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToEnumMultiAddress(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)">
+            <summary>
+            Convert AccountId32 to EnumMultiAddress
+            </summary>
+            <param name="accountId32"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToH256(System.String)">
+            <summary>
+            Convert hash string to H256
+            </summary>
+            <param name="hash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToHash(System.String)">
+            <summary>
+            Convert string to H256
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU8(System.Byte)">
+            <summary>
+            Convert byte to U8
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU8(System.Char)">
+            <summary>
+            Convert char to U8
+            </summary>
+            <param name="character"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU16(System.UInt16)">
+            <summary>
+            Convert ushort to U16
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU32(System.UInt32)">
+            <summary>
+            Convert uint to U32
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU128(System.Numerics.BigInteger)">
+            <summary>
+            Convert BigInteger to U128
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU8Array(System.Byte[])">
+            <summary>
+            Convert byte array to U8 array
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU8Array(System.String)">
+            <summary>
+            Convert string to U8 array
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU16Array(System.UInt16[])">
+            <summary>
+            Convert ushort array to U16 array
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToU32Array(System.UInt32[])">
+            <summary>
+            Convert uint array to U32 array
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToBaseOpt(Substrate.NetApi.Model.Types.Primitive.U8)">
+            <summary>
+            Convert U8 to BaseOpt
+            </summary>
+            <param name="u8"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToBytes(Substrate.Hexalem.NET.NetApiExt.Generated.Model.primitive_types.H256)">
+            <summary>
+            Convert H256 to byte array
+            </summary>
+            <param name="h256"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToBytes(Substrate.NetApi.Model.Types.Base.BaseVec{Substrate.NetApi.Model.Types.Primitive.U8})">
+            <summary>
+            Convert BaseVec of U8 to byte array
+            </summary>
+            <param name="baseVecU8"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.ToBytes(Substrate.NetApi.Model.Types.Primitive.U8[])">
+            <summary>
+            Convert U8 array to byte array
+            </summary>
+            <param name="arrayU8"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.Generic.BuildChunksOf``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Build chunks of a list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fullList"></param>
+            <param name="batchSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Helper.HexalemWrapper">
+            <summary>
+            Hexalem Wrapper
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Helper.HexalemWrapper.GetHexaGame(Substrate.Hexalem.Integration.Model.GameSharp,Substrate.Hexalem.Integration.Model.BoardSharp[])">
+            <summary>
+            Get the hexa game
+            </summary>
+            <param name="game"></param>
+            <param name="boards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.Helper.HexalemWrapper.GetHexaBoard(Substrate.Hexalem.Integration.Model.BoardSharp)">
+            <summary>
+            Get the hexa board
+            </summary>
+            <param name="board"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Integration.Helper.NetworkType">
+            <summary>
+            Network type
+            </summary>
+        </member>
+        <member name="F:Substrate.Integration.Helper.NetworkType.Host">
+            <summary>
+            Host
+            </summary>
+        </member>
+        <member name="F:Substrate.Integration.Helper.NetworkType.Test">
+            <summary>
+            Test
+            </summary>
+        </member>
+        <member name="F:Substrate.Integration.Helper.NetworkType.Live">
+            <summary>
+            Live
+            </summary>
+        </member>
+        <member name="T:Substrate.Integration.Model.AccountDataSharp">
+            <summary>
+            Account Data C# Wrapper
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Model.AccountDataSharp.#ctor(Substrate.Hexalem.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData)">
+            <summary>
+            Account Data Constructor
+            </summary>
+            <param name="accountData"></param>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountDataSharp.Free">
+            <summary>
+            Free
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountDataSharp.Reserved">
+            <summary>
+            Reserved
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountDataSharp.Frozen">
+            <summary>
+            Frozen
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountDataSharp.Flags">
+            <summary>
+            Flags
+            </summary>
+        </member>
+        <member name="T:Substrate.Integration.Model.AccountInfoSharp">
+            <summary>
+            Account Info C# Wrapper
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Model.AccountInfoSharp.#ctor(Substrate.Hexalem.NET.NetApiExt.Generated.Model.frame_system.AccountInfo)">
+            <summary>
+            Account Info Constructor
+            </summary>
+            <param name="accountInfo"></param>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountInfoSharp.Nonce">
+            <summary>
+            Nonce
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountInfoSharp.Consumers">
+            <summary>
+            Consumers
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountInfoSharp.Providers">
+            <summary>
+            Providers
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountInfoSharp.Sufficients">
+            <summary>
+            Sufficients
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.Model.AccountInfoSharp.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="T:Substrate.Integration.Model.ExtraFlagsSharp">
+            <summary>
+            Extra Flags C# Wrapper
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.Model.ExtraFlagsSharp.#ctor(Substrate.Hexalem.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags)">
+            <summary>
+            Extra Flags Constructor
+            </summary>
+            <param name="extraFlags"></param>
+        </member>
+        <member name="P:Substrate.Integration.Model.ExtraFlagsSharp.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="T:Substrate.Integration.SubstrateNetwork">
+            <summary>
+            Substrate network
+            </summary>
+            <summary>
+            Substrate network
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetGameAsync(System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Get game
+            </summary>
+            <param name="gameId"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetBoardAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get board
+            </summary>
+            <param name="playerAddress"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.CreateGameAsync(Substrate.NetApi.Model.Types.Account,System.Collections.Generic.List{Substrate.NetApi.Model.Types.Account},System.Byte,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Create game
+            </summary>
+            <param name="account"></param>
+            <param name="players"></param>
+            <param name="gridSize"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.PlayAsync(Substrate.NetApi.Model.Types.Account,System.Byte,System.Byte,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Play
+            </summary>
+            <param name="account"></param>
+            <param name="placeIndex"></param>
+            <param name="buyIndex"></param>
+            <param name="payType"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.UpgradeAsync(Substrate.NetApi.Model.Types.Account,System.Byte,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Upgrade a tile
+            </summary>
+            <param name="account"></param>
+            <param name="placeIndex"></param>
+            <param name="buyIndex"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.FinishTurnAsync(Substrate.NetApi.Model.Types.Account,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Finish turn
+            </summary>
+            <param name="account"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.SudoRootDeleteGameAsync(Substrate.NetApi.Model.Types.Account,System.Byte[],System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Root delete game, needs to be called by Sudo.
+            </summary>
+            <param name="account">Sudo account</param>
+            <param name="GameIdBytes">Game Id</param>
+            <param name="concurrentTasks">Concurrant tasks of this type allowed</param>
+            <param name="token">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="F:Substrate.Integration.SubstrateNetwork.DECIMALS">
+            <summary>
+            Decimals
+            </summary>
+        </member>
+        <member name="P:Substrate.Integration.SubstrateNetwork.Account">
+            <summary>
+            Account
+            </summary>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.#ctor(Substrate.NetApi.Model.Types.Account,Substrate.Integration.Helper.NetworkType,System.String)">
+            <summary>
+            Substrate network constructor
+            </summary>
+            <param name="account"></param>
+            <param name="networkType"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetBlocknumberAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get the current block number.
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAccountAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get owner account informations.
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAccountAsync(Substrate.NetApi.Model.Types.Account,System.Threading.CancellationToken)">
+            <summary>
+            Get account informations.
+            </summary>
+            <param name="account32"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAllStorageAsync``2(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get all storage as dictionary.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAllStorageAsync``2(System.String,System.String,System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Get all storage as dictionary.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="subKey"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAllStorageAsync``2(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get all storage as dictionary.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="blockHash"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAllStorageAsync``2(System.String,System.String,System.String,System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Get all storage as dictionary.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="blockHash"></param>
+            <param name="subKey"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetStoragePagedAsync``2(System.String,System.String,System.Byte[],System.UInt32,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get all storage paged.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="startKey"></param>
+            <param name="page"></param>
+            <param name="blockHash"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetStoragePagedAsync``2(System.String,System.String,System.Byte[],System.UInt32,System.String,System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Get all storage paged.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="startKey"></param>
+            <param name="page"></param>
+            <param name="blockHash"></param>
+            <param name="subKey"></param>
+            <param name="token"></param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetAllStorageKeysAsync(System.String,System.String,System.String,System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Get all storage keys as list.
+            </summary>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="blockHash"></param>
+            <param name="subKey"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetStorageKeysPagedAsync(System.String,System.String,System.Byte[],System.UInt32,System.String,System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Get all storage keys paged.
+            </summary>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="startKey"></param>
+            <param name="page"></param>
+            <param name="blockHash"></param>
+            <param name="subKey"></param>
+            <param name="token"></param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.GetStorageByKeysAsync``1(System.String,System.String,System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get all storage by keys.
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <param name="module"></param>
+            <param name="item"></param>
+            <param name="keys"></param>
+            <param name="blockHash"></param>
+            <param name="token"></param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.RemarksAsync(Substrate.NetApi.Model.Types.Base.BaseVec{Substrate.NetApi.Model.Types.Primitive.U8},System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Remark
+            </summary>
+            <param name="remark"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.TransferKeepAliveAsync(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Numerics.BigInteger,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Transfer keep alive
+            </summary>
+            <param name="dest"></param>
+            <param name="value"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.TransferKeepAliveAsync(Substrate.NetApi.Model.Types.Account,Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Numerics.BigInteger,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Transfer keep alive
+            </summary>
+            <param name="account"></param>
+            <param name="dest"></param>
+            <param name="value"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.BatchAllAsync(System.Collections.Generic.List{Substrate.Hexalem.NET.NetApiExt.Generated.Model.hexalem_runtime.EnumRuntimeCall},System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Batch all extrinsics in one transaction.
+            </summary>
+            <param name="callList"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.Integration.SubstrateNetwork.SudoAsync(Substrate.NetApi.Model.Types.Account,Substrate.Hexalem.NET.NetApiExt.Generated.Model.hexalem_runtime.EnumRuntimeCall,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Submit a sudo extrinsic.
+            </summary>
+            <param name="call"></param>
+            <param name="concurrentTasks"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.Hexalem.Integration.Helper.TypeExtension">
+            <summary>
+            Type extension
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Integration.Helper.TypeExtension.As``1(Substrate.NetApi.Model.Types.IType)">
+            <summary>
+            Cast a type to another type
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sender"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="T:Substrate.Hexalem.Integration.Model.BoardSharp">
+            <summary>
+            Board C# Wrapper
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Integration.Model.BoardSharp.#ctor(Substrate.Hexalem.NET.NetApiExt.Generated.Model.pallet_hexalem.pallet.HexBoard)">
+            <summary>
+            Board Constructor
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.BoardSharp.GameId">
+            <summary>
+            Game Id
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.BoardSharp.Resources">
+            <summary>
+            Resources
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.BoardSharp.HexGrid">
+            <summary>
+            Hex Grid
+            </summary>
+        </member>
+        <member name="T:Substrate.Hexalem.Integration.Model.GameSharp">
+            <summary>
+            Game C# Wrapper
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Integration.Model.GameSharp.#ctor(System.Byte[],Substrate.Hexalem.NET.NetApiExt.Generated.Model.pallet_hexalem.pallet.Game)">
+            <summary>
+            Game Constructor
+            </summary>
+            <param name="gameId"></param>
+            <param name="game"></param>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.GameId">
+            <summary>
+            Game Id
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.State">
+            <summary>
+            Game State
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.MaxRounds">
+            <summary>
+            Max Rounds
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.Round">
+            <summary>
+            Round
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.PlayerTurn">
+            <summary>
+            Player Turn
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.Played">
+            <summary>
+            Played
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.Players">
+            <summary>
+            Players
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.Selection">
+            <summary>
+            Selection
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.SelectionSize">
+            <summary>
+            Selection Size
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.GameSharp.LastBlock">
+            <summary>
+            Last Block
+            </summary>
+        </member>
+        <member name="T:Substrate.Hexalem.Integration.Model.TileSharp">
+            <summary>
+            Tile C# Wrapper
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.TileSharp.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:Substrate.Hexalem.Integration.Model.TileSharp.#ctor(Substrate.Hexalem.NET.NetApiExt.Generated.Model.hexalem_runtime.HexalemTile)">
+            <summary>
+            Tile Constructor
+            </summary>
+            <param name="tile"></param>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.TileSharp.TileType">
+            <summary>
+            Tile Type
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.TileSharp.TileLevel">
+            <summary>
+            Tile Level
+            </summary>
+        </member>
+        <member name="P:Substrate.Hexalem.Integration.Model.TileSharp.Pattern">
+            <summary>
+            Pattern
+            </summary>
+        </member>
+    </members>
+</doc>
