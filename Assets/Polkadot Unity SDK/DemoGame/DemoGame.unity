@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 55225687}
   - component: {fileID: 55225686}
   - component: {fileID: 55225691}
+  - component: {fileID: 55225694}
   - component: {fileID: 55225690}
   - component: {fileID: 55225689}
   - component: {fileID: 55225688}
@@ -275,6 +276,18 @@ MonoBehaviour:
   _caveTile: {fileID: 2758082140818558022, guid: 03c4ad2224bbae44e835b1be8327c163, type: 3}
   _grassDeltaTile: {fileID: 3871148027407231258, guid: 59d673fc6e5366d42ae9cefe3614f1f3, type: 3}
   _treesDeltaTile: {fileID: 6114412543288471618, guid: 6f7213687ddc4a341b31cadf8898483f, type: 3}
+--- !u!114 &55225694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55225685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3005e7e40a9c147886ce870b1ac24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &185871275
 GameObject:
   m_ObjectHideFlags: 0
