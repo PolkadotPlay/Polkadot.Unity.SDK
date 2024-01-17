@@ -90,7 +90,7 @@ namespace Assets.Scripts.ScreenStates
 
             // filler is to avoid camera in the ui
             var topFiller = FlowController.VelContainer.Q<VisualElement>("VelTopFiller");
-            topFiller.style.backgroundColor = GameConstant.ColorDark;
+            topFiller.style.backgroundColor = GameConstant.ColorLight;
 
             var visualTreeAsset = Resources.Load<VisualTreeAsset>($"DemoGame/UI/Screens/PlayScreenUI");
             var instance = visualTreeAsset.Instantiate();
@@ -193,8 +193,13 @@ namespace Assets.Scripts.ScreenStates
             Storage.OnNextBlocknumber -= OnNextBlockNumber;
         }
 
-        private void OnSwipeEvent(Vector3 direction)
+        private void OnSwipeEvent(Vector3 direction, bool isOverUI)
         {
+            if (isOverUI)
+            {
+                return;
+            }
+
             Grid.MoveCamera(direction);
         }
 

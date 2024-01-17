@@ -21,7 +21,7 @@
                 <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BtnBack" class="button-basic font-comic" style="width: 350px; height: 125px; font-size: 50px; -unity-font-style: normal;" />
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
-                <ui:Label tabindex="-1" text="1 Player Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblPlayerCount" class="font-comic font-color" style="font-size: 25px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font-style: bold; -unity-text-align: middle-center;" />
+                <ui:Label tabindex="-1" text="1 Player Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LblPlayerCount" class="font-color font-chicken" style="font-size: 25px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font-style: bold; -unity-text-align: middle-center;" />
             </ui:VisualElement>
             <ui:VisualElement name="VelPlayerBox" style="flex-grow: 0; justify-content: center; align-items: center; flex-shrink: 0; height: 100px; flex-direction: row;">
                 <ui:VisualElement name="VelPlayer1" style="flex-grow: 0; flex-shrink: 0; width: 100px; height: 100px; background-image: none; display: none;" />

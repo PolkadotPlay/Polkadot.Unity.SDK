@@ -17,42 +17,12 @@ namespace Assets.Scripts
         private Vector3 originCameraPosition;
         private Vector3 originCameraAngle;
 
-        public delegate void SwipeHandler(Vector3 direction);
+        public delegate void SwipeHandler(Vector3 direction, bool isOverUI);
 
         public event SwipeHandler OnSwipeEvent;
 
         [SerializeField]
         public GameObject PlayerGrid;
-
-        [SerializeField]
-        private GameObject _emptyTile;
-
-        [SerializeField]
-        private GameObject _homeTile;
-
-        [SerializeField]
-        private GameObject _rareHomeTile;
-
-        [SerializeField]
-        private GameObject _epicHomeTile;
-
-        [SerializeField]
-        private GameObject _grassTile;
-
-        [SerializeField]
-        private GameObject _waterTile;
-
-        [SerializeField]
-        private GameObject _mountainTile;
-
-        [SerializeField]
-        private GameObject _treesTile;
-
-        [SerializeField]
-        private GameObject _desertTile;
-
-        [SerializeField]
-        private GameObject _caveTile;
 
         private Vector2 touchStart;
 
@@ -114,9 +84,9 @@ namespace Assets.Scripts
 
                 case TouchPhase.Moved:
                     touchEnd = position;
-                    if (!isSwiping && !isPointerOverUI && Vector2.Distance(touchStart, touchEnd) >= swipeThreshold)
+                    if (!isSwiping && Vector2.Distance(touchStart, touchEnd) >= swipeThreshold)
                     {
-                        ProcessSwipe(touchEnd.x - touchStart.x, touchEnd.y - touchStart.y);
+                        ProcessSwipe(touchEnd.x - touchStart.x, touchEnd.y - touchStart.y, isPointerOverUI);
                         isSwiping = true;
                     }
                     break;
@@ -191,28 +161,28 @@ namespace Assets.Scripts
 
         #region Map swipe
 
-        private void ProcessSwipe(float xDist, float yDist)
+        private void ProcessSwipe(float xDist, float yDist, bool isOverUI)
         {
             if (Mathf.Abs(xDist) > Mathf.Abs(yDist))
             {
                 if (xDist > 0)
                 {
-                    OnSwipeEvent?.Invoke(Vector3.left);
+                    OnSwipeEvent?.Invoke(Vector3.left, isOverUI);
                 }
                 else
                 {
-                    OnSwipeEvent?.Invoke(Vector3.right);
+                    OnSwipeEvent?.Invoke(Vector3.right, isOverUI);
                 }
             }
             else
             {
                 if (yDist > 0)
                 {
-                    OnSwipeEvent?.Invoke(Vector3.down);
+                    OnSwipeEvent?.Invoke(Vector3.down, isOverUI);
                 }
                 else
                 {
-                    OnSwipeEvent?.Invoke(Vector3.up);
+                    OnSwipeEvent?.Invoke(Vector3.up, isOverUI);
                 }
             }
         }

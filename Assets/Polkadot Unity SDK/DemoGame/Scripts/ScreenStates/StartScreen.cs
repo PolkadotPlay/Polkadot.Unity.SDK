@@ -73,7 +73,7 @@ namespace Assets.Scripts.ScreenStates
             FlowController.VelContainer.RemoveAt(1);
         }
 
-        private void OnSwipeEvent(Vector3 direction)
+        private void OnSwipeEvent(Vector3 direction, bool _)
         {
             if (direction == Vector3.right)
             {

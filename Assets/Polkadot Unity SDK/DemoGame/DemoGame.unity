@@ -239,16 +239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerGrid: {fileID: 185871275}
-  _emptyTile: {fileID: 4291607650337064099, guid: 315ee07e0671d6046a7e5a96554b33a4, type: 3}
-  _homeTile: {fileID: 7535761464842861189, guid: 7ac4d9f2c3355e74e9b1dd336046365f, type: 3}
-  _rareHomeTile: {fileID: 7535761464842861189, guid: c8b31314346709e4db6827a310babc3b, type: 3}
-  _epicHomeTile: {fileID: 7535761464842861189, guid: b50980af26190674badf8a06633353aa, type: 3}
-  _grassTile: {fileID: 3604290564195660183, guid: 2aa1827cca7eefd4fab04654ce228a9b, type: 3}
-  _waterTile: {fileID: 5716525105324350660, guid: 6eee664e07d115345ba3afbf14b24e53, type: 3}
-  _mountainTile: {fileID: 3054226215825228916, guid: 4ca22e86fc765dc41b8f5332f9a93299, type: 3}
-  _treesTile: {fileID: 3202582487521064602, guid: d50c9ed70326c9a47939cf1539623b9e, type: 3}
-  _desertTile: {fileID: 8706329026578284017, guid: fc9eb7854517e1d449a63b950712b60e, type: 3}
-  _caveTile: {fileID: 2758082140818558022, guid: 03c4ad2224bbae44e835b1be8327c163, type: 3}
   swipeThreshold: 50
   cameraMoveSpeed: 1
 --- !u!114 &55225693
@@ -263,19 +253,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c2104e66a35234f87fe2957fd96c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _emptyTile: {fileID: 4291607650337064099, guid: 315ee07e0671d6046a7e5a96554b33a4, type: 3}
-  _homeTile: {fileID: 7535761464842861189, guid: 7ac4d9f2c3355e74e9b1dd336046365f, type: 3}
-  _rareHomeTile: {fileID: 7535761464842861189, guid: c8b31314346709e4db6827a310babc3b, type: 3}
-  _epicHomeTile: {fileID: 7535761464842861189, guid: b50980af26190674badf8a06633353aa, type: 3}
-  _legendaryHomeTile: {fileID: 7535761464842861189, guid: fc30de8843a71574e89a29674abdc447, type: 3}
-  _grassTile: {fileID: 3604290564195660183, guid: 2aa1827cca7eefd4fab04654ce228a9b, type: 3}
-  _waterTile: {fileID: 5716525105324350660, guid: 6eee664e07d115345ba3afbf14b24e53, type: 3}
-  _mountainTile: {fileID: 3054226215825228916, guid: 4ca22e86fc765dc41b8f5332f9a93299, type: 3}
-  _treesTile: {fileID: 3202582487521064602, guid: d50c9ed70326c9a47939cf1539623b9e, type: 3}
-  _desertTile: {fileID: 8706329026578284017, guid: fc9eb7854517e1d449a63b950712b60e, type: 3}
-  _caveTile: {fileID: 2758082140818558022, guid: 03c4ad2224bbae44e835b1be8327c163, type: 3}
-  _grassDeltaTile: {fileID: 3871148027407231258, guid: 59d673fc6e5366d42ae9cefe3614f1f3, type: 3}
-  _treesDeltaTile: {fileID: 6114412543288471618, guid: 6f7213687ddc4a341b31cadf8898483f, type: 3}
+  _emptyTile: {fileID: 4318896792736620446, guid: 0c90b531a021d7b4ea5ad63b3429de00, type: 3}
+  _homeTile: {fileID: 4318896792736620446, guid: 89e58d87fa058ea4fb9c7be336e4ad8b, type: 3}
+  _rareHomeTile: {fileID: 4318896792736620446, guid: 27729df09f7abae41be5980d55e57308, type: 3}
+  _epicHomeTile: {fileID: 4318896792736620446, guid: 891f94b0b0bcbea4f9d28152e735b4cd, type: 3}
+  _legendaryHomeTile: {fileID: 4318896792736620446, guid: 2636eb98e25c98e4e92c742ea41d0ff0, type: 3}
+  _grassTile: {fileID: 4318896792736620446, guid: 3ca6d0711c6e73d41907c083c044bfb6, type: 3}
+  _waterTile: {fileID: 4318896792736620446, guid: 7023122ffe2a3624cbdf96dca62ed794, type: 3}
+  _mountainTile: {fileID: 4318896792736620446, guid: 851f9fdbbcff69c4e91d4b4b7db8e457, type: 3}
+  _treesTile: {fileID: 4318896792736620446, guid: f480c027bbf48cb4bb7452be3b3fe35c, type: 3}
+  _desertTile: {fileID: 4318896792736620446, guid: ec7d947e2bdb0d644b8901cdfe77cc54, type: 3}
+  _caveTile: {fileID: 4318896792736620446, guid: 6583708d1f06d2549a67768c2799f9f3, type: 3}
+  _grassDeltaTile: {fileID: 4318896792736620446, guid: 91e32e0487e55f441bfff6fcad95c667, type: 3}
+  _treesDeltaTile: {fileID: 4318896792736620446, guid: 57bb52522accb9c4a9a21414d50425d3, type: 3}
 --- !u!114 &55225694
 MonoBehaviour:
   m_ObjectHideFlags: 0
