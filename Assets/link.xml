@@ -1,0 +1,10 @@
+<linker>
+	<assembly fullname="StreamJsonRpc" preserve="all"/>
+	<assembly fullname="Nerdbank.Streams" preserve="all"/>
+	<assembly fullname="Newtonsoft.Json" preserve="all"/>
+	<assembly fullname="Substrate.NetApi" preserve="all"/>
+	<assembly fullname="Substrate.Hexalem.NET.NetApiExt" preserve="all"/>
+	<assembly fullname="Substrate.Kusama.NET.NetApiExt" preserve="all"/>
+	<assembly fullname="Substrate.Polkadot.NET.NetApiExt" preserve="all"/>
+	<assembly fullname="Substrate.NET.Wallet" preserve="all"/>
+</linker>
