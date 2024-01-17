@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:Template name="HeaderBoxElement" src="project://database/Assets/Polkadot Unity SDK/DemoWallet/Resources/DemoWallet/UI/Boxes/HeaderBoxElement.uxml?fileID=9197481963319205126&amp;guid=93636438f421bbb4698baadc6e80b366&amp;type=3#HeaderBoxElement" />
-    <ui:Template name="AccountFullElement" src="project://database/Assets/Polkadot Unity SDK/DemoWallet/Resources/DemoWallet/UI/Elements/AccountFullElement.uxml?fileID=9197481963319205126&amp;guid=7725ea560ac3ee140b72cfb8311fa014&amp;type=3#AccountFullElement" />
-    <Style src="project://database/Assets/Resources/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
+    <ui:Template name="HeaderBoxElement" src="project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Resources/DemoWallet/UI/Boxes/HeaderBoxElement.uxml?fileID=9197481963319205126&amp;guid=93636438f421bbb4698baadc6e80b366&amp;type=3#HeaderBoxElement" />
+    <ui:Template name="AccountFullElement" src="project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Resources/DemoWallet/UI/Elements/AccountFullElement.uxml?fileID=9197481963319205126&amp;guid=7725ea560ac3ee140b72cfb8311fa014&amp;type=3#AccountFullElement" />
+    <Style src="project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Resources/DemoWallet/Styles/UIStylesheet.uss?fileID=7433441132597879392&amp;guid=f0c0984091307004087f5db030d4e506&amp;type=3#UIStylesheet" />
     <ui:VisualElement name="ResetScreen" style="flex-grow: 1; height: 100%; width: 100%; flex-shrink: 1; min-width: auto; min-height: auto; flex-basis: auto; justify-content: flex-start; align-items: auto;">
         <ui:VisualElement name="TopBound" style="flex-grow: 0; flex-shrink: 0; height: 350px; width: 100%; justify-content: flex-start; align-items: auto;">
             <ui:Instance template="HeaderBoxElement" name="HeaderBoxElement" style="height: 100%; width: 100%;" />
@@ -21,7 +21,7 @@
             </ui:VisualElement>
             <ui:VisualElement name="PasswordBox" style="flex-grow: 0; height: 200px; padding-top: 0; padding-right: 65px; padding-bottom: 40px; padding-left: 65px; flex-shrink: 0; width: 100%;">
                 <ui:VisualElement name="PasswordInputBox" style="flex-grow: 0; flex-shrink: 0; width: 100%; height: 100%;">
-                    <Assets.Scripts.CustomTextField name="TxfActionVerification" label_text="VERIFICATION" class="border-color-drk" style="flex-shrink: 0; width: 100%; height: 100%; border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px;" />
+                    <Assets.Scripts.CustomTextField name="TxfActionVerification" label_text="VERIFICATION" class="border-color-drk custom-text-field" style="flex-shrink: 0; width: 100%; height: 100%; border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="DeleteWalletBox" style="flex-grow: 0; height: 150px; flex-shrink: 0; width: 100%; padding-right: 65px; padding-bottom: 40px; padding-left: 65px; padding-top: 0;">

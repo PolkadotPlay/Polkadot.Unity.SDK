@@ -88,10 +88,14 @@ namespace Assets.Scripts
             textInput.style.whiteSpace = WhiteSpace.Normal;
             textInput.style.textOverflow = TextOverflow.Clip;
 
-            var textElement = textInput.Children().ElementAt(0);
-            textElement.AddToClassList(ussCustomTextFieldElement);
-            textElement.style.whiteSpace = WhiteSpace.Normal;
-            textElement.style.textOverflow = TextOverflow.Clip;
+            if (textInput.Children().Any())
+            {
+                var textElement = textInput.Children().ElementAt(0);
+                textElement.AddToClassList(ussCustomTextFieldElement);
+                textElement.style.whiteSpace = WhiteSpace.Normal;
+                textElement.style.textOverflow = TextOverflow.Clip;
+            }
+
             hierarchy.Add(mainVe);
         }
 

@@ -17,7 +17,7 @@
                     <ui:Label tabindex="-1" text="Enter your password to login" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PasswordInfo" class="font-dark-color" style="width: 100%; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 35px;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="PasswordInputBox" style="flex-grow: 0; flex-shrink: 0; width: 100%; height: 70%;">
-                    <Assets.Scripts.CustomTextField name="TxfPasswordInput" label_text="ENTER PASSWORD" class="border-color-drk" style="height: 100%; width: 100%; border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px;" />
+                    <Assets.Scripts.CustomTextField name="TxfPasswordInput" label_text="ENTER PASSWORD" class="border-color-drk custom-text-field" style="height: 100%; width: 100%; border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="UnlockBox" style="flex-grow: 0; height: 210px; flex-shrink: 0; width: 100%; padding-right: 65px; padding-bottom: 0; padding-left: 65px; padding-top: 40px;">
