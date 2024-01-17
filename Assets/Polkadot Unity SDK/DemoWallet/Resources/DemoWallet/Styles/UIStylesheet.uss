@@ -4,7 +4,7 @@
 
 .custom-text-field {
     flex-direction: column;
-    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: resource('Fonts & Materials/Hey Comic SDF');
     font-size: 35px;
 }
 
@@ -13,7 +13,7 @@
     color: rgb(144, 143, 141);
     padding-left: 20px;
     -unity-font-style: normal;
-    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: resource('Fonts & Materials/Hey Comic SDF');
 }
 
 .custom-text-field-element {
@@ -26,7 +26,7 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     font-size: 35px;
-    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: resource('Fonts & Materials/Hey Comic SDF');
     color: rgb(36, 38, 40);
 }
 
@@ -52,11 +52,11 @@
 }
 
 .font-nexa {
-    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/NexaBlack%20SDF.asset?fileID=11400000&guid=1ae826cfdcc741e469920de6462fd6f7&type=2#NexaBlack SDF');
+    -unity-font-definition: resource('Fonts & Materials/NexaBlack SDF');
 }
 
 .font-aeonik {
-    -unity-font-definition: url('project://database/Assets/Polkadot%20Unity%20SDK/DemoWallet/Fonts/Aeonik-Regular%20SDF.asset?fileID=11400000&guid=2f1d71530f6fe2946842a77c2e74fb8c&type=2#Aeonik-Regular SDF');
+    -unity-font-definition: resource('Fonts & Materials/Aeonik-Regular SDF');
 }
 
 .font-dark-color {

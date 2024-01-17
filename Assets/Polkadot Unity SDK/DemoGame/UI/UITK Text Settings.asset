@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 
   m_DefaultFontAsset: {fileID: 11400000, guid: 557e29b7ec4daca4fb38f95613b96846, type: 2}
-  m_DefaultFontAssetPath: DemoGame/Fonts & Materials/
+  m_DefaultFontAssetPath: Fonts & Materials/
   m_FallbackFontAssets: []
   m_MatchMaterialPreset: 0
   m_MissingCharacterUnicode: 0
