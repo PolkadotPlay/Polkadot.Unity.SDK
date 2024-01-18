@@ -4,7 +4,7 @@
 
 .custom-text-field {
     flex-direction: column;
-    -unity-font-definition: resource('Fonts & Materials/Hey Comic SDF');
+    -unity-font-definition: resource('Fonts & Materials/Aeonik-Regular SDF');
     font-size: 35px;
 }
 
@@ -13,7 +13,7 @@
     color: rgb(144, 143, 141);
     padding-left: 20px;
     -unity-font-style: normal;
-    -unity-font-definition: resource('Fonts & Materials/Hey Comic SDF');
+    -unity-font-definition: resource('Fonts & Materials/Aeonik-Regular SDF');
 }
 
 .custom-text-field-element {
@@ -26,7 +26,7 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     font-size: 35px;
-    -unity-font-definition: resource('Fonts & Materials/Hey Comic SDF');
+    -unity-font-definition: resource('Fonts & Materials/Aeonik-Regular SDF');
     color: rgb(36, 38, 40);
 }
 
