@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0117bce41162a1d408b9f5e83d5ea699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nodeUrl: wss://polkadot.public.curie.radiumblock.co/ws
 --- !u!114 &101633027
 MonoBehaviour:
   m_ObjectHideFlags: 0

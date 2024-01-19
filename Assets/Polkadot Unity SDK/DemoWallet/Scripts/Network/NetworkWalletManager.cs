@@ -21,7 +21,7 @@ namespace Assets.Scripts
         public Account Alice => Account.Build(KeyType.Sr25519, MiniSecretAlice.ExpandToSecret().ToBytes(), MiniSecretAlice.GetPair().Public.Key);
 
         [SerializeField]
-        private readonly string _nodeUrl = "wss://1rpc.io/dot";
+        private string _nodeUrl = "wss://1rpc.io/dot";
 
         private SubstrateClient _client;
         public SubstrateClient Client => _client;

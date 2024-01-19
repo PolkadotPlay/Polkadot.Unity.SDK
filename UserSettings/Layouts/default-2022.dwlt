@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2399
     height: 1333
   m_ShowMode: 4
-  m_Title: Asset Store Validator
+  m_Title: Asset Store Uploader
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 116
+  controlID: 38
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1894
-    height: 845
+    height: 949
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -187,8 +187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 409
-    height: 845
+    width: 253
+    height: 949
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -211,10 +211,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 409
+    x: 253
     y: 0
-    width: 1485
-    height: 845
+    width: 1641
+    height: 949
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
@@ -224,7 +224,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 21}
   m_Selected: 3
-  m_LastSelected: 1
+  m_LastSelected: 3
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,23 +235,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 845
+    y: 949
     width: 1894
-    height: 438
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 18}
+    height: 334
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AssetStoreValidator
+  m_Name: AssetStoreUploader
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -271,15 +271,15 @@ MonoBehaviour:
     y: 0
     width: 505
     height: 1283
-  m_MinSize: {x: 351, y: 371}
+  m_MinSize: {x: 401, y: 451}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 20}
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,10 +368,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 421
+    x: 265
     y: 81
-    width: 1483
-    height: 949
+    width: 1639
+    height: 928
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -404,8 +404,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 12
     y: 81
-    width: 408
-    height: 824
+    width: 252
+    height: 928
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -419,9 +419,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f6f9fffff8f9fffffaf9fffffcf9fffffef9ffff00faffff02faffff04faffff06faffff08faffff0afaffff0cfaffff2cfbffff
+      m_SelectedIDs: a0a00000
+      m_LastClickedID: 41120
+      m_ExpandedIDs: 3c72ffff4272ffff4872ffff4e72ffff5472ffff5a72ffff6072ffff6672ffff6c72ffff7272ffff7872ffff7e72ffffbc72ffffc272ffffc872ffffce72ffffd472ffffda72ffffe072ffffe672ffffec72fffff272fffff872fffffe72ffff5873ffff5e73ffff6473ffff6a73ffff7073ffff7673ffff7c73ffff8273ffff8873ffff8e73ffff9473ffff9a73ffff0c74ffff1274ffff1874ffff1e74ffff2474ffff2a74ffff3074ffff3674ffff3c74ffff4274ffff4874ffff4e74fffff874ffff4e75ffff9075ffff6479ffff907affffe27affffe47affffe67affffe87affffea7affffec7affffee7afffff07afffff27afffff47afffff67afffff87affff868cffff888cffff8a8cffff8c8cffff8e8cffff908cffff928cffff948cffff968cffff988cffff9a8cffff9c8cffffcc93ffff0694ffff4094ffff769fffff34a1ffff40a9ffffeaa9ffffeca9ffffeea9fffff0a9fffff2a9fffff4a9fffff6a9fffff8a9fffffaa9fffffca9fffffea9ffff00aaffff54b0ffff9cb0ffffdab1ffffe4b1fffff8b1ffff5cb5ffffa4b5ffffe2b6ffffecb6ffff00b7ffff54baffff9cbaffffdabbffffe4bbfffff8bbffff9ebfffffe6bfffff24c1ffff2ec1ffff42c1ffffc8c4ffff0ec5ffff4cc6ffff56c6ffff6ac6ffffc6c9ffff0ecaffff4ccbffff56cbffff6acbffffc6ceffff0ecfffff4cd0ffff56d0ffff6ad0ffff18d5ffff60d5ffffa6d6ffffb8d6ffffd4d6ffffb6defffffedeffff3ce0ffff46e0ffff5ae0ffffc0e3ffff08e4ffff52e5ffff60e5ffff74e5ffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -887,10 +887,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 421
+    x: 265
     y: 81
-    width: 1483
-    height: 824
+    width: 1639
+    height: 928
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -922,9 +922,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 12
-    y: 926
+    y: 1030
     width: 1893
-    height: 417
+    height: 313
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -946,7 +946,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Polkadot Unity SDK/DemoGame
+    - Assets/Polkadot Unity SDK
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -954,16 +954,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Polkadot Unity SDK/DemoGame
+  - Assets/Polkadot Unity SDK
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\repos\API AND SDK\Polkadot.Unity.SDK
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e5f0000
-    m_LastClickedID: 24446
-    m_ExpandedIDs: 000000005a5f00005c5f00005e5f0000605f0000625f0000645f0000665f0000685f00006a5f00006c5f00006e5f000000ca9a3b
+    scrollPos: {x: 0, y: 87}
+    m_SelectedIDs: 5e5f0000
+    m_LastClickedID: 24414
+    m_ExpandedIDs: 000000005a5f00005c5f00005e5f0000605f0000625f0000645f0000665f0000685f00006a5f00006c5f00006e5f0000805f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1018,22 +1018,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000f65f0000505a000036640000805a00009e590000c8590000cc590000ec6e0000a05a0000f2590000305c00001066000028980000827a0300125a00000000000034620000b25c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: DemoWallet
+      m_OriginalName: DemoWallet
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 24448
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -1068,9 +1068,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 12
-    y: 926
+    y: 1030
     width: 1893
-    height: 417
+    height: 313
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1148,10 +1148,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 421
+    x: 265
     y: 81
-    width: 1483
-    height: 824
+    width: 1639
+    height: 928
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.DeviceSimulation.SimulatorWindow
   m_SerializedViewValues:
-  - D:\repos\API AND SDK\Polkadot.Unity.SDK\Library\PlayModeViewStates\4335f9e2cf1922a449222ebfb46722b9
+  - D:\repos\API AND SDK\Polkadot.Unity.SDK\Library\PlayModeViewStates\37073d98b0393c641a0c7e4b4f868e33
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -1206,23 +1206,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1483
-      height: 803
-    m_Scale: {x: 0.41822916, y: 0.41822916}
-    m_Translation: {x: 741.5, y: 401.5}
+      width: 1639
+      height: 907
+    m_Scale: {x: 0.47239584, y: 0.47239584}
+    m_Translation: {x: 819.5, y: 453.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1772.9514
+      x: -1734.7739
       y: -960
-      width: 3545.9028
+      width: 3469.5479
       height: 1920
     m_MinimalGUI: 1
-  m_defaultScale: 0.41822916
-  m_LastWindowPixelSize: {x: 1483, y: 824}
+  m_defaultScale: 0.47239584
+  m_LastWindowPixelSize: {x: 1639, y: 928}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
