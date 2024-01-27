@@ -1,5 +1,6 @@
 using Schnorrkel.Keys;
 using Substrate.NET.Wallet;
+using Substrate.NET.Wallet.Keyring;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Types;
@@ -26,6 +27,7 @@ namespace Assets.Scripts
         private SubstrateClient _client;
         public SubstrateClient Client => _client;
 
+        public Keyring Keyring { get; private set; }
         public Wallet Wallet { get; private set; }
 
         private bool? _lastConnectionState = null;
@@ -90,7 +92,7 @@ namespace Assets.Scripts
                 }
             }
 
-            if (!Wallet.Load(walletName, out Wallet wallet))
+            if (!Wallet.TryLoad(walletName, out Wallet wallet))
             {
                 Debug.Log($"Couldn't load wallet {walletName}");
                 return false;
@@ -127,7 +129,7 @@ namespace Assets.Scripts
             var result = new List<Wallet>();
             foreach (var w in WalletFiles())
             {
-                if (!Wallet.Load(w, out Wallet wallet))
+                if (!Wallet.TryLoad(w, out Wallet wallet))
                 {
                     Debug.Log($"Failed to load wallet {w}");
                 }

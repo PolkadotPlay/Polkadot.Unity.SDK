@@ -1,4 +1,5 @@
 ﻿using Substrate.NET.Wallet;
+using Substrate.NET.Wallet.Keyring;
 using Substrate.NetApi.Model.Types;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -53,12 +54,35 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWallet(ClickEvent evt)
         {
-            if (!Wallet.CreateFromMnemonic(FlowController.TempAccountPassword, FlowController.TempMnemonic, KeyType.Sr25519, BIP39Wordlist.English, FlowController.TempAccountName, out Wallet wallet))
+            Wallet wallet;
+            try
             {
-                Debug.Log($"Failed to create {FlowController.TempAccountName} wallet!");
+                wallet = NetworkWalletManager.GetInstance().Keyring.CreateFromUri(
+                    FlowController.TempMnemonic, new 
+                    Meta() { name = FlowController.TempAccountName }, 
+                    KeyType.Sr25519);
+                var unlockSucceed = wallet.Unlock(FlowController.TempAccountPassword);
+
+                if(!unlockSucceed)
+                {
+                    Debug.Log($"Wallet successfully load, but invalid password to unlock");
+                    return;
+                }
+
+            } catch(System.Exception ex)
+            {
+                Debug.Log($"Failed to create {FlowController.TempAccountName} wallet ! : {ex.Message}");
                 return;
             }
-            else if (!NetworkWalletManager.GetInstance().ChangeWallet(wallet))
+
+            
+            //if (!Wallet.CreateFromMnemonic(FlowController.TempAccountPassword, FlowController.TempMnemonic, KeyType.Sr25519, BIP39Wordlist.English, FlowController.TempAccountName, out Wallet wallet))
+            //{
+            //    Debug.Log($"Failed to create {FlowController.TempAccountName} wallet!");
+            //    return;
+            //}
+            //else 
+            if (!NetworkWalletManager.GetInstance().ChangeWallet(wallet))
             {
                 Debug.Log($"Couldn't change to {FlowController.TempAccountName} wallet!");
                 return;

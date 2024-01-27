@@ -1,4 +1,5 @@
 ﻿using Substrate.NET.Wallet;
+using Substrate.NET.Wallet.Keyring;
 using System.Text.Json;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -56,7 +57,7 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWalletJson(ClickEvent evt)
         {
-            if (!Wallet.Load(FlowController.TempAccountName, FlowController.TempFileStore, out Wallet wallet))
+            if (!Wallet.TryLoad(FlowController.TempAccountName, FlowController.TempFileStore, out Wallet wallet))
             {
                 return;
             }
@@ -84,10 +85,10 @@ namespace Assets.Scripts.ScreenStates
                 return;
             }
 
-            FileStore fileStore;
+            WalletFile fileStore;
             try
             {
-                fileStore = JsonSerializer.Deserialize<FileStore>(jsonWallet);
+                fileStore = JsonSerializer.Deserialize<WalletFile>(jsonWallet);
             }
             catch
             {
