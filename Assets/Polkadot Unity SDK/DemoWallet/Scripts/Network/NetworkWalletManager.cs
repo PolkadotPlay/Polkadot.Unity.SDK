@@ -1,4 +1,4 @@
-using Schnorrkel.Keys;
+using Substrate.NET.Schnorrkel.Keys;
 using Substrate.NET.Wallet;
 using Substrate.NET.Wallet.Keyring;
 using Substrate.NetApi;
@@ -27,7 +27,7 @@ namespace Assets.Scripts
         private SubstrateClient _client;
         public SubstrateClient Client => _client;
 
-        public Keyring Keyring { get; private set; }
+        public Keyring Keyring { get; private set; } = new Keyring();
         public Wallet Wallet { get; private set; }
 
         private bool? _lastConnectionState = null;

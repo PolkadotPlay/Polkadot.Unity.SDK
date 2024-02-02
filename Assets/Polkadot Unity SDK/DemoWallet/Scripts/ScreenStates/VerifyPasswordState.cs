@@ -57,16 +57,28 @@ namespace Assets.Scripts.ScreenStates
             Wallet wallet;
             try
             {
-                wallet = NetworkWalletManager.GetInstance().Keyring.CreateFromUri(
+                Debug.Log($"[{nameof(VerifyPasswordState)}] - Mnemonic = {FlowController.TempMnemonic} - Wallet name = {FlowController.TempAccountName}");
+
+                wallet = NetworkWalletManager.GetInstance().Keyring.AddFromUri(
                     FlowController.TempMnemonic, new 
                     Meta() { name = FlowController.TempAccountName }, 
                     KeyType.Sr25519);
+
+                Debug.Log($"[{nameof(VerifyPasswordState)}] - Wallet = {wallet} | IsLocked = {wallet.IsLocked} | IsStored = {wallet.IsStored}");
+
                 var unlockSucceed = wallet.Unlock(FlowController.TempAccountPassword);
 
-                if(!unlockSucceed)
+                Debug.Log($"[{nameof(VerifyPasswordState)}] - Wallet = {wallet} | Unlock succeed = {unlockSucceed} | IsLocked = {wallet.IsLocked} | IsStored = {wallet.IsStored}");
+
+                if (!unlockSucceed)
                 {
                     Debug.Log($"Wallet successfully load, but invalid password to unlock");
                     return;
+                }
+
+                if(!wallet.IsStored)
+                {
+                    wallet.Save(FlowController.TempAccountName, FlowController.TempAccountPassword);
                 }
 
             } catch(System.Exception ex)

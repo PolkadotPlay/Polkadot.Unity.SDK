@@ -1,7 +1,7 @@
-using Schnorrkel.Keys;
 using Substrate.Integration;
 using Substrate.Integration.Client;
 using Substrate.Integration.Helper;
+using Substrate.NET.Schnorrkel.Keys;
 using Substrate.NET.Wallet;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Rpc;

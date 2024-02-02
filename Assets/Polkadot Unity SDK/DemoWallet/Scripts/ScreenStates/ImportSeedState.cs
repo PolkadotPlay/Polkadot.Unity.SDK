@@ -63,9 +63,9 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWalletSeed(ClickEvent evt)
         {
-            FlowController.TempAccount = NetworkWalletManager.GetInstance().Keyring.CreateFromUri(FlowController.TempMnemonic, new Meta(), KeyType.Sr25519).Account;
+            FlowController.TempAccount = NetworkWalletManager.GetInstance().Keyring.AddFromUri(FlowController.TempMnemonic, new Meta(), KeyType.Sr25519).Account;
 
-            Debug.Log($"Temporary account stored with keytype {FlowController.TempAccount.KeyType}");
+            Debug.Log($"Temporary account {FlowController.TempAccount} stored with keytype {FlowController.TempAccount.KeyType}");
             FlowController.ChangeScreenState(DemoWalletScreen.CreateWallet);
         }
 

@@ -1,5 +1,6 @@
 ﻿using Substrate.NET.Wallet;
 using Substrate.NET.Wallet.Keyring;
+using System;
 using System.Text.Json;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -72,15 +73,7 @@ namespace Assets.Scripts.ScreenStates
             var jsonContent = evt.newValue;
 
             _btnCreateWalletJson.SetEnabled(false);
-            if (jsonContent.Length < 200 || !jsonContent.Contains('#'))
-            {
-                return;
-            }
-
-            var array = evt.newValue.Split('#');
-            var accountName = array[0].ToUpper();
-            var jsonWallet = array[1];
-            if (!Wallet.IsValidWalletName(accountName) || jsonWallet.Length < 180)
+            if (jsonContent.Length < 200)
             {
                 return;
             }
@@ -88,14 +81,15 @@ namespace Assets.Scripts.ScreenStates
             WalletFile fileStore;
             try
             {
-                fileStore = JsonSerializer.Deserialize<WalletFile>(jsonWallet);
+                fileStore = JsonSerializer.Deserialize<WalletFile>(jsonContent);
             }
-            catch
+            catch(Exception ex)
             {
+                Debug.Log($"{ex.Message}");
                 return;
             }
 
-            FlowController.TempAccountName = accountName;
+            FlowController.TempAccountName = fileStore.meta.name;
             FlowController.TempFileStore = fileStore;
 
             _btnCreateWalletJson.SetEnabled(true);
