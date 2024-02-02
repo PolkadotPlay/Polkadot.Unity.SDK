@@ -63,6 +63,12 @@ namespace Assets.Scripts.ScreenStates
                 return;
             }
 
+            // Save the wallet
+            string fileName = Wallet.ConcatWalletFileType(FlowController.TempAccountName);
+            Substrate.NET.Wallet.Caching.Persist(fileName, FlowController.TempFileStore);
+            Debug.Log($"Wallet JSON saved ({fileName})");
+
+
             Network.ChangeWallet(wallet);
             Debug.Log($"Changing to json wallet {FlowController.TempAccountName}");
             FlowController.ChangeScreenState(DemoWalletScreen.UnlockWallet);
