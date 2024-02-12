@@ -83,7 +83,8 @@ namespace Assets.Scripts.ScreenStates
         {
             _btnCreateWalletSeed.SetEnabled(false);
 
-            if(Keyring.IsMnemonicPhraseValid(evt.newValue))
+            var words = evt.newValue.Split(' ');
+            if (words.Length >= 12 && words.All(p => p.Length > 2))
             {
                 FlowController.TempMnemonic = evt.newValue;
                 _btnCreateWalletSeed.SetEnabled(true);

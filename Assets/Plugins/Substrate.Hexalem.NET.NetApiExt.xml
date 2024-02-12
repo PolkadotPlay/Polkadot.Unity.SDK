@@ -4621,7 +4621,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.AuraStorage.Authorities(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.AuraStorage.Authorities(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Authorities
              The current authority set.
@@ -4641,7 +4641,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.AuraStorage.CurrentSlot(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.AuraStorage.CurrentSlot(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentSlot
              The current slot of this block.
@@ -4681,7 +4681,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.TotalIssuance(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.TotalIssuance(System.String,System.Threading.CancellationToken)">
             <summary>
             >> TotalIssuance
              The total units issued in the system.
@@ -4699,7 +4699,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.InactiveIssuance(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.InactiveIssuance(System.String,System.Threading.CancellationToken)">
             <summary>
             >> InactiveIssuance
              The total units of outstanding deactivated balance in the system.
@@ -4712,7 +4712,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Account(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Account(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)" -->
         <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)">
             <summary>
             >> LocksParams
@@ -4726,7 +4726,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Locks(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Locks(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Locks
              Any liquidity locks on some account balances.
@@ -4745,7 +4745,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Reserves(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Reserves(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Reserves
              Named reserves on some account balances.
@@ -4763,7 +4763,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Holds(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Holds(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Holds
              Holds on account balances.
@@ -4781,7 +4781,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Freezes(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.BalancesStorage.Freezes(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Freezes
              Freeze locks on account balances.
@@ -4976,7 +4976,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.State(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.State(System.String,System.Threading.CancellationToken)">
             <summary>
             >> State
              State of the current authority set.
@@ -4994,7 +4994,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.PendingChange(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.PendingChange(System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingChange
              Pending change: (signaled at, scheduled change).
@@ -5012,7 +5012,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.NextForced(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.NextForced(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextForced
              next block number where we can force a change.
@@ -5030,7 +5030,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.Stalled(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.Stalled(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Stalled
              `true` if we are currently stalled.
@@ -5049,7 +5049,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.CurrentSetId(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.CurrentSetId(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentSetId
              The number of changes (both in terms of keys and underlying economic responsibilities)
@@ -5077,7 +5077,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.GrandpaStorage.SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SetIdSession
              A mapping from grandpa set ID to the index of the *most recent* session for which its
@@ -5213,7 +5213,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.HexalemModuleStorage.GameStorage(Substrate.Hexalem.NET.NetApiExt.Generated.Types.Base.Arr32U8,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.HexalemModuleStorage.GameStorage(Substrate.Hexalem.NET.NetApiExt.Generated.Types.Base.Arr32U8,System.String,System.Threading.CancellationToken)">
             <summary>
             >> GameStorage
             </summary>
@@ -5229,7 +5229,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.HexalemModuleStorage.HexBoardStorage(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.HexalemModuleStorage.HexBoardStorage(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HexBoardStorage
             </summary>
@@ -5245,7 +5245,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.HexalemModuleStorage.TargetGoalStorage(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.HexalemModuleStorage.TargetGoalStorage(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> TargetGoalStorage
             </summary>
@@ -5524,7 +5524,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SudoStorage.Key(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SudoStorage.Key(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Key
              The `AccountId` of the sudo key.
@@ -5597,7 +5597,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Account(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Account(Substrate.Hexalem.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Account
              The full account information for a particular account ID.
@@ -5615,7 +5615,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ExtrinsicCount
              Total extrinsics count for the current block.
@@ -5633,7 +5633,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.BlockWeight(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.BlockWeight(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BlockWeight
              The current weight for the block.
@@ -5651,7 +5651,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.AllExtrinsicsLen(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.AllExtrinsicsLen(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AllExtrinsicsLen
              Total length (in bytes) for all extrinsics put together, for the current block.
@@ -5669,7 +5669,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.BlockHash(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.BlockHash(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> BlockHash
              Map of block numbers to block hashes.
@@ -5687,7 +5687,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicData(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicData(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ExtrinsicData
              Extrinsics data for the current block (maps an extrinsic's index to its data).
@@ -5705,7 +5705,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Number(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Number(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Number
              The current block number being processed. Set by `execute_block`.
@@ -5723,7 +5723,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ParentHash(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ParentHash(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ParentHash
              Hash of the previous block.
@@ -5741,7 +5741,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Digest(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Digest(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Digest
              Digest of the current block, also part of the block header.
@@ -5765,7 +5765,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Events(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.Events(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Events
              Events deposited for the current block.
@@ -5784,7 +5784,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.EventCount(System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.EventCount(System.String,System.Threading.CancellationToken)" -->
         <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopicsParams(Substrate.Hexalem.NET.NetApiExt.Generated.Model.primitive_types.H256)" -->
         <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopicsDefault">
             <summary>
@@ -5792,7 +5792,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopics(Substrate.Hexalem.NET.NetApiExt.Generated.Model.primitive_types.H256,System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopics(Substrate.Hexalem.NET.NetApiExt.Generated.Model.primitive_types.H256,System.String,System.Threading.CancellationToken)" -->
         <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.LastRuntimeUpgradeParams">
             <summary>
             >> LastRuntimeUpgradeParams
@@ -5805,7 +5805,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.LastRuntimeUpgrade(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.LastRuntimeUpgrade(System.String,System.Threading.CancellationToken)">
             <summary>
             >> LastRuntimeUpgrade
              Stores the `spec_version` and `spec_name` of when the last runtime upgrade happened.
@@ -5823,7 +5823,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToU32RefCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToU32RefCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradedToU32RefCount
              True if we have upgraded so that `type RefCount` is `u32`. False (default) if not.
@@ -5842,7 +5842,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToTripleRefCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToTripleRefCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradedToTripleRefCount
              True if we have upgraded so that AccountInfo contains three types of `RefCount`. False
@@ -5861,7 +5861,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ExecutionPhase(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.SystemStorage.ExecutionPhase(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ExecutionPhase
              The execution phase of the block.
@@ -6027,7 +6027,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TimestampStorage.Now(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TimestampStorage.Now(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Now
              Current time for the current block.
@@ -6045,7 +6045,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TimestampStorage.DidUpdate(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TimestampStorage.DidUpdate(System.String,System.Threading.CancellationToken)">
             <summary>
             >> DidUpdate
              Did the timestamp get updated in this block?
@@ -6097,7 +6097,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.NextFeeMultiplier(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.NextFeeMultiplier(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextFeeMultiplier
             </summary>
@@ -6113,7 +6113,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.StorageVersion(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Hexalem.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.StorageVersion(System.String,System.Threading.CancellationToken)">
             <summary>
             >> StorageVersion
             </summary>

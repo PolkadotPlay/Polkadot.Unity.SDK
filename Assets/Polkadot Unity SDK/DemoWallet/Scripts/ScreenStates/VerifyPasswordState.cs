@@ -61,7 +61,7 @@ namespace Assets.Scripts.ScreenStates
 
                 wallet = NetworkWalletManager.GetInstance().Keyring.AddFromUri(
                     FlowController.TempMnemonic, new 
-                    Meta() { name = FlowController.TempAccountName }, 
+                    Meta() { Name = FlowController.TempAccountName }, 
                     KeyType.Sr25519);
 
                 Debug.Log($"[{nameof(VerifyPasswordState)}] - Wallet = {wallet} | IsLocked = {wallet.IsLocked} | IsStored = {wallet.IsStored}");

@@ -95,7 +95,7 @@ namespace Assets.Scripts.ScreenStates
                 return;
             }
 
-            FlowController.TempAccountName = fileStore.meta.name;
+            FlowController.TempAccountName = fileStore.Meta.Name;
             FlowController.TempFileStore = fileStore;
 
             _btnCreateWalletJson.SetEnabled(true);

@@ -19301,7 +19301,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.AuctionCounter(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.AuctionCounter(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AuctionCounter
              Number of auctions started so far.
@@ -19323,7 +19323,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.AuctionInfo(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.AuctionInfo(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AuctionInfo
              Information relating to the current auction, if there is one.
@@ -19346,7 +19346,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmounts(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmounts(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ReservedAmounts
              Amounts currently reserved in the accounts of the bidders currently winning
@@ -19367,7 +19367,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.Winning(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.Winning(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Winning
              The winning bids for each of the 10 ranges at each sample in the final Ending Period of
@@ -19516,7 +19516,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuthorshipStorage.Author(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuthorshipStorage.Author(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Author
              Author of current block.
@@ -19554,7 +19554,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.EpochIndex(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.EpochIndex(System.String,System.Threading.CancellationToken)">
             <summary>
             >> EpochIndex
              Current epoch index.
@@ -19572,7 +19572,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Authorities(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Authorities(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Authorities
              Current epoch authorities.
@@ -19591,7 +19591,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.GenesisSlot(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.GenesisSlot(System.String,System.Threading.CancellationToken)">
             <summary>
             >> GenesisSlot
              The slot at which the first epoch actually started. This is 0
@@ -19610,7 +19610,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.CurrentSlot(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.CurrentSlot(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentSlot
              Current slot number.
@@ -19637,7 +19637,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Randomness(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Randomness(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Randomness
              The epoch randomness for the *current* epoch.
@@ -19664,7 +19664,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.PendingEpochConfigChange(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.PendingEpochConfigChange(System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingEpochConfigChange
              Pending epoch configuration change that will be applied when the next epoch is enacted.
@@ -19682,7 +19682,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextRandomness(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextRandomness(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextRandomness
              Next epoch randomness.
@@ -19700,7 +19700,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextAuthorities(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextAuthorities(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextAuthorities
              Next epoch authorities.
@@ -19726,7 +19726,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.SegmentIndex(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.SegmentIndex(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SegmentIndex
              Randomness under construction.
@@ -19752,7 +19752,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstruction(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstruction(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> UnderConstruction
              TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
@@ -19771,7 +19771,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Initialized(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Initialized(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Initialized
              Temporary value (cleared at block finalization) which is `Some`
@@ -19793,7 +19793,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.AuthorVrfRandomness(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.AuthorVrfRandomness(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AuthorVrfRandomness
              This field should always be populated during block processing unless
@@ -19818,7 +19818,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.EpochStart(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.EpochStart(System.String,System.Threading.CancellationToken)">
             <summary>
             >> EpochStart
              The block numbers when the last and current epoch have started, respectively `N-1` and
@@ -19844,7 +19844,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Lateness(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.Lateness(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Lateness
              How late the current block is compared to its parent.
@@ -19867,7 +19867,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.EpochConfig(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.EpochConfig(System.String,System.Threading.CancellationToken)">
             <summary>
             >> EpochConfig
              The configuration for the current epoch. Should never be `None` as it is initialized in
@@ -19887,7 +19887,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextEpochConfig(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextEpochConfig(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextEpochConfig
              The configuration for the next epoch, `None` if the config will not change
@@ -19913,7 +19913,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.SkippedEpochs(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.SkippedEpochs(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SkippedEpochs
              A list of the last 100 skipped epochs and the corresponding session index
@@ -20035,7 +20035,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.TotalIssuance(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.TotalIssuance(System.String,System.Threading.CancellationToken)">
             <summary>
             >> TotalIssuance
              The total units issued in the system.
@@ -20053,7 +20053,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.InactiveIssuance(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.InactiveIssuance(System.String,System.Threading.CancellationToken)">
             <summary>
             >> InactiveIssuance
              The total units of outstanding deactivated balance in the system.
@@ -20066,7 +20066,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Account(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Account(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)" -->
         <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)">
             <summary>
             >> LocksParams
@@ -20080,7 +20080,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Locks(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Locks(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Locks
              Any liquidity locks on some account balances.
@@ -20099,7 +20099,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Reserves(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Reserves(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Reserves
              Named reserves on some account balances.
@@ -20117,7 +20117,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Holds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Holds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Holds
              Holds on account balances.
@@ -20135,7 +20135,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Freezes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.Freezes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Freezes
              Freeze locks on account balances.
@@ -20330,7 +20330,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BountyCount
              Number of bounty proposals that have been made.
@@ -20348,7 +20348,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.Bounties(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.Bounties(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Bounties
              Bounties that have been made.
@@ -20366,7 +20366,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> BountyDescriptions
              The description of each bounty.
@@ -20384,7 +20384,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyApprovals(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyApprovals(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BountyApprovals
              Bounty indices that have been approved but not yet funded.
@@ -20607,7 +20607,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ChildBountyCount
              Number of total child bounties.
@@ -20626,7 +20626,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ParentChildBounties(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ParentChildBounties(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ParentChildBounties
              Number of child bounties per parent bounty.
@@ -20645,7 +20645,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBounties(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.NetApi.Model.Types.Primitive.U32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBounties(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.NetApi.Model.Types.Primitive.U32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ChildBounties
              Child bounties that have been added.
@@ -20663,7 +20663,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ChildBountyDescriptions
              The description of each child-bounty.
@@ -20681,7 +20681,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildrenCuratorFees(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildrenCuratorFees(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ChildrenCuratorFees
              The cumulative child-bounty curator fee for each parent bounty.
@@ -20795,7 +20795,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Claims(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Claims(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Claims
             </summary>
@@ -20811,7 +20811,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Total(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Total(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Total
             </summary>
@@ -20831,7 +20831,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Vesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Vesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Vesting
              Vesting schedule for a claim.
@@ -20852,7 +20852,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Signing(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Signing(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Signing
              The statement kind that must be signed, if any.
@@ -20870,7 +20870,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Preclaims(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ClaimsStorage.Preclaims(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Preclaims
              Pre-claimed Ethereum accounts, by the Account ID that they are claimed to.
@@ -20985,7 +20985,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConfigurationStorage.ActiveConfig(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConfigurationStorage.ActiveConfig(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ActiveConfig
              The active configuration for the current session.
@@ -21009,7 +21009,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConfigurationStorage.PendingConfigs(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConfigurationStorage.PendingConfigs(System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingConfigs
              Pending configuration changes.
@@ -21034,7 +21034,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConfigurationStorage.BypassConsistencyCheck(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConfigurationStorage.BypassConsistencyCheck(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BypassConsistencyCheck
              If this is set, then the configuration setters will bypass the consistency checks. This
@@ -21355,7 +21355,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.VotingFor(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.NetApi.Model.Types.Primitive.U16},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.VotingFor(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.NetApi.Model.Types.Primitive.U16},System.String,System.Threading.CancellationToken)">
             <summary>
             >> VotingFor
              All voting for a particular voter in a particular voting class. We store the balance for the
@@ -21376,7 +21376,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ClassLocksFor
              The voting classes which have a non-zero lock requirement and the lock amounts which they
@@ -21548,7 +21548,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.Funds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.Funds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Funds
              Info on all of the funds.
@@ -21567,7 +21567,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.NewRaise(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.NewRaise(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NewRaise
              The funds that have had additional contributions during the last block. This is used
@@ -21586,7 +21586,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.EndingsCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.EndingsCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> EndingsCount
              The number of auctions that have entered into their ending period so far.
@@ -21604,7 +21604,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.NextFundIndex(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage.NextFundIndex(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextFundIndex
              Tracker for the next available fund index
@@ -21860,7 +21860,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> DownwardMessageQueues
              The downward messages addressed for a certain para.
@@ -21884,7 +21884,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> DownwardMessageQueueHeads
              A mapping that stores the downward message queue MQC head for each para.
@@ -21908,7 +21908,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> DeliveryFeeFactor
              The number to multiply the base delivery fee by.
@@ -21951,7 +21951,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.Round(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.Round(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Round
              Internal counter for the number of rounds.
@@ -21974,7 +21974,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.CurrentPhase(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.CurrentPhase(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentPhase
              Current phase.
@@ -21994,7 +21994,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.QueuedSolution(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.QueuedSolution(System.String,System.Threading.CancellationToken)">
             <summary>
             >> QueuedSolution
              Current best solution, signed or unsigned, queued to be returned upon `elect`.
@@ -22016,7 +22016,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.Snapshot(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.Snapshot(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Snapshot
              Snapshot data of the round.
@@ -22038,7 +22038,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.DesiredTargets(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.DesiredTargets(System.String,System.Threading.CancellationToken)">
             <summary>
             >> DesiredTargets
              Desired number of targets to elect for this round.
@@ -22060,7 +22060,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SnapshotMetadata(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SnapshotMetadata(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SnapshotMetadata
              The metadata of the [`RoundSnapshot`]
@@ -22088,7 +22088,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndex(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndex(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SignedSubmissionNextIndex
              The next index to be assigned to an incoming signed submission.
@@ -22119,7 +22119,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionIndices(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionIndices(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SignedSubmissionIndices
              A sorted, bounded vector of `(score, block_number, index)`, where each `index` points to a
@@ -22148,7 +22148,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionsMap(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionsMap(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SignedSubmissionsMap
              Unchecked, signed solutions.
@@ -22175,7 +22175,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.MinimumUntrustedScore(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.MinimumUntrustedScore(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinimumUntrustedScore
              The minimum score that each 'untrusted' solution must attain in order to be considered
@@ -22448,7 +22448,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.Head(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.Head(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Head
              The current "head of the queue" being unstaked.
@@ -22470,7 +22470,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.Queue(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.Queue(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Queue
              The map of all accounts wishing to be unstaked.
@@ -22490,7 +22490,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.CounterForQueue(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.CounterForQueue(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForQueue
             Counter for the related counted storage map
@@ -22515,7 +22515,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.ErasToCheckPerBlock(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.FastUnstakeStorage.ErasToCheckPerBlock(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasToCheckPerBlock
              Number of eras to check per block.
@@ -22628,7 +22628,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.State(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.State(System.String,System.Threading.CancellationToken)">
             <summary>
             >> State
              State of the current authority set.
@@ -22646,7 +22646,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.PendingChange(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.PendingChange(System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingChange
              Pending change: (signaled at, scheduled change).
@@ -22664,7 +22664,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.NextForced(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.NextForced(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextForced
              next block number where we can force a change.
@@ -22682,7 +22682,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.Stalled(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.Stalled(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Stalled
              `true` if we are currently stalled.
@@ -22701,7 +22701,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.CurrentSetId(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.CurrentSetId(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentSetId
              The number of changes (both in terms of keys and underlying economic responsibilities)
@@ -22729,7 +22729,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SetIdSession
              A mapping from grandpa set ID to the index of the *most recent* session for which its
@@ -22891,7 +22891,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpOpenChannelRequests(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpOpenChannelRequests(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpOpenChannelRequests
              The set of pending HRMP open channel requests.
@@ -22913,7 +22913,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpOpenChannelRequestsList(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpOpenChannelRequestsList(System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpOpenChannelRequestsList
             </summary>
@@ -22932,7 +22932,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpOpenChannelRequestCount(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpOpenChannelRequestCount(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpOpenChannelRequestCount
              This mapping tracks how many open channel requests are initiated by a given sender para.
@@ -22954,7 +22954,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpAcceptedChannelRequestCount(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpAcceptedChannelRequestCount(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpAcceptedChannelRequestCount
              This mapping tracks how many open channel requests were accepted by a given recipient para.
@@ -22980,7 +22980,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpCloseChannelRequests(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpCloseChannelRequests(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpCloseChannelRequests
              A set of pending HRMP close channel requests that are going to be closed during the session
@@ -23003,7 +23003,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpCloseChannelRequestsList(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpCloseChannelRequestsList(System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpCloseChannelRequestsList
             </summary>
@@ -23023,7 +23023,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpWatermarks(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpWatermarks(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpWatermarks
              The HRMP watermark associated with each para.
@@ -23046,7 +23046,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpChannels(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpChannels(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpChannels
              HRMP channel data associated with each para.
@@ -23078,7 +23078,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpIngressChannelsIndex(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpIngressChannelsIndex(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpIngressChannelsIndex
              Ingress/egress indexes allow to find all the senders and receivers given the opposite side.
@@ -23107,7 +23107,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpEgressChannelsIndex(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpEgressChannelsIndex(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpEgressChannelsIndex
             </summary>
@@ -23125,7 +23125,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpChannelContents(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpChannelContents(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId,System.String,System.Threading.CancellationToken)">
             <summary>
             >> HrmpChannelContents
              Storage for the messages for each channel.
@@ -23139,7 +23139,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpChannelDigests(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpStorage.HrmpChannelDigests(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)" -->
         <member name="T:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.HrmpCalls">
             <summary>
             >> HrmpCalls
@@ -23341,7 +23341,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> IdentityOf
              Information that is pertinent to identify the entity behind an account.
@@ -23362,7 +23362,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SuperOf
              The super-identity of an alternative "sub" identity together with its name, within that
@@ -23385,7 +23385,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SubsOf
              Alternative "sub" identities of this account.
@@ -23410,7 +23410,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.Registrars(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.Registrars(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Registrars
              The set of registrars. Not expected to get very big as can only be added through a
@@ -23704,7 +23704,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.HeartbeatAfter(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.HeartbeatAfter(System.String,System.Threading.CancellationToken)">
             <summary>
             >> HeartbeatAfter
              The block number after which it's ok to send heartbeats in the current
@@ -23732,7 +23732,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.Keys(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.Keys(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Keys
              The current set of keys that may issue a heartbeat.
@@ -23750,7 +23750,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.ReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.NetApi.Model.Types.Primitive.U32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.ReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.NetApi.Model.Types.Primitive.U32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ReceivedHeartbeats
              For each session index, we keep a mapping of `SessionIndex` and `AuthIndex`.
@@ -23763,7 +23763,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.AuthoredBlocks(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.AuthoredBlocks(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.String,System.Threading.CancellationToken)" -->
         <member name="T:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineCalls">
             <summary>
             >> ImOnlineCalls
@@ -23828,7 +23828,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IndicesStorage.Accounts(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IndicesStorage.Accounts(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Accounts
              The lookup from index to account.
@@ -23932,7 +23932,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.InitializerStorage.HasInitialized(System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.InitializerStorage.HasInitialized(System.String,System.Threading.CancellationToken)" -->
         <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.InitializerStorage.BufferedSessionChangesParams">
             <summary>
             >> BufferedSessionChangesParams
@@ -23951,7 +23951,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.InitializerStorage.BufferedSessionChanges(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.InitializerStorage.BufferedSessionChanges(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BufferedSessionChanges
              Buffered session changes along with the block number at which they should be applied.
@@ -24001,7 +24001,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MessageQueueStorage.BookStateFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MessageQueueStorage.BookStateFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin,System.String,System.Threading.CancellationToken)">
             <summary>
             >> BookStateFor
              The index of the first and last (non-empty) pages.
@@ -24019,7 +24019,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MessageQueueStorage.ServiceHead(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MessageQueueStorage.ServiceHead(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ServiceHead
              The origin at which we should begin servicing.
@@ -24037,7 +24037,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MessageQueueStorage.Pages(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin,Substrate.NetApi.Model.Types.Primitive.U32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MessageQueueStorage.Pages(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin,Substrate.NetApi.Model.Types.Primitive.U32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> Pages
              The map of page indices to pages.
@@ -24174,7 +24174,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MultisigStorage.Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.MultisigStorage.Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8},System.String,System.Threading.CancellationToken)">
             <summary>
             >> Multisigs
              The set of open multisig operations.
@@ -24350,7 +24350,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MinJoinBond(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MinJoinBond(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinJoinBond
              Minimum amount to bond to join a pool.
@@ -24374,7 +24374,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MinCreateBond(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MinCreateBond(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinCreateBond
              Minimum bond required to create a pool.
@@ -24399,7 +24399,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPools(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPools(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MaxPools
              Maximum number of nomination pools that can exist. If `None`, then an unbounded number of
@@ -24419,7 +24419,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPoolMembers(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPoolMembers(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MaxPoolMembers
              Maximum number of members that can exist in the system. If `None`, then the count
@@ -24439,7 +24439,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPoolMembersPerPool(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPoolMembersPerPool(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MaxPoolMembersPerPool
              Maximum number of members that may belong to pool. If `None`, then the count of
@@ -24460,7 +24460,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.GlobalMaxCommission(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.GlobalMaxCommission(System.String,System.Threading.CancellationToken)">
             <summary>
             >> GlobalMaxCommission
              The maximum commission that can be charged by a pool. Used on commission payouts to bound
@@ -24482,7 +24482,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.PoolMembers(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.PoolMembers(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> PoolMembers
              Active members.
@@ -24502,7 +24502,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForPoolMembers(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForPoolMembers(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForPoolMembers
             Counter for the related counted storage map
@@ -24520,7 +24520,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.BondedPools(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.BondedPools(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> BondedPools
              Storage for bonded pools.
@@ -24538,7 +24538,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForBondedPools(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForBondedPools(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForBondedPools
             Counter for the related counted storage map
@@ -24557,7 +24557,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.RewardPools(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.RewardPools(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> RewardPools
              Reward pools. This is where there rewards for each pool accumulate. When a members payout is
@@ -24576,7 +24576,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForRewardPools(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForRewardPools(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForRewardPools
             Counter for the related counted storage map
@@ -24595,7 +24595,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.SubPoolsStorage(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.SubPoolsStorage(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SubPoolsStorage
              Groups of unbonding pools. Each group of unbonding pools belongs to a
@@ -24614,7 +24614,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForSubPoolsStorage(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForSubPoolsStorage(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForSubPoolsStorage
             Counter for the related counted storage map
@@ -24632,7 +24632,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.Metadata(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.Metadata(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Metadata
              Metadata for the pool.
@@ -24650,7 +24650,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForMetadata(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForMetadata(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForMetadata
             Counter for the related counted storage map
@@ -24668,7 +24668,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.LastPoolId(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.LastPoolId(System.String,System.Threading.CancellationToken)">
             <summary>
             >> LastPoolId
              Ever increasing number of all pools created so far.
@@ -24689,7 +24689,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ReversePoolIdLookup(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ReversePoolIdLookup(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ReversePoolIdLookup
              A reverse lookup from the pool's account id to its id.
@@ -24710,7 +24710,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForReversePoolIdLookup(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForReversePoolIdLookup(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForReversePoolIdLookup
             Counter for the related counted storage map
@@ -24728,7 +24728,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ClaimPermissions(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ClaimPermissions(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ClaimPermissions
              Map from a pool member account to their opted claim permission.
@@ -25114,7 +25114,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.OffencesStorage.Reports(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.OffencesStorage.Reports(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Reports
              The primary structure that holds all offence records keyed by report identifiers.
@@ -25132,7 +25132,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.OffencesStorage.ConcurrentReportsIndex(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8,Substrate.NetApi.Model.Types.Base.BaseVec{Substrate.NetApi.Model.Types.Primitive.U8}},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.OffencesStorage.ConcurrentReportsIndex(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8,Substrate.NetApi.Model.Types.Base.BaseVec{Substrate.NetApi.Model.Types.Primitive.U8}},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ConcurrentReportsIndex
              A vector of reports of the same kind that happened at the same time slot.
@@ -25210,7 +25210,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.AvailabilityBitfields(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.AvailabilityBitfields(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex,System.String,System.Threading.CancellationToken)">
             <summary>
             >> AvailabilityBitfields
              The latest bitfield for each validator, referred to by their index in the validator set.
@@ -25228,7 +25228,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailability(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailability(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingAvailability
              Candidates pending availability by `ParaId`.
@@ -25246,7 +25246,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityCommitments(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityCommitments(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingAvailabilityCommitments
              The commitments of candidates pending availability, by `ParaId`.
@@ -25463,7 +25463,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInherentStorage.Included(System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInherentStorage.Included(System.String,System.Threading.CancellationToken)" -->
         <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInherentStorage.OnChainVotesParams">
             <summary>
             >> OnChainVotesParams
@@ -25476,7 +25476,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInherentStorage.OnChainVotes(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInherentStorage.OnChainVotes(System.String,System.Threading.CancellationToken)">
             <summary>
             >> OnChainVotes
              Scraped on chain data for extracting resolved disputes as well as backing votes.
@@ -25565,7 +25565,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PvfActiveVoteMap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PvfActiveVoteMap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash,System.String,System.Threading.CancellationToken)">
             <summary>
             >> PvfActiveVoteMap
              All currently active PVF pre-checking votes.
@@ -25586,7 +25586,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PvfActiveVoteList(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PvfActiveVoteList(System.String,System.Threading.CancellationToken)">
             <summary>
             >> PvfActiveVoteList
              The list of all currently active PVF votes. Auxiliary to `PvfActiveVoteMap`.
@@ -25607,7 +25607,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.Parachains(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.Parachains(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Parachains
              All lease holding parachains. Ordered ascending by `ParaId`. On demand parachains are not
@@ -25628,7 +25628,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.ParaLifecycles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.ParaLifecycles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ParaLifecycles
              The current lifecycle of a all known Para IDs.
@@ -25646,7 +25646,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.Heads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.Heads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Heads
              The head-data of every registered para.
@@ -25664,7 +25664,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.MostRecentContext(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.MostRecentContext(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> MostRecentContext
              The context (relay-chain block number) of the most recent parachain head.
@@ -25684,7 +25684,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.CurrentCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.CurrentCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentCodeHash
              The validation code hash of every live para.
@@ -25707,7 +25707,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PastCodeHash(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,Substrate.NetApi.Model.Types.Primitive.U32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PastCodeHash(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,Substrate.NetApi.Model.Types.Primitive.U32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> PastCodeHash
              Actual past code hash, indicated by the para id as well as the block number at which it
@@ -25730,7 +25730,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PastCodeMeta(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PastCodeMeta(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> PastCodeMeta
              Past code of parachains. The parachains themselves may not be registered anymore,
@@ -25755,7 +25755,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PastCodePruning(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.PastCodePruning(System.String,System.Threading.CancellationToken)">
             <summary>
             >> PastCodePruning
              Which paras have past code that needs pruning and the relay-chain block at which the code
@@ -25780,7 +25780,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeUpgrades(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeUpgrades(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> FutureCodeUpgrades
              The block number at which the planned code change is expected for a para.
@@ -25802,7 +25802,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> FutureCodeHash
              The actual future code hash of a para.
@@ -25831,7 +25831,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpgradeGoAheadSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpgradeGoAheadSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradeGoAheadSignal
              This is used by the relay-chain to communicate to a parachain a go-ahead with in the upgrade
@@ -25866,7 +25866,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpgradeRestrictionSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpgradeRestrictionSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradeRestrictionSignal
              This is used by the relay-chain to communicate that there are restrictions for performing
@@ -25894,7 +25894,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpgradeCooldowns(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpgradeCooldowns(System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradeCooldowns
              The list of parachains that are awaiting for their upgrade restriction to cooldown.
@@ -25917,7 +25917,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpcomingUpgrades(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpcomingUpgrades(System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpcomingUpgrades
              The list of upcoming code upgrades. Each item is a pair of which para performs a code
@@ -25938,7 +25938,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.ActionsQueue(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.ActionsQueue(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ActionsQueue
              The actions to perform during the start of a specific session index.
@@ -25959,7 +25959,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpcomingParasGenesis(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.UpcomingParasGenesis(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpcomingParasGenesis
              Upcoming paras instantiation arguments.
@@ -25980,7 +25980,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.CodeByHashRefs(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.CodeByHashRefs(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash,System.String,System.Threading.CancellationToken)">
             <summary>
             >> CodeByHashRefs
              The number of reference on the validation code in [`CodeByHash`] storage.
@@ -26001,7 +26001,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.CodeByHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasStorage.CodeByHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash,System.String,System.Threading.CancellationToken)">
             <summary>
             >> CodeByHash
              Validation code stored by its hash.
@@ -26184,7 +26184,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ValidatorGroups(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ValidatorGroups(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ValidatorGroups
              All the validator groups. One for each core. Indices are into `ActiveValidators` - not the
@@ -26215,7 +26215,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.AvailabilityCores(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.AvailabilityCores(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AvailabilityCores
              One entry for each availability core. Entries are `None` if the core is not currently
@@ -26246,7 +26246,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.SessionStartBlock(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.SessionStartBlock(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SessionStartBlock
              The block number where the session start occurred. Used to track how many group rotations
@@ -26274,7 +26274,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ClaimQueue(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ClaimQueue(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ClaimQueue
              One entry for each availability core. The `VecDeque` represents the assignments to be
@@ -26317,7 +26317,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.LastPrunedSession(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.LastPrunedSession(System.String,System.Threading.CancellationToken)">
             <summary>
             >> LastPrunedSession
              The last pruned session, if any. All data stored by this module
@@ -26336,7 +26336,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.Disputes(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.Disputes(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.String,System.Threading.CancellationToken)">
             <summary>
             >> Disputes
              All ongoing or concluded disputes for the last several sessions.
@@ -26355,7 +26355,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputes(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputes(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.String,System.Threading.CancellationToken)">
             <summary>
             >> BackersOnDisputes
              Backing votes stored for each dispute.
@@ -26375,7 +26375,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.Included(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.Included(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.String,System.Threading.CancellationToken)">
             <summary>
             >> Included
              All included blocks on the chain, as well as the block number in this chain that
@@ -26397,7 +26397,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.Frozen(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.Frozen(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Frozen
              Whether the chain is frozen. Starts as `None`. When this is `Some`,
@@ -26505,7 +26505,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.AssignmentKeysUnsafe(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.AssignmentKeysUnsafe(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AssignmentKeysUnsafe
              Assignment keys for the current session.
@@ -26525,7 +26525,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.EarliestStoredSession(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.EarliestStoredSession(System.String,System.Threading.CancellationToken)">
             <summary>
             >> EarliestStoredSession
              The earliest session for which previous session info is stored.
@@ -26545,7 +26545,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.Sessions(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.Sessions(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Sessions
              Session information in a rolling window.
@@ -26565,7 +26565,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.AccountKeys(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.AccountKeys(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> AccountKeys
              The validator account keys of the validators actively participating in parachain consensus.
@@ -26583,7 +26583,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.SessionExecutorParams(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.SessionExecutorParams(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SessionExecutorParams
              Executor parameter set for a given session index
@@ -26621,7 +26621,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.CurrentSessionIndex(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.CurrentSessionIndex(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentSessionIndex
              The current session index.
@@ -26640,7 +26640,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.ActiveValidatorIndices(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.ActiveValidatorIndices(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ActiveValidatorIndices
              All the validators actively participating in parachain consensus.
@@ -26660,7 +26660,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.ActiveValidatorKeys(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.ActiveValidatorKeys(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ActiveValidatorKeys
              The parachain attestation keys of the validators actively participating in parachain
@@ -26679,7 +26679,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.AllowedRelayParents(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.AllowedRelayParents(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AllowedRelayParents
              All allowed relay-parents.
@@ -26717,7 +26717,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSlashingStorage.UnappliedSlashes(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSlashingStorage.UnappliedSlashes(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash},System.String,System.Threading.CancellationToken)">
             <summary>
             >> UnappliedSlashes
              Validators pending dispute slashes.
@@ -26735,7 +26735,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSlashingStorage.ValidatorSetCounts(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSlashingStorage.ValidatorSetCounts(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ValidatorSetCounts
              `ValidatorSetCount` per session.
@@ -26821,7 +26821,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.String,System.Threading.CancellationToken)">
             <summary>
             >> StatusFor
              The request status of a given hash.
@@ -26838,7 +26838,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,Substrate.NetApi.Model.Types.Primitive.U32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,Substrate.NetApi.Model.Types.Primitive.U32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> PreimageFor
             </summary>
@@ -26941,7 +26941,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ProxyStorage.Proxies(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ProxyStorage.Proxies(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Proxies
              The set of account proxies. Maps the account which has delegated to the accounts
@@ -26960,7 +26960,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ProxyStorage.Announcements(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ProxyStorage.Announcements(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Announcements
              The announcements made by the proxy (key).
@@ -27160,7 +27160,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ReferendumCount
              The next free referendum index, aka the number of referenda started so far.
@@ -27178,7 +27178,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ReferendumInfoFor
              Information concerning any given referendum.
@@ -27199,7 +27199,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16,System.String,System.Threading.CancellationToken)">
             <summary>
             >> TrackQueue
              The sorted list of referenda ready to be decided but not yet being decided, ordered by
@@ -27220,7 +27220,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16,System.String,System.Threading.CancellationToken)">
             <summary>
             >> DecidingCount
              The number of referenda being decided currently.
@@ -27243,7 +27243,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> MetadataOf
              The metadata is a general information concerning the referendum.
@@ -27456,7 +27456,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage.PendingSwap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage.PendingSwap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> PendingSwap
              Pending swap operations.
@@ -27477,7 +27477,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage.Paras(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage.Paras(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Paras
              Amount held on deposit for each para and the original depositor.
@@ -27498,7 +27498,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage.NextFreeParaId(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage.NextFreeParaId(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextFreeParaId
              The next free `ParaId`.
@@ -27693,7 +27693,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSince(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSince(System.String,System.Threading.CancellationToken)">
             <summary>
             >> IncompleteSince
             </summary>
@@ -27710,7 +27710,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.Agenda(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.Agenda(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Agenda
              Items to be executed, indexed by the block number that they should be executed on.
@@ -27731,7 +27731,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.Lookup(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.Lookup(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Lookup
              Lookup from a name to the block number and index of the task.
@@ -27859,7 +27859,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.Validators(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.Validators(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Validators
              The current set of validators.
@@ -27877,7 +27877,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.CurrentIndex(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.CurrentIndex(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentIndex
              Current index of the session.
@@ -27896,7 +27896,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.QueuedChanged(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.QueuedChanged(System.String,System.Threading.CancellationToken)">
             <summary>
             >> QueuedChanged
              True if the underlying economic identities or weighting behind the validators
@@ -27916,7 +27916,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.QueuedKeys(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.QueuedKeys(System.String,System.Threading.CancellationToken)">
             <summary>
             >> QueuedKeys
              The queued keys for the next session. When the next session begins, these keys
@@ -27939,7 +27939,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.DisabledValidators(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.DisabledValidators(System.String,System.Threading.CancellationToken)">
             <summary>
             >> DisabledValidators
              Indices of disabled validators.
@@ -27961,7 +27961,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.NextKeys(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.NextKeys(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextKeys
              The next session keys for a validator.
@@ -27979,7 +27979,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.KeyOwner(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId,Substrate.NetApi.Model.Types.Base.BaseVec{Substrate.NetApi.Model.Types.Primitive.U8}},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SessionStorage.KeyOwner(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId,Substrate.NetApi.Model.Types.Base.BaseVec{Substrate.NetApi.Model.Types.Primitive.U8}},System.String,System.Threading.CancellationToken)">
             <summary>
             >> KeyOwner
              The owner of a key. The key is the `KeyTypeId` + the encoded key.
@@ -28079,7 +28079,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SlotsStorage.Leases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SlotsStorage.Leases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Leases
              Amounts held on deposit for each (possibly future) leased parachain.
@@ -28179,7 +28179,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ValidatorCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ValidatorCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ValidatorCount
              The ideal number of active validators.
@@ -28197,7 +28197,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinimumValidatorCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinimumValidatorCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinimumValidatorCount
              Minimum number of staking participants before emergency conditions are imposed.
@@ -28217,7 +28217,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Invulnerables(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Invulnerables(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Invulnerables
              Any validators that may never be slashed or forcibly kicked. It's a Vec since they're
@@ -28239,7 +28239,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Bonded(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Bonded(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Bonded
              Map from all locked "stash" accounts to the controller account.
@@ -28259,7 +28259,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinNominatorBond(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinNominatorBond(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinNominatorBond
              The minimum active bond to become and maintain the role of a nominator.
@@ -28277,7 +28277,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinValidatorBond(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinValidatorBond(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinValidatorBond
              The minimum active bond to become and maintain the role of a validator.
@@ -28295,7 +28295,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinimumActiveStake(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinimumActiveStake(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinimumActiveStake
              The minimum active nominator stake of the last successful election.
@@ -28315,7 +28315,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinCommission(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MinCommission(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MinCommission
              The minimum amount of commission that validators can set.
@@ -28335,7 +28335,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Ledger(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Ledger(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Ledger
              Map from all (unlocked) "controller" accounts to the info regarding the staking.
@@ -28355,7 +28355,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Payee(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Payee(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Payee
              Where the reward payment should be made. Keyed by stash.
@@ -28377,7 +28377,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Validators(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Validators(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Validators
              The map from (wannabe) validator stash key to the preferences of that validator.
@@ -28397,7 +28397,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CounterForValidators(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CounterForValidators(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForValidators
             Counter for the related counted storage map
@@ -28417,7 +28417,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MaxValidatorsCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MaxValidatorsCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MaxValidatorsCount
              The maximum validator count before we stop allowing new validators to join.
@@ -28455,7 +28455,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Nominators(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.Nominators(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Nominators
              The map from nominator stash key to their nomination preferences, namely the validators that
@@ -28491,7 +28491,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CounterForNominators(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CounterForNominators(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForNominators
             Counter for the related counted storage map
@@ -28511,7 +28511,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MaxNominatorsCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.MaxNominatorsCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> MaxNominatorsCount
              The maximum nominator count before we stop allowing new validators to join.
@@ -28534,7 +28534,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CurrentEra(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CurrentEra(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentEra
              The current era index.
@@ -28558,7 +28558,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ActiveEra(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ActiveEra(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ActiveEra
              The active era information, it holds index and start.
@@ -28582,7 +28582,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStartSessionIndex(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStartSessionIndex(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasStartSessionIndex
              The session index at which the era start for the last `HISTORY_DEPTH` eras.
@@ -28608,7 +28608,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakers(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakers(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasStakers
              Exposure of validator at era.
@@ -28641,7 +28641,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersClipped(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersClipped(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasStakersClipped
              Clipped Exposure of validator at era.
@@ -28673,7 +28673,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasValidatorPrefs(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasValidatorPrefs(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasValidatorPrefs
              Similar to `ErasStakers`, this holds the preferences of validators.
@@ -28697,7 +28697,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasValidatorReward(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasValidatorReward(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasValidatorReward
              The total validator era payout for the last `HISTORY_DEPTH` eras.
@@ -28718,7 +28718,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasRewardPoints(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasRewardPoints(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasRewardPoints
              Rewards for the last `HISTORY_DEPTH` eras.
@@ -28738,7 +28738,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasTotalStake(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasTotalStake(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ErasTotalStake
              The total amount staked for the last `HISTORY_DEPTH` eras.
@@ -28757,7 +28757,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ForceEra(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ForceEra(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ForceEra
              Mode of era forcing.
@@ -28777,7 +28777,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.SlashRewardFraction(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.SlashRewardFraction(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SlashRewardFraction
              The percentage of the slash that is distributed to reporters.
@@ -28798,7 +28798,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CanceledSlashPayout(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CanceledSlashPayout(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CanceledSlashPayout
              The amount of currency given to reporters of a slash event which was
@@ -28817,7 +28817,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.UnappliedSlashes(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.UnappliedSlashes(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> UnappliedSlashes
              All unapplied slashes that are queued for later.
@@ -28838,7 +28838,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.BondedEras(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.BondedEras(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BondedEras
              A mapping from still-bonded eras to the first session index of that era.
@@ -28860,7 +28860,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ValidatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ValidatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> ValidatorSlashInEra
              All slashing events on validators, mapped by era to the highest slash proportion
@@ -28879,7 +28879,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.NominatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.NominatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> NominatorSlashInEra
              All slashing events on nominators, mapped by era to the highest slash value of the era.
@@ -28897,7 +28897,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.SlashingSpans(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.SlashingSpans(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> SlashingSpans
              Slashing spans for stash accounts.
@@ -28916,7 +28916,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.SpanSlash(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.NetApi.Model.Types.Primitive.U32},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.SpanSlash(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.NetApi.Model.Types.Primitive.U32},System.String,System.Threading.CancellationToken)">
             <summary>
             >> SpanSlash
              Records information about the maximum slash of a stash within a slashing span,
@@ -28937,7 +28937,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CurrentPlannedSession(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.CurrentPlannedSession(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentPlannedSession
              The last planned session scheduled by the session pallet.
@@ -28965,7 +28965,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.OffendingValidators(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.OffendingValidators(System.String,System.Threading.CancellationToken)">
             <summary>
             >> OffendingValidators
              Indices of validators that have offended in the active era and whether they are currently
@@ -28993,7 +28993,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ChillThreshold(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ChillThreshold(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ChillThreshold
              The threshold for when users can start calling `chill_other` for other validators /
@@ -29418,7 +29418,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Account(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Account(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Account
              The full account information for a particular account ID.
@@ -29436,7 +29436,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ExtrinsicCount
              Total extrinsics count for the current block.
@@ -29454,7 +29454,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.BlockWeight(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.BlockWeight(System.String,System.Threading.CancellationToken)">
             <summary>
             >> BlockWeight
              The current weight for the block.
@@ -29472,7 +29472,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.AllExtrinsicsLen(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.AllExtrinsicsLen(System.String,System.Threading.CancellationToken)">
             <summary>
             >> AllExtrinsicsLen
              Total length (in bytes) for all extrinsics put together, for the current block.
@@ -29490,7 +29490,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.BlockHash(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.BlockHash(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> BlockHash
              Map of block numbers to block hashes.
@@ -29508,7 +29508,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicData(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicData(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ExtrinsicData
              Extrinsics data for the current block (maps an extrinsic's index to its data).
@@ -29526,7 +29526,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Number(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Number(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Number
              The current block number being processed. Set by `execute_block`.
@@ -29544,7 +29544,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ParentHash(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ParentHash(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ParentHash
              Hash of the previous block.
@@ -29562,7 +29562,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Digest(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Digest(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Digest
              Digest of the current block, also part of the block header.
@@ -29586,7 +29586,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Events(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.Events(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Events
              Events deposited for the current block.
@@ -29605,7 +29605,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.EventCount(System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.EventCount(System.String,System.Threading.CancellationToken)" -->
         <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopicsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256)" -->
         <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopicsDefault">
             <summary>
@@ -29613,7 +29613,7 @@
             Default value as hex string
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopics(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.Threading.CancellationToken)" -->
+        <!-- Badly formed XML comment ignored for member "M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.EventTopics(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.String,System.Threading.CancellationToken)" -->
         <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.LastRuntimeUpgradeParams">
             <summary>
             >> LastRuntimeUpgradeParams
@@ -29626,7 +29626,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.LastRuntimeUpgrade(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.LastRuntimeUpgrade(System.String,System.Threading.CancellationToken)">
             <summary>
             >> LastRuntimeUpgrade
              Stores the `spec_version` and `spec_name` of when the last runtime upgrade happened.
@@ -29644,7 +29644,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToU32RefCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToU32RefCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradedToU32RefCount
              True if we have upgraded so that `type RefCount` is `u32`. False (default) if not.
@@ -29663,7 +29663,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToTripleRefCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.UpgradedToTripleRefCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> UpgradedToTripleRefCount
              True if we have upgraded so that AccountInfo contains three types of `RefCount`. False
@@ -29682,7 +29682,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ExecutionPhase(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SystemStorage.ExecutionPhase(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ExecutionPhase
              The execution phase of the block.
@@ -29848,7 +29848,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TimestampStorage.Now(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TimestampStorage.Now(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Now
              Current time for the current block.
@@ -29866,7 +29866,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TimestampStorage.DidUpdate(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TimestampStorage.DidUpdate(System.String,System.Threading.CancellationToken)">
             <summary>
             >> DidUpdate
              Did the timestamp get updated in this block?
@@ -29918,7 +29918,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.NextFeeMultiplier(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.NextFeeMultiplier(System.String,System.Threading.CancellationToken)">
             <summary>
             >> NextFeeMultiplier
             </summary>
@@ -29934,7 +29934,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.StorageVersion(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TransactionPaymentStorage.StorageVersion(System.String,System.Threading.CancellationToken)">
             <summary>
             >> StorageVersion
             </summary>
@@ -29997,7 +29997,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalCount(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalCount(System.String,System.Threading.CancellationToken)">
             <summary>
             >> ProposalCount
              Number of proposals that have been made.
@@ -30015,7 +30015,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.Proposals(Substrate.NetApi.Model.Types.Primitive.U32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.Proposals(Substrate.NetApi.Model.Types.Primitive.U32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Proposals
              Proposals that have been made.
@@ -30033,7 +30033,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.Deactivated(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.Deactivated(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Deactivated
              The amount which has been reported as inactive to Currency.
@@ -30051,7 +30051,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.Approvals(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.Approvals(System.String,System.Threading.CancellationToken)">
             <summary>
             >> Approvals
              Proposal indices that have been approved but not yet awarded.
@@ -30273,7 +30273,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.Vesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.Vesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Vesting
              Information regarding the vesting of a given account.
@@ -30293,7 +30293,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.StorageVersion(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.StorageVersion(System.String,System.Threading.CancellationToken)">
             <summary>
             >> StorageVersion
              Storage version of the pallet.
@@ -30412,7 +30412,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VoterListStorage.ListNodes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VoterListStorage.ListNodes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ListNodes
              A single node, within some bag.
@@ -30432,7 +30432,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VoterListStorage.CounterForListNodes(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VoterListStorage.CounterForListNodes(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CounterForListNodes
             Counter for the related counted storage map
@@ -30452,7 +30452,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VoterListStorage.ListBags(Substrate.NetApi.Model.Types.Primitive.U64,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VoterListStorage.ListBags(Substrate.NetApi.Model.Types.Primitive.U64,System.String,System.Threading.CancellationToken)">
             <summary>
             >> ListBags
              A bag stored in storage.
@@ -30568,7 +30568,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.WhitelistStorage.WhitelistedCall(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.WhitelistStorage.WhitelistedCall(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.String,System.Threading.CancellationToken)">
             <summary>
             >> WhitelistedCall
             </summary>
@@ -30664,7 +30664,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.QueryCounter(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.QueryCounter(System.String,System.Threading.CancellationToken)">
             <summary>
             >> QueryCounter
              The latest available query index.
@@ -30682,7 +30682,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.Queries(Substrate.NetApi.Model.Types.Primitive.U64,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.Queries(Substrate.NetApi.Model.Types.Primitive.U64,System.String,System.Threading.CancellationToken)">
             <summary>
             >> Queries
              The ongoing queries.
@@ -30703,7 +30703,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.AssetTraps(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.AssetTraps(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256,System.String,System.Threading.CancellationToken)">
             <summary>
             >> AssetTraps
              The existing asset traps.
@@ -30725,7 +30725,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.SafeXcmVersion(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.SafeXcmVersion(System.String,System.Threading.CancellationToken)">
             <summary>
             >> SafeXcmVersion
              Default version to encode XCM when latest version of destination is unknown. If `None`,
@@ -30744,7 +30744,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation},System.String,System.Threading.CancellationToken)">
             <summary>
             >> SupportedVersion
              The Latest versions that we know various locations support.
@@ -30762,7 +30762,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation},System.String,System.Threading.CancellationToken)">
             <summary>
             >> VersionNotifiers
              All locations that we have requested version notifications from.
@@ -30781,7 +30781,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation},System.String,System.Threading.CancellationToken)">
             <summary>
             >> VersionNotifyTargets
              The target locations that are subscribed to our version changes, as well as the most recent
@@ -30802,7 +30802,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionDiscoveryQueue(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionDiscoveryQueue(System.String,System.Threading.CancellationToken)">
             <summary>
             >> VersionDiscoveryQueue
              Destinations whose latest XCM version we would like to know. Duplicates not allowed, and
@@ -30822,7 +30822,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.CurrentMigration(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.CurrentMigration(System.String,System.Threading.CancellationToken)">
             <summary>
             >> CurrentMigration
              The current migration's stage, if any.
@@ -30840,7 +30840,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungibles(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId},System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungibles(Substrate.NetApi.Model.Types.Base.BaseTuple{Substrate.NetApi.Model.Types.Primitive.U32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId},System.String,System.Threading.CancellationToken)">
             <summary>
             >> RemoteLockedFungibles
              Fungible assets which we know are locked on a remote chain.
@@ -30858,7 +30858,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungibles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungibles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32,System.String,System.Threading.CancellationToken)">
             <summary>
             >> LockedFungibles
              Fungible assets which we know are locked on this chain.
@@ -30876,7 +30876,7 @@
             Default value as hex string
             </summary>
         </member>
-        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.XcmExecutionSuspended(System.Threading.CancellationToken)">
+        <member name="M:Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.XcmExecutionSuspended(System.String,System.Threading.CancellationToken)">
             <summary>
             >> XcmExecutionSuspended
              Global suspension state of the XCM executor.
