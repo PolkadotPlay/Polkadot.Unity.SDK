@@ -61,7 +61,10 @@ namespace Assets.Scripts.ScreenStates
         {
             var accountPassword = evt.newValue;
 
-            if (!Wallet.IsValidPassword(accountPassword))
+            var isValidPassword = Wallet.IsValidPassword(accountPassword);
+            Debug.Log($"IsPasswordValid = {isValidPassword}");
+
+            if (!isValidPassword)
             {
                 FlowController.TempAccountPassword = null;
                 _btnCreateWallet.SetEnabled(false);

@@ -1,7 +1,7 @@
-using Schnorrkel.Keys;
 using Substrate.Integration;
 using Substrate.Integration.Client;
 using Substrate.Integration.Helper;
+using Substrate.NET.Schnorrkel.Keys;
 using Substrate.NET.Wallet;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Rpc;
@@ -186,7 +186,7 @@ namespace Assets.Scripts
             var result = new List<Wallet>();
             foreach (var w in WalletFiles())
             {
-                if (!Wallet.Load(w, out Wallet wallet))
+                if (!Wallet.TryLoad(w, out Wallet wallet))
                 {
                     Debug.Log($"Failed to load wallet {w}");
                 }

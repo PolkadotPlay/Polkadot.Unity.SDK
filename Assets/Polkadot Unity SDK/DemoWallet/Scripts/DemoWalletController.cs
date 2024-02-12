@@ -1,5 +1,6 @@
 using Assets.Scripts.ScreenStates;
 using Substrate.NET.Wallet;
+using Substrate.NET.Wallet.Keyring;
 using Substrate.NetApi.Model.Types;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -37,7 +38,7 @@ namespace Assets.Scripts
         public VisualElement VelContainer { get; private set; }
 
         internal Account TempAccount { get; set; }
-        internal FileStore TempFileStore { get; set; }
+        internal WalletFile TempFileStore { get; set; }
 
         internal string TempAccountName { get; set; } // TODO: remove this ....
         internal string TempAccountPassword { get; set; } // TODO: remove this ....

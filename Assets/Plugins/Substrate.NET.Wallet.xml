@@ -1,0 +1,1073 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Substrate.NET.Wallet</name>
+    </assembly>
+    <members>
+        <member name="T:Substrate.NET.Wallet.Caching">
+            <summary>
+            Caching
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Caching.Logger">
+            <summary> The logger. </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Caching.TryReadFile``1(System.String,``0@)">
+            <summary>
+            Tries the read file.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path">The path.</param>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Caching.Persist``1(System.String,``0)">
+            <summary>
+            Persists the specified path.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path">The path.</param>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Derivation.DeriveJunction">
+            <summary>
+            Analyse a derivation phrase and categorize it as soft and hard derivation
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.DeriveJunction.JUNCTION_ID_LEN">
+            <summary>
+            Junction id lenght
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.DeriveJunction.NUMBER_PATTERN">
+            <summary>
+            Regex number pattern
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.DeriveJunction.IsHard">
+            <summary>
+            Return true if it is a hard derivation (starts with //)
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.DeriveJunction.IsSoft">
+            <summary>
+            Return true if it is a soft derivation (starts with //)
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.DeriveJunction.ChainCode">
+            <summary>
+            Represents the chain code associated with the junction
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.CompactAddLength(System.Byte[])">
+            <summary>
+            Add lenght as first byte
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.Hard(System.String)">
+            <summary>
+            Harden the given string
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.Harden">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.Soft(System.Byte[])">
+            <summary>
+            Soft the given byte array
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.Soft(System.Numerics.BigInteger)">
+            <summary>
+            Soft the given number
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.Soft(System.String)">
+            <summary>
+            Soft the given string
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.Soften">
+            <summary>
+            Return a soft representation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Derivation.DeriveJunction.From(System.String)">
+            <summary>
+            Create a <see cref="T:Substrate.NET.Wallet.Derivation.DeriveJunction"/> instance from a derivation string
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Derivation.Keys">
+            <summary>
+            Constants definition
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.MINI_SECRET_KEY_LENGTH">
+            <summary>
+            The length of a Ristretto Schnorr `MiniSecretKey`, in bytes.
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.PUBLIC_KEY_LENGTH">
+            <summary>
+            The length of a Ristretto Schnorr `PublicKey`, in bytes.
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.SECRET_KEY_KEY_LENGTH">
+            <summary>
+            The length of the "key" portion of a Ristretto Schnorr secret key, in bytes.
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.SECRET_KEY_NONCE_LENGTH">
+            <summary>
+            The length of the "nonce" portion of a Ristretto Schnorr secret key, in bytes.
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.SECRET_KEY_LENGTH">
+            <summary>
+            The length of a Ristretto Schnorr key, `SecretKey`, in bytes.
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.KEYPAIR_LENGTH">
+            <summary>
+            The length of an Ristretto Schnorr `Keypair`, in bytes.
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Derivation.Keys.CHAIN_CODE_LENGTH">
+            <summary>
+            Length in bytes of our chain codes.
+            </summary>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Derivation.KeyExtractResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.KeyExtractResult.DerivePath">
+            <summary>
+            Derivation phrase
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.KeyExtractResult.Password">
+            <summary>
+            Password use in the derivation
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.KeyExtractResult.Path">
+            <summary>
+            List of derivations
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.KeyExtractResult.Phrase">
+            <summary>
+            Mnemonic phrase
+            </summary>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Derivation.KeyExtractPathResult">
+            <summary>
+            Result of derivation path
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.KeyExtractPathResult.Parts">
+            <summary>
+            Derivation string splitted
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Derivation.KeyExtractPathResult.Path">
+            <summary>
+            List of derivations
+            </summary>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Extensions.AccountExtension">
+            <summary>
+            Account extension methods
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Extensions.AccountExtension.Clone(Substrate.NetApi.Model.Types.Account)">
+            <summary>
+            Clone an instance of an Account
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Extensions.ArrayExtension.SubArray``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Read an array from start index to end index
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.Keyring">
+            <summary>
+            Keyring is a cryptographic key management tool or library used to manage cryptographic keys and perform key-related operations, such as key generation, storage, and signing.
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Pair.CreatePair(Substrate.NET.Wallet.Keyring.KeyringAddress,Substrate.NetApi.Model.Types.Account,Substrate.NET.Wallet.Keyring.Meta,System.Byte[],System.Collections.Generic.List{Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding},System.Int16)">
+            <summary>
+            https://github.com/polkadot-js/common/blob/master/packages/keyring/src/pair/index.ts#L89
+            </summary>
+            <param name="setup"></param>
+            <param name="publicKey"></param>
+            <param name="secretKey"></param>
+            <param name="meta"></param>
+            <param name="decoded"></param>
+            <param name="encryptedEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.Pkcs8">
+            <summary>
+            PKCS8
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Pkcs8.Decode(System.String,System.Byte[],System.Collections.Generic.List{Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding})">
+            <summary>
+            Decode
+            </summary>
+            <param name="password"></param>
+            <param name="encoded"></param>
+            <param name="encryptedEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Pkcs8.Encode(System.String,System.Byte[],System.Collections.Generic.List{Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding})">
+            <summary>
+            https://github.com/polkadot-js/common/blob/master/packages/keyring/src/pair/index.ts#L104
+            </summary>
+            <param name="password"></param>
+            <param name="encoded"></param>
+            <param name="encryptionType"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.Scrypt">
+            <summary>
+            Scrypt
+            https://github.com/viniciuschiele/Scrypt/tree/master
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Scrypt.FromBytes(System.Byte[])">
+            <summary>
+            https://github.com/polkadot-js/common/blob/master/packages/util-crypto/src/scrypt/fromU8a.ts
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Scrypt.ToBytes(System.Byte[],Substrate.NET.Wallet.Keyring.ScryptParam)">
+             <summary>
+            
+             </summary>
+             <param name="salt"></param>
+             <param name="param"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Scrypt.ScryptEncode(System.String,Substrate.NET.Wallet.Keyring.ScryptParam)">
+            <summary>
+            Create a new scrypt encoding with random salt
+            </summary>
+            <param name="password"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Scrypt.ScryptEncode(System.String,System.Byte[],Substrate.NET.Wallet.Keyring.ScryptParam)">
+            <summary>
+            Encode our password with Scrypt algorithm
+            </summary>
+            <param name="password"></param>
+            <param name="salt"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.ScryptResult">
+            <summary>
+            Scrypt result
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.ScryptResult.#ctor(Substrate.NET.Wallet.Keyring.ScryptParam,System.Byte[])">
+            <summary>
+            Scrypt result constructor
+            </summary>
+            <param name="param"></param>
+            <param name="salt"></param>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.ScryptResult.#ctor(Substrate.NET.Wallet.Keyring.ScryptParam,System.Byte[],System.Byte[])">
+            <summary>
+            Scrypt result constructor
+            </summary>
+            <param name="param"></param>
+            <param name="salt"></param>
+            <param name="password"></param>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptResult.Param">
+            <summary>
+            Scrypt param
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptResult.Salt">
+            <summary>
+            Salt
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptResult.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.ScryptParam">
+            <summary>
+            Scrypt param
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptParam.IterationCount">
+            <summary>
+            N
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptParam.ThreadCount">
+            <summary>
+            r
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptParam.BlockSize">
+            <summary>
+            p
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.ScryptParam.#ctor(System.Numerics.BigInteger,System.Numerics.BigInteger,System.Numerics.BigInteger)">
+            <summary>
+            Scrypt param constructor
+            </summary>
+            <param name="iterationCount"></param>
+            <param name="threadCount"></param>
+            <param name="blockSize"></param>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.ScryptParam.Default">
+            <summary>
+            https://github.com/polkadot-js/common/blob/master/packages/util-crypto/src/scrypt/defaults.ts#L6
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.ScryptParam.ToBytes">
+            <summary>
+            To bytes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.Uri.DEV_PHRASE">
+            <summary>
+            DEV PHRASE
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.Uri.DEV_SEED">
+            <summary>
+            DEV SEED
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.Uri.CaptureUriPattern">
+            <summary>
+            Capture URI pattern
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.Uri.CaptureJunctionPattern">
+            <summary>
+            Capture junction pattern
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.KeyExtractUri(System.String)">
+            <summary>
+            Key extract uri
+            </summary>
+            <param name="suri"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.KeyExtractPath(System.String)">
+            <summary>
+            Key extract path
+            </summary>
+            <param name="derivePath"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.KeyFromPath(Substrate.NetApi.Model.Types.Account,System.Collections.Generic.IList{Substrate.NET.Wallet.Derivation.DeriveJunction},Substrate.NetApi.Model.Types.KeyType)">
+            <summary>
+            Key from path
+            </summary>
+            <param name="pair"></param>
+            <param name="paths"></param>
+            <param name="keyType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.CreateDerive(Substrate.NetApi.Model.Types.KeyType,Substrate.NET.Wallet.Derivation.DeriveJunction,Substrate.NetApi.Model.Types.Account)">
+            <summary>
+            Create derive
+            </summary>
+            <param name="keyType"></param>
+            <param name="path"></param>
+            <param name="pair"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.Sr25519DeriveHard(System.Byte[],System.Byte[])">
+            <summary>
+            Sr25519 derive hard
+            </summary>
+            <param name="seed"></param>
+            <param name="chainCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.Sr25519DeriveHard(Substrate.NET.Schnorrkel.Keys.KeyPair,System.Byte[])">
+            <summary>
+            Sr25519 derive hard
+            </summary>
+            <param name="pair"></param>
+            <param name="chainCode"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.Sr25519DeriveSoft(System.Byte[],System.Byte[])">
+            <summary>
+            Sr25519 derive soft
+            </summary>
+            <param name="seed"></param>
+            <param name="chainCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.Sr25519DeriveSoft(Substrate.NET.Schnorrkel.Keys.KeyPair,System.Byte[])">
+            <summary>
+            Sr25519 derive soft
+            </summary>
+            <param name="pair"></param>
+            <param name="chainCode"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.Uri.Ed25519DeriveHard(System.Byte[],System.Byte[])">
+             <summary>
+            
+             </summary>
+             <param name="secretKey">64 bytes private key + nonce</param>
+             <param name="chainCode"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.WalletJson">
+            <summary>
+            Wallet JSON
+            </summary>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding">
+            <summary>
+            Encrypted JSON encoding
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding.None">
+            <summary>
+            No encoding
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding.Scrypt">
+            <summary>
+            Scrypt encoding
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding.Xsalsa20Poly1305">
+            <summary>
+            Xsalsa20Poly1305 encoding
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.WalletJson.EncryptedToString(Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding)">
+            <summary>
+            Encrypted to string
+            </summary>
+            <param name="encrypt"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.WalletJson.EncryptedFromString(System.String)">
+            <summary>
+            Encrypted from string
+            </summary>
+            <param name="encrypt"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.WalletFile">
+            <summary>
+            Wallet file
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.WalletFile.Encoded">
+            <summary>
+            Encoded
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.WalletFile.Encoding">
+            <summary>
+            Encoding
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.WalletFile.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.WalletFile.Meta">
+            <summary>
+            Meta
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.WalletFile.ToJson">
+            <summary>
+            Convert to json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Keyring.WalletFile.GetKeyType">
+            <summary>
+            Get the key type
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.Encoding">
+            <summary>
+            Encoding for the wallet file
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Encoding.Content">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Encoding.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Encoding.Version">
+            <summary>
+            Version
+            </summary>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Keyring.Meta">
+            <summary>
+            Metadata for the wallet file
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Meta.GenesisHash">
+            <summary>
+            Genesis hash
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Meta.IsHardware">
+            <summary>
+            Is hardware wallet
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Meta.Name">
+            <summary>
+            Name of the wallet
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Meta.Tags">
+            <summary>
+            Tags
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Keyring.Meta.WhenCreated">
+            <summary>
+            When created
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.SystemInteraction.ReadData">
+            <summary>
+            Gets or sets the read data.
+            </summary>
+            <value>
+            The read data.
+            </value>
+        </member>
+        <member name="P:Substrate.NET.Wallet.SystemInteraction.DataExists">
+            <summary>
+            Gets or sets the data exists.
+            </summary>
+            <value>
+            The data exists.
+            </value>
+        </member>
+        <member name="P:Substrate.NET.Wallet.SystemInteraction.ReadPersistent">
+            <summary>
+            Gets or sets the read persistent.
+            </summary>
+            <value>
+            The read persistent.
+            </value>
+        </member>
+        <member name="P:Substrate.NET.Wallet.SystemInteraction.PersistentExists">
+            <summary>
+            Gets or sets the persistent exists.
+            </summary>
+            <value>
+            The persistent exists.
+            </value>
+        </member>
+        <member name="P:Substrate.NET.Wallet.SystemInteraction.Persist">
+            <summary>
+            Gets or sets the persist.
+            </summary>
+            <value>
+            The persist.
+            </value>
+        </member>
+        <member name="M:Substrate.NET.Wallet.SystemInteraction.ReadAllText(System.String)">
+            <summary>
+            Reads all text.
+            </summary>
+            <param name="path">The path.</param>
+            <returns></returns>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="T:Substrate.NET.Wallet.Wallet">
+            <summary>
+            Basic Wallet implementation
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.Wallet.Logger">
+            <summary> The logger. </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.Address">
+            <summary>
+            Account address
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.Encoded">
+            <summary>
+            Encoded value in JSON file
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.EncryptedEncoding">
+            <summary>
+            Type of encoding
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.KeyType">
+            <summary>
+            The type of cryptographic keys used in digital signatures
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.Meta">
+            <summary>
+            Wallet metadatas
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.Account">
+            <summary>
+            Wallet associated account
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.FileName">
+            <summary>
+            Account file name
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.AccountNamePolicy">
+            <summary>
+            Account name policy for this wallet
+            </summary>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.PasswordPolicy">
+            <summary>
+            Password policy for this wallet
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.#ctor(System.String,System.Byte[],Substrate.NET.Wallet.Keyring.Meta,System.Byte[],System.Byte[],Substrate.NetApi.Model.Types.KeyType,System.Collections.Generic.List{Substrate.NET.Wallet.Keyring.WalletJson.EncryptedJsonEncoding})">
+            <summary>
+            Initializes a new instance of the wallet.
+            </summary>
+            <param name="address"></param>
+            <param name="encoded"></param>
+            <param name="meta"></param>
+            <param name="publicKey"></param>
+            <param name="privateKey"></param>
+            <param name="keyType"></param>
+            <param name="encryptedEncoding"></param>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.IsUnlocked">
+            <summary>
+            Gets a value indicating whether this instance is unlocked.
+            </summary>
+            <value>
+              <c>true</c> if this instance is unlocked; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Substrate.NET.Wallet.Wallet.IsStored">
+            <summary>
+            Gets a value indicating whether this file has been created.
+            </summary>
+            <value>
+              <c>true</c> if this instance is created; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Unlock(System.String,System.Byte[])">
+            <summary>
+            Unlocks the account
+            </summary>
+            <param name="password">The password.</param>
+            <param name="userEncoded"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Lock">
+            <summary>
+            Lock the account
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.ToWalletFile(System.String,System.String)">
+            <summary>
+            Transform to wallet file.
+            </summary>
+            <param name="walletName"></param>
+            <param name="password"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.ToJson(System.String,System.String)">
+            <summary>
+            To the json.
+            </summary>
+            <param name="walletName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Recode(System.String)">
+            <summary>
+            Recode the account
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Derive(System.String)">
+            <summary>
+            Derive a new account from the current account
+            </summary>
+            <param name="sUri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Derive(System.String,Substrate.NET.Wallet.Keyring.Meta)">
+            <summary>
+            Derive a new account from the current account
+            </summary>
+            <param name="sUri"></param>
+            <param name="meta"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidCastException"></exception>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Save(System.String,System.String)">
+            <summary>
+            Save the account
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.TryLoad(System.String,Substrate.NET.Wallet.Wallet@)">
+            <summary>
+            Load the wallet from the file system.
+            </summary>
+            <param name="walletName"></param>
+            <param name="wallet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.TryLoad(System.String,Substrate.NET.Wallet.Keyring.WalletFile,Substrate.NET.Wallet.Wallet@)">
+            <summary>
+            Load the wallet from file store object.
+            </summary>
+            <param name="walletName"></param>
+            <param name="fileStore"></param>
+            <param name="wallet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Sign(System.String,System.Boolean)">
+            <summary>
+            Sign the message
+            </summary>
+            <param name="message"></param>
+            <param name="wrap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Sign(System.Byte[],System.Boolean)">
+            <summary>
+            Sign the message
+            </summary>
+            <param name="message"></param>
+            <param name="wrap"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.TrySignMessage(Substrate.NetApi.Model.Types.Account,System.Byte[],System.Byte[]@,System.Boolean)">
+            <summary>
+            Tries the sign message.
+            </summary>
+            <param name="signer">The signer.</param>
+            <param name="message">The data.</param>
+            <param name="signature">The signature.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException">KeyType {signer.KeyType} is currently not implemented for signing.</exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Verify(System.Byte[],System.String,System.Boolean)">
+            <summary>
+            Verify the message
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <param name="wrap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.Verify(System.Byte[],System.Byte[],System.Boolean)">
+            <summary>
+            Verify the message
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <param name="wrap"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.IsValidWalletName(System.String)">
+            <summary>
+            Determines whether [is valid wallet name] [the specified wallet name].
+            </summary>
+            <param name="walletName">Name of the wallet.</param>
+            <returns>
+              <c>true</c> if [is valid wallet name] [the specified wallet name]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.IsValidPassword(System.String)">
+            <summary>
+            Determines whether [is valid password] [the specified password].
+            </summary>
+            <param name="password">The password.</param>
+            <returns>
+              <c>true</c> if [is valid password] [the specified password]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.Wallet.ConcatWalletFileType(System.String)">
+            <summary>
+            Adds the type of the wallet file.
+            </summary>
+            <param name="walletName">Name of the wallet.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.WordManager">
+            <summary>
+            Build rules on a phrase
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.WordManager.minimumLength">
+            <summary>
+            Minimum of character
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.WordManager.maximumLength">
+            <summary>
+            Maximum of character
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.#ctor">
+            <summary>
+            Word manager constructor
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.Create">
+            <summary>
+            Create a new password manager
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.WithMinimumLength(System.Int32)">
+            <summary>
+            With minimum length
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.WithMaximumLength(System.Int32)">
+            <summary>
+            With maximum length
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.Should">
+            <summary>
+            Should
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldNot">
+            <summary>
+            Should not
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.GetErrors(System.String)">
+            <summary>
+            Get errors
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.IsValid(System.String)">
+            <summary>
+            Is valid password
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Substrate.NET.Wallet.WordManager.StandardAccountName">
+            <summary>
+            Get account name default policy
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Substrate.NET.Wallet.WordManager.StandardPassword">
+            <summary>
+            Get password default policy
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.WordManager.ShouldAbstract">
+            <summary>
+            Should abstract
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldAbstract.#ctor(Substrate.NET.Wallet.WordManager)">
+            <summary>
+            Should abstract constructor
+            </summary>
+            <param name="wm"></param>
+        </member>
+        <member name="F:Substrate.NET.Wallet.WordManager.ShouldAbstract.uppercase">
+            <summary>
+            Upercase letter requirement
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.WordManager.ShouldAbstract.lowercase">
+            <summary>
+            Lowercase letter requirement
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.WordManager.ShouldAbstract.digit">
+            <summary>
+            Digit letter requirement
+            </summary>
+        </member>
+        <member name="F:Substrate.NET.Wallet.WordManager.ShouldAbstract.letter">
+            <summary>
+            Alphanumeric latter requirement
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldAbstract.GetErrors(System.String)">
+            <summary>
+            Get errors
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.WordManager.ShouldManager">
+            <summary>
+            Should manager
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldManager.#ctor(Substrate.NET.Wallet.WordManager)">
+            <summary>
+            Should manager constructor
+            </summary>
+            <param name="wm"></param>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldManager.AtLeastOneUppercase">
+            <summary>
+            At least one uppercase letter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldManager.AtLeastOneLowercase">
+            <summary>
+            At least one lowercase letter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldManager.AtLeastOneDigit">
+            <summary>
+            At least one digit
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldManager.AtLeastOneLetter">
+            <summary>
+            At least one digit
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Substrate.NET.Wallet.WordManager.ShouldNotManager">
+            <summary>
+            Should not manager
+            </summary>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldNotManager.#ctor(Substrate.NET.Wallet.WordManager)">
+            <summary>
+            Should not manager constructor
+            </summary>
+            <param name="wm"></param>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldNotManager.HaveUppercase">
+            <summary>
+            Have uppercase letter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldNotManager.HaveLowercase">
+            <summary>
+            Have lowercase letter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldNotManager.HaveDigit">
+            <summary>
+            Have digit
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Substrate.NET.Wallet.WordManager.ShouldNotManager.HaveLetter">
+            <summary>
+            Have letter
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,4 +1,6 @@
 ﻿using Substrate.NET.Wallet;
+using Substrate.NET.Wallet.Keyring;
+using System;
 using System.Text.Json;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -56,10 +58,16 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWalletJson(ClickEvent evt)
         {
-            if (!Wallet.Load(FlowController.TempAccountName, FlowController.TempFileStore, out Wallet wallet))
+            if (!Wallet.TryLoad(FlowController.TempAccountName, FlowController.TempFileStore, out Wallet wallet))
             {
                 return;
             }
+
+            // Save the wallet
+            string fileName = Wallet.ConcatWalletFileType(FlowController.TempAccountName);
+            Substrate.NET.Wallet.Caching.Persist(fileName, FlowController.TempFileStore);
+            Debug.Log($"Wallet JSON saved ({fileName})");
+
 
             Network.ChangeWallet(wallet);
             Debug.Log($"Changing to json wallet {FlowController.TempAccountName}");
@@ -71,30 +79,23 @@ namespace Assets.Scripts.ScreenStates
             var jsonContent = evt.newValue;
 
             _btnCreateWalletJson.SetEnabled(false);
-            if (jsonContent.Length < 200 || !jsonContent.Contains('#'))
+            if (jsonContent.Length < 200)
             {
                 return;
             }
 
-            var array = evt.newValue.Split('#');
-            var accountName = array[0].ToUpper();
-            var jsonWallet = array[1];
-            if (!Wallet.IsValidWalletName(accountName) || jsonWallet.Length < 180)
-            {
-                return;
-            }
-
-            FileStore fileStore;
+            WalletFile fileStore;
             try
             {
-                fileStore = JsonSerializer.Deserialize<FileStore>(jsonWallet);
+                fileStore = JsonSerializer.Deserialize<WalletFile>(jsonContent);
             }
-            catch
+            catch(Exception ex)
             {
+                Debug.Log($"{ex.Message}");
                 return;
             }
 
-            FlowController.TempAccountName = accountName;
+            FlowController.TempAccountName = fileStore.Meta.Name;
             FlowController.TempFileStore = fileStore;
 
             _btnCreateWalletJson.SetEnabled(true);

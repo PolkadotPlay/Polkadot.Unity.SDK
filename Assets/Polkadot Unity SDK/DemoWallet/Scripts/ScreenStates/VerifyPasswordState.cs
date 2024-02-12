@@ -1,4 +1,5 @@
 ﻿using Substrate.NET.Wallet;
+using Substrate.NET.Wallet.Keyring;
 using Substrate.NetApi.Model.Types;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -53,12 +54,47 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWallet(ClickEvent evt)
         {
-            if (!Wallet.CreateFromMnemonic(FlowController.TempAccountPassword, FlowController.TempMnemonic, KeyType.Sr25519, BIP39Wordlist.English, FlowController.TempAccountName, out Wallet wallet))
+            Wallet wallet;
+            try
             {
-                Debug.Log($"Failed to create {FlowController.TempAccountName} wallet!");
+                Debug.Log($"[{nameof(VerifyPasswordState)}] - Mnemonic = {FlowController.TempMnemonic} - Wallet name = {FlowController.TempAccountName}");
+
+                wallet = NetworkWalletManager.GetInstance().Keyring.AddFromUri(
+                    FlowController.TempMnemonic, new 
+                    Meta() { Name = FlowController.TempAccountName }, 
+                    KeyType.Sr25519);
+
+                Debug.Log($"[{nameof(VerifyPasswordState)}] - Wallet = {wallet} | IsLocked = {wallet.IsLocked} | IsStored = {wallet.IsStored}");
+
+                var unlockSucceed = wallet.Unlock(FlowController.TempAccountPassword);
+
+                Debug.Log($"[{nameof(VerifyPasswordState)}] - Wallet = {wallet} | Unlock succeed = {unlockSucceed} | IsLocked = {wallet.IsLocked} | IsStored = {wallet.IsStored}");
+
+                if (!unlockSucceed)
+                {
+                    Debug.Log($"Wallet successfully load, but invalid password to unlock");
+                    return;
+                }
+
+                if(!wallet.IsStored)
+                {
+                    wallet.Save(FlowController.TempAccountName, FlowController.TempAccountPassword);
+                }
+
+            } catch(System.Exception ex)
+            {
+                Debug.Log($"Failed to create {FlowController.TempAccountName} wallet ! : {ex.Message}");
                 return;
             }
-            else if (!NetworkWalletManager.GetInstance().ChangeWallet(wallet))
+
+            
+            //if (!Wallet.CreateFromMnemonic(FlowController.TempAccountPassword, FlowController.TempMnemonic, KeyType.Sr25519, BIP39Wordlist.English, FlowController.TempAccountName, out Wallet wallet))
+            //{
+            //    Debug.Log($"Failed to create {FlowController.TempAccountName} wallet!");
+            //    return;
+            //}
+            //else 
+            if (!NetworkWalletManager.GetInstance().ChangeWallet(wallet))
             {
                 Debug.Log($"Couldn't change to {FlowController.TempAccountName} wallet!");
                 return;

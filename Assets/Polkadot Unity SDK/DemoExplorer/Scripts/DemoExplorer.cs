@@ -1,5 +1,5 @@
 using Assets.Scripts;
-using Schnorrkel.Keys;
+using Substrate.NET.Schnorrkel.Keys;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Rpc;
@@ -66,8 +66,8 @@ namespace Substrate
 
         private Func<CancellationToken, Task<RuntimeVersion>> StateRuntimeVersion { get; set; }
         private Func<CancellationToken, Task<Properties>> SystemProperties { get; set; }
-        private Func<CancellationToken, Task<U32>> SystemStorageNumber { get; set; }
-        private Func<CancellationToken, Task<U32>> SystemStorageCustom { get; set; }
+        private Func<string, CancellationToken, Task<U32>> SystemStorageNumber { get; set; }
+        private Func<string, CancellationToken, Task<U32>> SystemStorageCustom { get; set; }
 
         private JsonSerializerOptions _jsonSerializerOptions;
 
@@ -317,7 +317,7 @@ namespace Substrate
         {
             string commandText = SubstrateCmds.Block.ToString().ToLower();
             _lblNodeInfo.text = $"{commandText}\n -> {commandText} = ...";
-            var blockNumber = await SystemStorageNumber(CancellationToken.None);
+            var blockNumber = await SystemStorageNumber(null,CancellationToken.None);
 
             _lblNodeInfo.text = blockNumber == null
                 ? $"{commandText}\n -> {commandText} = null"
@@ -329,7 +329,7 @@ namespace Substrate
             string commandText = SubstrateCmds.Custom.ToString().ToLower();
             string customName = "event count";
             _lblNodeInfo.text = $"{commandText}\n -> {customName} = ...";
-            var blockNumber = await SystemStorageCustom(CancellationToken.None);
+            var blockNumber = await SystemStorageCustom(null, CancellationToken.None);
 
             _lblNodeInfo.text = blockNumber == null
                 ? $"{commandText}\n -> {customName} = null"
@@ -393,7 +393,7 @@ namespace Substrate
             var properties = await SystemProperties(CancellationToken.None);
             var tokenDecimals = BigInteger.Pow(10, properties.TokenDecimals);
 
-            var accountInfo = await ((LocalExt.SubstrateClientExt)_client).SystemStorage.Account(accountAlice, CancellationToken.None);
+            var accountInfo = await ((LocalExt.SubstrateClientExt)_client).SystemStorage.Account(accountAlice, null, CancellationToken.None);
             if (accountInfo == null)
             {
                 Debug.Log("No account found!");

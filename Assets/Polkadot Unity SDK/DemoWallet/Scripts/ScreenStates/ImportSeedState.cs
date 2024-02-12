@@ -1,4 +1,5 @@
-﻿using Substrate.NetApi;
+﻿using Substrate.NET.Wallet.Keyring;
+using Substrate.NetApi;
 using Substrate.NetApi.Model.Types;
 using System;
 using System.Linq;
@@ -62,8 +63,9 @@ namespace Assets.Scripts.ScreenStates
 
         private void OnClickBtnCreateWalletSeed(ClickEvent evt)
         {
-            FlowController.TempAccount = Mnemonic.GetAccountFromMnemonic(FlowController.TempMnemonic, "", KeyType.Sr25519);
-            Debug.Log($"Temporary account stored with keytype {FlowController.TempAccount.KeyType}");
+            FlowController.TempAccount = NetworkWalletManager.GetInstance().Keyring.AddFromUri(FlowController.TempMnemonic, new Meta(), KeyType.Sr25519).Account;
+
+            Debug.Log($"Temporary account {FlowController.TempAccount} stored with keytype {FlowController.TempAccount.KeyType}");
             FlowController.ChangeScreenState(DemoWalletScreen.CreateWallet);
         }
 
@@ -80,19 +82,15 @@ namespace Assets.Scripts.ScreenStates
         private void OnChangeEventSeedPhrase(ChangeEvent<string> evt)
         {
             _btnCreateWalletSeed.SetEnabled(false);
+
             var words = evt.newValue.Split(' ');
             if (words.Length >= 12 && words.All(p => p.Length > 2))
             {
-                try
-                {
-                    _ = Mnemonic.MnemonicToEntropy(evt.newValue, BIP39Wordlist.English);
-                    FlowController.TempMnemonic = evt.newValue;
-                    _btnCreateWalletSeed.SetEnabled(true);
-                }
-                catch (Exception)
-                {
-                    Debug.Log("Invalid seed phrase");
-                }
+                FlowController.TempMnemonic = evt.newValue;
+                _btnCreateWalletSeed.SetEnabled(true);
+            } else
+            {
+                Debug.Log("Invalid seed phrase");
             }
         }
     }
